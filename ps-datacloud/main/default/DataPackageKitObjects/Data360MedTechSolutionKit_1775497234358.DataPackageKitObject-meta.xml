@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataPackageKitObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Pacemaker_Patient_Health_Summary_default</masterLabel>
+    <parentDataPackageKitDefinitionName>Data360MedTechSolutionKit</parentDataPackageKitDefinitionName>
+    <referenceObjectName>Contact.Battery_Score__c</referenceObjectName>
+    <referenceObjectType>CustomFieldDefinition</referenceObjectType>
+</DataPackageKitObject>

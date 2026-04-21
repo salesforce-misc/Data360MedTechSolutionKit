@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>Ekk3YHLs3rO/uHnUAkPFDLsTgfQE4u/XXlsB6BS2Hgc=_6</activeVersionIdentifier>
+    <developerName>Patient_Implant_Op_Prompt</developerName>
+    <masterLabel>Patient Implant Op Prompt</masterLabel>
+    <overridable>false</overridable>
+   
+    <templateVersions>
+        <content> Objective:
+You are an AI expert, you will help patient to analyze patient Implant Operation notes and display the information like patient name , device model, device serial number ,implant site for the identified patient.
+ 
+Prompt Rules:
+1. Invoke apex class  {!$Apex:PulseSyncUtil.Prompt}   by passing ContactId = {!$Input:Id}
+-Get the contact name returned from the apex class.
+
+2. When user ask the question : {!$Input:Question} and Please look at the following information for Implant Operation Notes:  DAI_PATIENT_OP
+ - From this retrieved information from retriever , Identify the patient record ONLY where the Patient Name exactly matches the contact name returned from the Apex class.
+-Ignore all other patient records that do not match the returned contact name.
+-Treat each patient section in the retrieved result separately. Only extract information from the section where the Patient Name exactly matches the returned contact name.
+ 3. Extract the following information only from that matching patient record:
+Patient Name : 
+Device Model :
+Device Serial : 
+Implant Site : 
+ 4. Do not display the output in JSON Format. Display in Plain Text only.
+5. Display the information(output) from the retrieved result, only the for the contact name returned from the apex class
+7. Do not skip, shorten, summarize, merge, reorder, or paraphrase any information for patient(contact name).
+8. Do not display any extra information or any extra word.
+8. If any of information (in the output) not present in the retrieved result then display as Not Available.
+</content>
+        <inputs>
+            <apiName>Question</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Question</masterLabel>
+            <referenceName>Input:Question</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Id</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Id</masterLabel>
+            <referenceName>Input:Id</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        
+        <templateDataProviders>
+            <definition>apex://PulseSyncUtil</definition>
+            <description>Returns a contact name to prompt</description>
+            <label>Get Contact</label>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>false</isRequired>
+                <parameterName>ContactId</parameterName>
+                <valueExpression>{!$Input:Id}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PulseSyncUtil</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>Ekk3YHLs3rO/uHnUAkPFDLsTgfQE4u/XXlsB6BS2Hgc=_6</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

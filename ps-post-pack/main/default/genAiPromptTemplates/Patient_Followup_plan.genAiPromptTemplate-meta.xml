@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>Ekk3YHLs3rO/uHnUAkPFDLsTgfQE4u/XXlsB6BS2Hgc=_7</activeVersionIdentifier>
+    <developerName>Patient_Followup_plan</developerName>
+    <masterLabel>Patient Followup plan</masterLabel>
+    <overridable>false</overridable>
+  
+    <templateVersions>
+        <content>Objective:
+You are an AI expert, you will help patient to Applies clinic protocol rules and display information about follow up tasks, remote transmission cadence, clinic visit windows, education reminders.
+ 
+Prompt Instructions:
+1. When the patient asks a question, use the input {!$Input:Question}
+2. Invoke apex class {!$Apex:PulseSyncUtil.Prompt}  to retrieve the contact name.
+3. Use the returned value as {!$Input:ContactName} in the response
+4.Do not display output in JSON format.
+5.Your tone should be friendly as you are speaking with patient.
+6.Please invoke and execute the Flow : {!$Flow:FollowUp_Plan_Based_Tasks.Prompt}  and Pass the input contactId = {!$Input:Id}
+
+Output(Response:
+Following tasks have been created for {!$Input:ContactName}, based on the Clinic&apos;s protocol rules:
+
+a. Task created, to regularly follow-up about Transmission of pacemaker data as per the set cadence 
+b. Clinic visit reminder activity created, for regular consultation with the Cardiologist 
+c. Enrolled to the upcoming Pacemaker Education Series - Dos and Don&apos;ts Session
+
+
+</content>
+        <inputs>
+            <apiName>Question</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Question</masterLabel>
+            <referenceName>Input:Question</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Id</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Id</masterLabel>
+            <referenceName>Input:Id</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>ContactName</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>ContactName</masterLabel>
+            <referenceName>Input:ContactName</referenceName>
+            <required>false</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PulseSyncUtil</definition>
+            <description>Returns a contact name to prompt</description>
+            <label>Get Contact</label>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>false</isRequired>
+                <parameterName>ContactId</parameterName>
+                <valueExpression>{!$Input:Id}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PulseSyncUtil</referenceName>
+        </templateDataProviders>
+        <templateDataProviders>
+            <definition>flow://FollowUp_Plan_Based_Tasks</definition>
+            <description>Auto-generates follow-up tasks: remote transmission cadence, clinic visit windows, education reminders.</description>
+            <label>FollowUp Plan Based Tasks</label>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>false</isRequired>
+                <parameterName>contactId</parameterName>
+                <valueExpression>{!$Input:Id}</valueExpression>
+            </parameters>
+            <referenceName>Flow:FollowUp_Plan_Based_Tasks</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>Ekk3YHLs3rO/uHnUAkPFDLsTgfQE4u/XXlsB6BS2Hgc=_7</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

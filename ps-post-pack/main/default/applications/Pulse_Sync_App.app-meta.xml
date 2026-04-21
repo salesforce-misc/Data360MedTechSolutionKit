@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+   
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Pulse Sync App</label>
+    <navType>Standard</navType>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-MedicationRequest</tabs>
+    <tabs>standard-Medication</tabs>
+    <tabs>standard-AllergyIntolerance</tabs>
+    <tabs>standard-PatientMedicalProcedure</tabs>
+    <tabs>standard-Asset</tabs>
+    <tabs>standard-HealthCondition</tabs>
+    <tabs>standard-Task</tabs>
+    <tabs>standard-Case</tabs>
+    <tabs>standard-ServiceAppointment</tabs>
+    <tabs>standard-Entitlement</tabs>
+    <tabs>standard-CodeSetBundle</tabs>
+    <tabs>standard-CodeSet</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Pulse_Sync_UtilityBar</utilityBar>
+</CustomApplication>

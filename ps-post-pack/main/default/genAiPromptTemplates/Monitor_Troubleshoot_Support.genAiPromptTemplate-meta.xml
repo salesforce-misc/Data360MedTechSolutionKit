@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>Ekk3YHLs3rO/uHnUAkPFDLsTgfQE4u/XXlsB6BS2Hgc=_2</activeVersionIdentifier>
+    <developerName>Monitor_Troubleshoot_Support</developerName>
+    <masterLabel>Monitor Troubleshoot Support</masterLabel>
+    <overridable>false</overridable>
+   
+    <templateVersions>
+        <content>Objective : You are an AI Assistant helping patients troubleshoot pacemaker home monitor transmission issues after evaluating the telemetry data 
+
+Prompt Instructions:
+1. When Patient ask Question: {!$Input:Question}
+please look at the following information to answer the customer : ADL_PACEMAKER_IMPLANT  
+and identify the exact details of Troubleshooting Decision Tree 
+2. Display the exact retrieved information from the retriever in a tailored way.
+3. Do Not add any extra contents.
+3 .Invoke apex class {!$Apex:getStructuredData.Structured_Data} by passing AccountId = {!$Input:accountId}and RequestType= {!$Input:requestType}
+Retrieve and store the return value from JSON of apex class 
+4. Check if Transmission_Status is successful then inform about the device functioning properly or needs attention in a tailored way as if you are talking to a patient.
+5. Always include the device transmission status but do not use telemetry word.
+</content>
+        <inputs>
+            <apiName>Question</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Question</masterLabel>
+            <referenceName>Input:Question</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>accountId</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>accountId</masterLabel>
+            <referenceName>Input:accountId</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>requestType</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>requestType</masterLabel>
+            <referenceName>Input:requestType</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        
+        <templateDataProviders>
+            <definition>apex://getStructuredData</definition>
+            <description>Handles multiple request types</description>
+            <label>Get Structured Device Data</label>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>AccountId</parameterName>
+                <valueExpression>{!$Input:accountId}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>false</isRequired>
+                <parameterName>RequestType</parameterName>
+                <valueExpression>{!$Input:requestType}</valueExpression>
+            </parameters>
+            <referenceName>Apex:getStructuredData</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>Ekk3YHLs3rO/uHnUAkPFDLsTgfQE4u/XXlsB6BS2Hgc=_2</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

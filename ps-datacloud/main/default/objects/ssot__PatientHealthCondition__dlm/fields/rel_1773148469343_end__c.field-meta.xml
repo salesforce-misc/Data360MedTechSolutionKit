@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>rel_1773148469343_end__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>ssot_PatientHealthCondition_Individu_rel</label>
+    <referenceTo>ssot__Individual__dlm</referenceTo>
+    <relationshipLabel>ssot_PatientHealthCondition_Individu_rel</relationshipLabel>
+    <relationshipName>rel_1773148469343_end</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

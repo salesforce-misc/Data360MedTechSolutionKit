@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectDependency xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataPackageKitDef>Data360MedTechSolutionKit</dataPackageKitDef>
+    <developerName>pacemaker_iot_data12</developerName>
+    <masterLabel>pacemaker_iot_data__dll</masterLabel>
+    <sourceObject>pacemaker_iot_data12</sourceObject>
+    <sourceObjectType>DataSourceObject</sourceObjectType>
+    <targetObject>pacemaker_iot_data23</targetObject>
+</DataKitObjectDependency>

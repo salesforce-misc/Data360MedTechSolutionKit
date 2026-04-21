@@ -1,0 +1,9 @@
+{
+"records":[
+  {
+    "attributes": {"type": "Pricebook2","referenceId": "pulseSyncPricebookRef1"},
+    "Name": "PulseSync Price Book",
+    "IsActive": true
+  }
+ ]
+}

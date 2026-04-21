@@ -1,0 +1,33 @@
+{
+     "records": [
+    {
+      "attributes": {"type": "Asset", "referenceId": "assetRef1"},
+      "Name": "Cardiac Pacemaker Implant",
+      "AccountId": "@personAccRef1",
+      "Product2Id": "@productRef1",
+      "Status": "Installed",
+      "SerialNumber": "PSM482917",
+      "PurchaseDate": "2026-03-02",
+      "Implant_Site__c": "Right pectoral"
+    },
+    {
+      "attributes": {"type": "Asset", "referenceId": "assetRef2"},
+
+      "Name": "Home Monitor",
+      "AccountId": "@personAccRef1",
+      "Product2Id": "@productRef4",
+      "Status": "Purchased",
+      "PurchaseDate": "2026-03-02",
+      "SerialNumber": "PSM482918"
+    },
+    {
+      "attributes": {"type": "Asset", "referenceId": "assetRef3"},
+
+      "Name": "Lead Adapters",
+      "AccountId": "@personAccRef2",
+      "Product2Id": "@productRef9",
+      "Status": "Purchased",
+      "PurchaseDate": "2026-03-01"
+    }
+  ]
+}

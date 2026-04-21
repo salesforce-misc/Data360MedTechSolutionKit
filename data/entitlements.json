@@ -1,0 +1,34 @@
+{
+   "records": [
+    {
+      "attributes": {"type": "Entitlement", "referenceId": "entitlementRef1"},
+      "Name": "Pacemaker Warranty Coverage",
+      "AccountId": "@personAccRef1",
+      
+      "AssetId": "@assetRef1",
+      "StartDate": "2026-01-06",
+      "EndDate": "2031-01-06",
+      "Type": "Device Warranty"
+    },
+    {
+        "attributes": {"type": "Entitlement", "referenceId": "entitlementRef2"},
+      "Name": "Remote Monitor Support Plan",
+      "AccountId": "@personAccRef1",
+      
+      "AssetId": "@assetRef2",
+      "StartDate": "2026-01-05",
+      "EndDate": "2027-01-05",
+      "Type": "Support Plan"
+    },
+    {
+        "attributes": {"type": "Entitlement", "referenceId": "entitlementRef3"},
+      "Name": "Lead Generator Annual Service Plan",
+      "AccountId": "@personAccRef2",
+      
+      "AssetId": "@assetRef3",
+      "StartDate": "2026-01-05",
+      "EndDate": "2027-01-06",
+      "Type": "Support Plan"
+    }
+  ]
+}

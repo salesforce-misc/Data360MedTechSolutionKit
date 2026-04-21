@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>Ekk3YHLs3rO/uHnUAkPFDLsTgfQE4u/XXlsB6BS2Hgc=_3</activeVersionIdentifier>
+    <developerName>Schedule_Remote_Device</developerName>
+    <masterLabel>Schedule Remote Device Evaluation</masterLabel>
+    <overridable>false</overridable>
+   
+    <templateVersions>
+        <content>Objective: You are an AI assistant for booking a service appointment for device check 
+
+Prompt Instruction:
+1. Can you suggest 3 appointment dates along with time for a remote device check keeping today&apos;s date {!$Input:Date} into consideration for the upcoming days
+2. Your tone should be like these are the upcoming appointment dates available.
+3. Also Ask the customer to select any one of the available options to proceed further for Scheduling Appointment
+4. Do Not Use Thanks
+</content>
+        <inputs>
+            <apiName>Date</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Date</masterLabel>
+            <referenceName>Input:Date</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>Ekk3YHLs3rO/uHnUAkPFDLsTgfQE4u/XXlsB6BS2Hgc=_3</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

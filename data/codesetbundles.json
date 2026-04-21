@@ -1,0 +1,150 @@
+{
+     "records": [
+    {
+      "attributes": {
+        "type": "CodeSetBundle",
+        "referenceId": "CodeSetBundleRef1"
+      },
+      "Name": "Pacemaker Implantation",
+      "CodeSet1Id": "@codesetRef1"
+    },
+    {
+      "attributes": {
+        "type": "CodeSetBundle",
+        "referenceId": "CodeSetBundleRef2"
+      },
+      "Name": "Remote Monitoring",
+      "CodeSet1Id": "@codesetRef2"
+    },
+    {
+      "attributes": {
+        "type": "CodeSetBundle",
+        "referenceId": "CodeSetBundleRef3"
+      },
+
+      "Name": "Generator Placement",
+      "CodeSet1Id": "@codesetRef3"
+    },
+    {
+      "attributes": {
+        "type": "CodeSetBundle",
+        "referenceId": "CodeSetBundleRef4"
+      },
+      "Name": "Appendix Removal Surgery",
+      "CodeSet1Id": "@codesetRef4"
+    },
+    {
+      "attributes": {
+        "type": "CodeSetBundle",
+        "referenceId": "CodeSetBundleRef5"
+      },
+      "Name": "Acetaminophen",
+      "CodeSet1Id": "@codesetRef5"
+    },
+    {
+      "attributes": {
+        "type": "CodeSetBundle",
+        "referenceId": "CodeSetBundleRef6"
+      },
+      "Name": "Keflex",
+      "CodeSet1Id": "@codesetRef6"
+    },
+    {
+      "attributes": {
+        "type": "CodeSetBundle",
+        "referenceId": "CodeSetBundleRef7"
+      },
+      "Name": "Cefazolin",
+      "CodeSet1Id": "@codesetRef7"
+    },
+    {
+      "attributes": {
+        "type": "CodeSetBundle",
+        "referenceId": "CodeSetBundleRef8"
+      },
+      "Name": "Vancomycin",
+      "CodeSet1Id": "@codesetRef8"
+    },
+    {
+      "attributes": {
+        "type": "CodeSetBundle",
+        "referenceId": "CodeSetBundleRef9"
+      },
+      "Name": "Ibuprofen",
+      "CodeSet1Id": "@codesetRef9"
+    },
+    {
+      "attributes": {
+        "type": "CodeSetBundle",
+        "referenceId": "CodeSetBundleRef10"
+      },
+      "Name": "Peanut Allergy",
+      "CodeSet1Id": "@codesetRef10"
+    },
+    {
+      "attributes": {
+        "type": "CodeSetBundle",
+        "referenceId": "CodeSetBundleRef11"
+      },
+      "Name": "Penicillin Allergy",
+      "CodeSet1Id": "@codesetRef11"
+    },
+    {
+      "attributes": {
+        "type": "CodeSetBundle",
+        "referenceId": "CodeSetBundleRef12"
+      },
+      "Name": "Dust Mite Allergy",
+      "CodeSet1Id": "@codesetRef12"
+    },
+    {
+         "attributes": {
+            "type": "CodeSetBundle",
+            "referenceId": "CodeSetBundleRef13"
+         },
+      "Name": "Milk Allergy",
+      "CodeSet1Id": "@codesetRef13"
+    },
+    {
+      "attributes": {
+        "type": "CodeSetBundle",
+        "referenceId": "CodeSetBundleRef14"
+      },
+      "Name": "Shellfish Allergy",
+      "CodeSet1Id": "@codesetRef14"
+    },
+    {
+      "attributes": {
+        "type": "CodeSetBundle",
+        "referenceId": "CodeSetBundleRef15"
+      },
+      "Name": "High Blood Pressure",
+      "CodeSet1Id": "@codesetRef15"
+    },
+    {
+      "attributes": {
+        "type": "CodeSetBundle",
+        "referenceId": "CodeSetBundleRef16"
+      },
+      "Name": "Bradycardia",
+      "CodeSet1Id": "@codesetRef16"
+    },
+    {
+        "attributes": {
+            "type": "CodeSetBundle",
+            "referenceId": "CodeSetBundleRef17"
+        },
+      "Name": "Type 2 diabetes",
+      "CodeSet1Id": "@codesetRef17"
+    },
+    {
+      "attributes": {
+        "type": "CodeSetBundle",
+        "referenceId": "CodeSetBundleRef18"
+      },
+
+      "Name": "Congestive Heart Failure",
+      "CodeSet1Id": "@codesetRef18"
+    }
+  ]
+}

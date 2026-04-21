@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>When patient ask a question related to Pacemaker Types/Process, Pacemaker FDA-approved/cleared ,Warranty coverage, Demo of Remote Monitor App then run this action and display the information to patients.</description>
+    <developerName>PacemakerDetailsForGuest</developerName>
+    <invocationTarget>PacemakerDetailsForGuest</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>PacemakerDetailsForGuest</localDeveloperName>
+    <masterLabel>PacemakerDetailsForGuest</masterLabel>
+</GenAiFunction>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Used to get the Patient OP Note based on Retrievers</description>
+    <developerName>Patient_Implant_Op_Prompt</developerName>
+    <invocationTarget>Patient_Implant_Op_Prompt</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>Patient_Implant_Op_Prompt</localDeveloperName>
+    <masterLabel>Patient Implant Op Prompt</masterLabel>
+</GenAiFunction>

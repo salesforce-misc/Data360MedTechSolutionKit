@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSrcDataModelFieldMap xmlns="http://soap.sforce.com/2006/04/metadata">
+    <filterApplied>false</filterApplied>
+    <filterOperationType>Equal</filterOperationType>
+    <masterLabel>Data360MedTechSolutionKitSalesforce_HomeCodeDescriptionCodeSetDescriptionyvjjYCRbGrjvqSo</masterLabel>
+    <sourceField>CodeSet_Home3.CodeDescription__c</sourceField>
+    <targetField>ssot__CodeSet__dlm.ssot__Description__c</targetField>
+    <templateVersion>1</templateVersion>
+    <versionNumber>1.0</versionNumber>
+</DataSrcDataModelFieldMap>

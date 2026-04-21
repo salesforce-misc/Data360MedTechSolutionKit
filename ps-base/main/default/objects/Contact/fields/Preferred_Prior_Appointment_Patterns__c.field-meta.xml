@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_Prior_Appointment_Patterns__c</fullName>
+    <label>Preferred Prior Appointment Patterns</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Morning slots (8 AM – 12 PM)</fullName>
+                <default>false</default>
+                <label>Morning slots (8 AM – 12 PM)</label>
+            </value>
+            <value>
+                <fullName>Afternoon slots (12 PM – 4 PM)</fullName>
+                <default>false</default>
+                <label>Afternoon slots (12 PM – 4 PM)</label>
+            </value>
+            <value>
+                <fullName>Evening slots (4 PM – 7 PM)</fullName>
+                <default>false</default>
+                <label>Evening slots (4 PM – 7 PM)</label>
+            </value>
+            <value>
+                <fullName>Telehealth preferred</fullName>
+                <default>false</default>
+                <label>Telehealth preferred</label>
+            </value>
+            <value>
+                <fullName>Prefers weekend availability</fullName>
+                <default>false</default>
+                <label>Prefers weekend availability</label>
+            </value>
+            <value>
+                <fullName>Follow‑up every 3 months</fullName>
+                <default>false</default>
+                <label>Follow‑up every 3 months</label>
+            </value>
+            <value>
+                <fullName>Urgent appointments preferred when symptoms worsen</fullName>
+                <default>false</default>
+                <label>Urgent appointments preferred when symptoms worsen</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

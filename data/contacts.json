@@ -1,0 +1,40 @@
+{
+    "records": [
+    {
+     "attributes": {
+                "type": "Contact",
+                "referenceId": "contactRef1"
+            },
+      "FirstName": "James",
+      "LastName": "Walker",
+      "Email": "james.walker@pulsesynchospital.com",
+      "Phone": -4171,
+      "AccountId": "@accountRef1",
+      "MailingCity": "Indianapolis",
+      "MailingStreet": "123 Meridian St",
+      "MailingState": "IN",
+      "MailingPostalCode": 94105,
+      "MailingCountry": "USA",
+      "Speciality__c": "Electrophysiology",
+      "License_Number__c": "MDIN78421"
+    },
+    {
+      "attributes": {
+                "type": "Contact",
+                "referenceId": "contactRef2"
+            },
+      "FirstName": "Julia",
+      "LastName": "Bennett",
+      "Email": "julia.ben@pulsesyncclinic.com",
+      "Phone": -4221,
+      "AccountId": "@accountRef2",
+      "MailingCity": "Indianapolis",
+      "MailingStreet": "45 Broad Ripple Ave",
+      "MailingState": "IN",
+      "MailingPostalCode": 94105,
+      "MailingCountry": "USA",
+      "Speciality__c": "Cardiac Nurse",
+      "License_Number__c": "RNIL55231"
+    }
+  ]
+}

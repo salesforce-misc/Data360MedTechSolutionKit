@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSrcDataModelFieldMap xmlns="http://soap.sforce.com/2006/04/metadata">
+    <filterApplied>false</filterApplied>
+    <filterOperationType>Equal</filterOperationType>
+    <masterLabel>Data360MedTechSolutionKitSalesforce_HomeStatusCategoryServiceAppointmentServiceAppointmentStatusCategoryUQuCdnuDjQBOIDH</masterLabel>
+    <sourceField>ServiceAppointment_Home3.StatusCategory__c</sourceField>
+    <targetField>ssot__ServiceAppointment__dlm.ssot__ServiceAppointmentStatusCategory__c</targetField>
+    <templateVersion>1</templateVersion>
+    <versionNumber>1.0</versionNumber>
+</DataSrcDataModelFieldMap>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>When patient ask about create a follow up plan based on our protocol then run this action and display the response</description>
+    <developerName>Patient_Followup_plan</developerName>
+    <invocationTarget>Patient_Followup_plan</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>Patient_Followup_plan</localDeveloperName>
+    <masterLabel>Patient Followup plan</masterLabel>
+</GenAiFunction>

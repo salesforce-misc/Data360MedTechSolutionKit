@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>If patient ask about summarize my last 6 months for my primary care doctor then execute this action and display the response.</description>
+    <developerName>PatientSummary60Days</developerName>
+    <invocationTarget>PatientSummary60Days</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>PatientSummary60Days</localDeveloperName>
+    <masterLabel>PatientSummary60Days</masterLabel>
+</GenAiFunction>

@@ -1,0 +1,20 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Home",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "contentWidth" : "60"
+        },
+        "id" : "6a53e82d-6062-486e-99bd-94c871b402b0"
+      }, {
+        "attributes" : {
+          "textDisplayInfo" : "{\"textStyle\": \"heading-large\"}"
+        },
+        "id" : "491a78d9-f96f-4d09-8e76-d2753e47fc26"
+      } ]
+    }
+  },
+  "urlName" : "home"
+}

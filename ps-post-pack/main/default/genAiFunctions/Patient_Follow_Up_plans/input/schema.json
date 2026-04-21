@@ -1,0 +1,21 @@
+{
+  "required" : [ "Input:Id", "Input:Question" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:Id" : {
+      "title" : "Id",
+      "description" : "Id of the record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Input:Question" : {
+      "title" : "Question",
+      "description" : "Patient Question",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

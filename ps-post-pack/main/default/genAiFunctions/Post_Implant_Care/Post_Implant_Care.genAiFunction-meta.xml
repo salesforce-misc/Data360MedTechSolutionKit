@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This agent action is used to help patients understand the precautions they need to follow after an implant.</description>
+    <developerName>Post_Implant_Care</developerName>
+    <invocationTarget>Post_Implant_Care</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>Post_Implant_Care</localDeveloperName>
+    <masterLabel>Post Implant Care</masterLabel>
+</GenAiFunction>

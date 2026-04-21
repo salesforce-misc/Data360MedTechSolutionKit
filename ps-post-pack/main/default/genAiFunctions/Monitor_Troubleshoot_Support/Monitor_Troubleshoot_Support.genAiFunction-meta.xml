@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This agent action is used to check the patient’s pacemaker transmission and help troubleshoot the device.</description>
+    <developerName>Monitor_Troubleshoot_Support</developerName>
+    <invocationTarget>Monitor_Troubleshoot_Support</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>Monitor_Troubleshoot_Support</localDeveloperName>
+    <masterLabel>Monitor Troubleshoot Support</masterLabel>
+</GenAiFunction>

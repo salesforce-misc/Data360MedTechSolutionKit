@@ -1,0 +1,65 @@
+{
+    "records": [
+    {
+      "attributes":{ "type":"AllergyIntolerance", "referenceId":"AllergyIntoleranceRef1" },
+      "PatientId": "@personAccRef1",
+      "Status": "Active",
+      "Type": "Allergy",
+      "Category": "Food",
+      "CodeId": "@CodeSetBundleRef10",
+      "VerificationStatus": "Confirmed",
+      "Severity": "High"
+    },
+    {
+      "attributes":{ "type":"AllergyIntolerance", "referenceId":"AllergyIntoleranceRef2" },
+      "PatientId": "@personAccRef1",
+      "Status": "Resolved",
+      "Type": "Intolerance",
+      "Category": "Medication",
+      "CodeId": "@CodeSetBundleRef11",
+      "VerificationStatus": "Unconfirmed",
+      "Severity": "Low"
+    },
+    {
+      "attributes":{ "type":"AllergyIntolerance", "referenceId":"AllergyIntoleranceRef3" },
+      "PatientId": "@personAccRef2",
+      "Status": "Active",
+      "Type": "Allergy",
+      "Category": "Environment",
+      "CodeId": "@CodeSetBundleRef11",
+      "VerificationStatus": "Unconfirmed",
+      "Severity": "High"
+    },
+    {
+      "attributes":{ "type":"AllergyIntolerance", "referenceId":"AllergyIntoleranceRef4" },
+      "PatientId": "@personAccRef2",
+      "Status": "Active",
+      "Type": "Allergy",
+      "Category": "Food",
+      "CodeId": "@CodeSetBundleRef13",
+      "VerificationStatus": "Confirmed",
+      "Severity": "High"
+    },
+    {
+      "attributes":{ "type":"AllergyIntolerance", "referenceId":"AllergyIntoleranceRef5" },
+
+      "PatientId": "@personAccRef2",
+      "Status": "Active",
+      "Type": "Allergy",
+      "Category": "Food",
+      "CodeId": "@CodeSetBundleRef13",
+      "VerificationStatus": "Unconfirmed",
+      "Severity": "Medium"
+    },
+    {
+      "attributes":{ "type":"AllergyIntolerance", "referenceId":"AllergyIntoleranceRef6" },
+      "PatientId": "@personAccRef2",
+      "Status": "Resolved",
+      "Type": "Allergy",
+      "Category": "Environment",
+      "CodeId": "@CodeSetBundleRef11",
+      "VerificationStatus": "Refuted",
+      "Severity": "Medium"
+    }
+  ]
+}

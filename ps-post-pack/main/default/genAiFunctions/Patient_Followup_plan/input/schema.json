@@ -1,0 +1,28 @@
+{
+  "required" : [ "Input:Id", "Input:Question" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:ContactName" : {
+      "title" : "ContactName",
+      "description" : "Store the contact name returned from apex class",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Input:Id" : {
+      "title" : "Id",
+      "description" : "Id of the record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Input:Question" : {
+      "title" : "Question",
+      "description" : "Patient Question",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

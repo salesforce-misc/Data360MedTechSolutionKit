@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This action used to get execute when customer asking a question related to device family, regulatory compliance information and indications, display exact prompt response.</description>
+    <developerName>DeviceRegulatoryInfo</developerName>
+    <invocationTarget>DeviceRegulatoryInfo</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <localDeveloperName>DeviceRegulatoryInfo</localDeveloperName>
+    <masterLabel>DeviceRegulatoryInfo</masterLabel>
+    <progressIndicatorMessage>default</progressIndicatorMessage>
+</GenAiFunction>

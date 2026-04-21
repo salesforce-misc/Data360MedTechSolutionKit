@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>HELP ME SET UP THE HOME MONITOR and WARRANTY/COVERAGE FOR MY IMPLANTED DEVICE AND MONITOR</description>
+    <developerName>HomeMonitorSetupGuide</developerName>
+    <invocationTarget>HomeMonitorSetupGuide</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>HomeMonitorSetupGuide</localDeveloperName>
+    <masterLabel>HomeMonitorSetupGuide</masterLabel>
+</GenAiFunction>

@@ -1,0 +1,87 @@
+{
+    "records": [
+    {
+      "attributes": {
+                "type": "Account",
+                "referenceId": "accountRef1"
+            },
+      "Name": "PulseSync Medical Device Clinic",
+      "Industry": "Healthcare",
+     
+      "Type": "Clinic",
+      "Phone": "+1 (317) 555-3071",
+      "BillingStreet": "45 Broad Ripple Ave",
+      "BillingState": "IN",
+      "BillingPostalCode": 94105,
+      "BillingCountry": "USA",
+      "BillingCity": "Indianapolis"
+    },
+    {
+      "attributes": {
+                "type": "Account",
+                "referenceId": "accountRef2"
+            },
+      "Name": "PulseSync Medical Specialty Hospital",
+      "Industry": "Healthcare",
+      
+      "Type": "Hospital",
+      "Phone": "+1 (317) 555-4023",
+      "BillingStreet": "123 Meridian St",
+      "BillingState": "IN",
+      "BillingPostalCode": 94105,
+      "BillingCountry": "USA",
+      "BillingCity": "Indianapolis"
+    },
+    {
+      "attributes": {
+                "type": "Account",
+                "referenceId": "personAccRef2"
+            },
+      "FirstName": "John",
+      "LastName": "Smith",
+      "PersonEmail": "john.smith@example.com",
+      
+      "Type": "PersonAccount",
+      "Phone": "+1 (317) 555-0688",
+      "BillingStreet": "500 W Washington St",
+      "BillingState": "IN",
+      "BillingPostalCode": 46228,
+      "BillingCountry": "USA",
+      "BillingCity": "Indianapolis",
+      "Remote_Monitoring_Enrollment__pc": true,
+      "Implant_Date__pc": "2024-01-20",
+      "Member_ID__pc": "PSM583210",
+      "isHealthCloudRecord__pc": false
+    },
+    {
+      "attributes": {
+                "type": "Account",
+                "referenceId": "personAccRef1"
+            },
+      "FirstName": "Mark",
+      "LastName": "Smith",
+      "PersonEmail": "msmith@example.com",      
+      "Type": "PersonAccount",
+      "Phone": "+1 (317) 555-0199",
+      "BillingStreet": "120 Monument Circle",
+      "BillingState": "IN",
+      "BillingPostalCode": 46204,
+      "BillingCountry": "USA",
+      "BillingCity": "Indianapolis",
+      "Remote_Monitoring_Enrollment__pc": true,
+      "Atrial_Risk_Score__pc": 1,
+      "Battery_Score__pc": 25,
+      "Cadence__pc": 5,
+      "Implant_Date__pc": "2025-12-20",
+      "Last_Transmission__pc": "2025-06-26T23:00:00.000+0000",
+      "Member_ID__pc": "PSM491002",
+      "Pacing_Performance_Score__pc": 3,
+      "Preferred_Clinic__pc": "Ascension Medical Group St. Vincent",
+      "Preferred_Prior_Appointment_Patterns__pc": "Morning slots (8 AM – 12 PM)",
+      "Preferred_Provider__pc": "Dr. Matthew French, MD, FACC",
+      "Serial_Number__pc": "PSM482917",
+      "Unified_Individual_Id__pc": "e3a7c4b3d8efbfd48c46c2261fe1d02d",
+      "isHealthCloudRecord__pc": true
+    }
+  ]
+}

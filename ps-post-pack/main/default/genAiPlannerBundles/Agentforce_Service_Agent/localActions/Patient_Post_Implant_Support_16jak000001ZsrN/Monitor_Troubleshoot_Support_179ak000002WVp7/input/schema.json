@@ -1,0 +1,36 @@
+{
+  "required" : [ "Input:Question", "Input:requestType", "Input:accountId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:Question" : {
+      "title" : "Question",
+      "description" : "input Question",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Input:requestType" : {
+      "title" : "requestType",
+      "description" : "requestType",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Input:accountId" : {
+      "title" : "accountId",
+      "description" : "accountId",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "citationMode" : {
+      "title" : "Citation Mode",
+      "description" : "Select Citation Mode",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

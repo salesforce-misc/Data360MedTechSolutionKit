@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectDependency xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataPackageKitDef>Data360MedTechSolutionKit</dataPackageKitDef>
+    <developerName>UploadedFiles</developerName>
+    <masterLabel>UploadedFiles</masterLabel>
+    <sourceObject>pacemaker_iot_data_1775496213033</sourceObject>
+    <sourceObjectType>DataStreamTemplate</sourceObjectType>
+    <targetObject>UploadedFiles</targetObject>
+</DataKitObjectDependency>

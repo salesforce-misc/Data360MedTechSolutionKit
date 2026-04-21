@@ -1,0 +1,132 @@
+[
+ {
+    "sobject": "Account",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "accounts.json"
+    ]
+  },
+  {
+    "sobject": "Contact",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "contacts.json"
+    ]
+  },
+  {
+    "sobject": "Task",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "tasks.json"
+    ]
+  },
+  {
+    "sobject": "Case",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "cases.json"
+    ]
+  },
+  {
+    "sobject": "Product2",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "products.json"
+    ]
+  },
+  {    "sobject": "Pricebook2",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "pricebooks.json"
+    ]
+  },
+  {    "sobject": "PricebookEntry",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "pricebookentries.json"
+    ]
+  },
+  {    "sobject": "CodeSet",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "codesets.json"
+    ]
+  },
+  {    "sobject": "CodeSetBundle",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "codesetbundles.json"
+    ]
+  },
+  {
+    "sobject": "Medication",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "medications.json"
+    ]
+  },
+ {    "sobject": "MedicationRequest",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "medicationrequests.json"
+    ]
+  },
+  {    "sobject": "AllergyIntolerance",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "allergytollerance.json"
+    ]
+  },
+  {
+    "sobject": "HealthCondition",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "healthcondition.json"
+    ]
+  },
+  {
+    "sobject": "PatientMedicalProcedure",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "patientmedicalproceedures.json"
+    ]
+  },
+  {
+    "sobject":"Asset",
+    "saveRefs": true, 
+    "resolveRefs": true,
+    "files": [
+      "assets.json"
+    ]
+  },
+  {
+    "sobject":"Entitlement",
+    "saveRefs": true, 
+    "resolveRefs": true,
+    "files": [
+      "entitlements.json"
+    ]
+  },
+  {
+    "sobject": "ServiceAppointment",
+    "saveRefs": true,
+    "resolveRefs": true,
+    "files": [
+      "serviceappointments.json"
+    ]
+  }
+]

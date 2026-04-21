@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This agent action is used to create a appointment for remote device check and provide the summary of the patient device summary</description>
+    <developerName>Create_Service_Appointment</developerName>
+    <invocationTarget>Create_Service_Appointment</invocationTarget>
+    <invocationTargetType>flow</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>Create_Service_Appointment</localDeveloperName>
+    <masterLabel>Create Service Appointment</masterLabel>
+</GenAiFunction>

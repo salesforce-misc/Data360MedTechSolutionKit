@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>Ekk3YHLs3rO/uHnUAkPFDLsTgfQE4u/XXlsB6BS2Hgc=_1</activeVersionIdentifier>
+    <developerName>Patient30DaysSummary</developerName>
+    <masterLabel>Patient30DaysSummary</masterLabel>
+    <overridable>false</overridable>
+    <templateVersions>
+        <content>Objective: You are an AI expert, your job is to help patient about summarizing the patient clinical history and recommend next steps for review.
+
+Prompt Rules:
+1. patient Question: {!$Input:Question}
+2. Invoke the apex class {!$Apex:getSmmarizePatientDetails.Pacemaker_Data} 
+3. Get the returned field from the apex class.
+4. After Identifying the patient name from the apex class, please look at the following information: DAI_PATIENT_OP ADL_PATIENT_CLINIC 
+- From the retrieved result from retriever, as last interrogation note,call transcript,implant report for the identified Patient from the apex class
+5. Display the output as : 
+Summary :Summarize a concise, clinically oriented summary based on the retrieved result from retriever and fields returned from the apex class and Do not display any patient name
+Recommendation: recommend some steps for next review.
+
+</content>
+        <inputs>
+            <apiName>Id</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Id</masterLabel>
+            <referenceName>Input:Id</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Question</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Question</masterLabel>
+            <referenceName>Input:Question</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://getSmmarizePatientDetails</definition>
+            <description>Extract Patient and Telemetric details</description>
+            <label>Get Summarize Patient Details</label>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>AccountId</parameterName>
+                <valueExpression>{!$Input:Id}</valueExpression>
+            </parameters>
+            <referenceName>Apex:getSmmarizePatientDetails</referenceName>
+        </templateDataProviders>
+        
+        
+        <versionIdentifier>Ekk3YHLs3rO/uHnUAkPFDLsTgfQE4u/XXlsB6BS2Hgc=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

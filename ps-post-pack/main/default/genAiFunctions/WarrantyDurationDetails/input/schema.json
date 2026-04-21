@@ -1,0 +1,35 @@
+{
+  "required" : [ "Input:AccountId", "Input:Question", "Input:RequestType" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:AccountId" : {
+      "title" : "AccountId",
+      "description" : "Id of the Record",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Input:Question" : {
+      "title" : "Question",
+      "description" : "Patient Question",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Input:RequestType" : {
+      "title" : "RequestType",
+      "description" : "Pass the RequestType",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "citationMode" : {
+      "title" : "Citation Mode",
+      "description" : "Select Citation Mode",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

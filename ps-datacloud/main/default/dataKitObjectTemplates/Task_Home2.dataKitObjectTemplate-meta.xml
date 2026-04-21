@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectTemplate xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <developerName xsi:nil="true"/>
+    <entityPayload>{&quot;dataSpaceName&quot;:&quot;default&quot;,&quot;type&quot;:&quot;DLO&quot;,&quot;developerName&quot;:&quot;DLO_Task_Home&quot;}</entityPayload>
+    <masterLabel>Task_Home__dll</masterLabel>
+    <parentDataPackageKitDefinitionName xsi:nil="true"/>
+    <sourceObject>0viak00000Aqs1lAAB</sourceObject>
+    <sourceObjectType>DataSpaceMember</sourceObjectType>
+    <templateVersion>1</templateVersion>
+</DataKitObjectTemplate>

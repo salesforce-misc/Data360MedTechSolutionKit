@@ -1,0 +1,29 @@
+{
+  "required" : [ "Input:Question", "Input:Id" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:Question" : {
+      "title" : "Question",
+      "description" : "Get the Input From User\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Input:Id" : {
+      "title" : "Id",
+      "description" : "Get the Id from the Current Record Page",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "citationMode" : {
+      "title" : "Citation Mode",
+      "description" : "Select Citation Mode",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

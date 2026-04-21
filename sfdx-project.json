@@ -1,0 +1,13 @@
+{
+  "packageDirectories": [
+   
+    {
+      "path": "ps-post-pack",
+      "default": true
+    }
+  ],
+  "name": "pulsesync",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "66.0"
+}

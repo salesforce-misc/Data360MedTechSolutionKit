@@ -1,0 +1,162 @@
+:root {
+  --com-c-theme-version: 1;
+  --com-c-header-zindex: 999;
+  /*
+      Subscription history panel z-index should be greater than header z-index
+      as Subscription panel should be on top header panel.
+  */
+  --com-c-subscription-history-panel-zindex: 1000;
+}
+
+commerce_my_account-my-account-layout aside.navigation {
+  padding-top: var(--dxp-g-spacing-xlarge);
+}
+
+b2c_lite_commerce-external-layout b2c_lite_commerce-store-logo-cms img {
+  padding-top: var(--dxp-g-spacing-xlarge);
+  padding-bottom: var(--dxp-g-spacing-xlarge);
+}
+
+b2b_buyer_product_details-expandable-text-section {
+  --sds-c-accordion-section-spacing-inline-start: 0;
+}
+
+b2c_lite_commerce-my-account-profile,
+b2c_lite_commerce-my-account-password {
+  --dxp-g-spacing-medium: 0;
+}
+
+b2c_lite_commerce-my-account-profile,
+b2c_lite_commerce-my-account-password,
+commerce-my-account-profile,
+commerce-my-account-password {
+  --sds-c-card-header-spacing-block-start: 1rem;
+  --sds-c-card-header-spacing-inline-end: 1rem;
+  --sds-c-card-header-spacing-inline-start: 1rem;
+  --sds-c-card-body-spacing-inline-start: 1rem;
+  --sds-c-card-body-spacing-inline-end: 1rem;
+  --sds-c-card-body-spacing-block-end: 1rem;
+  --sds-c-card-radius-border: 0;
+}
+b2c_lite_commerce-my-account-profile label,
+b2c_lite_commerce-my-account-password label,
+commerce-my-account-profile label,
+commerce-my-account-password label {
+  --dxp-s-form-element-label-font-size: var(--dxp-g-font-size-4);
+  font-weight: var(--dxp-c-strong-text-weight);
+}
+
+b2c_lite_commerce-my-account-password header,
+commerce-my-account-password header {
+  font-size: var(--dxp-g-font-size-4);
+}
+
+@media (min-width: 64.0625em) {
+  b2c_lite_commerce-my-account-profile,
+  b2c_lite_commerce-my-account-password,
+  commerce-my-account-profile,
+  commerce-my-account-password {
+    --sds-c-card-header-spacing-block-start: 2rem;
+    --sds-c-card-header-spacing-inline-end: 2rem;
+    --sds-c-card-header-spacing-inline-start: 2rem;
+    --sds-c-card-body-spacing-block: 1rem;
+    --sds-c-card-body-spacing-inline-start: 2rem;
+    --sds-c-card-body-spacing-inline-end: 2rem;
+    --sds-c-card-body-spacing-block-end: 2rem;
+  }
+}
+b2c_lite_commerce-scoped-notification .slds-scoped-notification,
+commerce-scoped-notification .slds-scoped-notification {
+  margin-bottom: 1rem;
+}
+
+b2c_lite_commerce-my-account-menu-ui .slds-dropdown__header {
+  font-size: var(--dxp-g-font-size-6);
+}
+b2c_lite_commerce-my-account-menu-ui lightning-menu-subheader {
+  border-bottom: 1px solid var(--dxp-g-root-1);
+}
+
+commerce_builder-order-confirmation-error-message .slds-icon,
+commerce_builder-order-confirmation-error-message lightning-icon::part(icon) {
+  width: 4rem;
+  height: 4rem;
+  fill: var(--com-c-order-confirmation-error-icon-color, #707275);
+}
+
+/* Required to override cart items css in order confirmation items*/
+commerce_builder-order-confirmation-items ul article li.li-layout {
+  border-bottom: none;
+  padding: 0.75rem 0 0.25rem 0 !important;
+}
+
+commerce_builder-order-confirmation-items ul article:last-child li.li-layout {
+  border-bottom: none;
+  padding: 0.75rem 0 0 0 !important;
+}
+
+commerce_builder-order-confirmation-items ul {
+  padding-bottom: 0rem !important;
+}
+
+commerce-subscription-card commerce-pill .slds-pill__label {
+  white-space: normal;
+  word-break: break-all;
+}
+
+/* Theme changes for product configurator modal */
+runtime_industries_cfg-pricing-summary-option .optionName .slds-truncate {
+  max-width: 100%;
+}
+
+runtime_industries_cfg-pricing-summary-pane .detailHeader {
+  padding: 1rem;
+}
+
+runtime_industries_cfg-pricing-summary .totalsSection {
+  --footerHeight: var(--lwc-spacingXxLarge, 3.5rem);
+}
+
+runtime_industries_cfg-action-footer .spacer-element .slds-docked-form-footer {
+  --componentHeight: 4.5rem;
+  padding-bottom: 1rem;
+}
+
+runtime_industries_cfg-transaction-header,
+runtime_industries_cfg-favorite-container,
+runtime_industries_cfg-product-header .psm-option-value,
+runtime_industries_cfg-pricing-summary .totalsSection .slds-grid:has(.monthlyTotal),
+runtime_industries_cfg-pricing-summary .totalsSection .slds-grid:has(.annualTotal),
+runtime_industries_cfg-pricing-summary .totalsSection .slds-grid:has(.quarterlyTotal),
+runtime_industries_cfg-pricing-summary .totalsSection .slds-grid:has(.semiAnnualTotal),
+runtime_industries_cfg-pricing-summary .totalsSection .slds-grid:has(.defaultNetAmount) {
+  display: none;
+}
+
+/* disabled checkbox will be greyed out */
+.slds-checkbox [type=checkbox]:disabled + .slds-checkbox--faux,
+.slds-checkbox [type=checkbox]:disabled + .slds-checkbox_faux,
+.slds-checkbox [type=checkbox]:disabled ~ .slds-checkbox--faux,
+.slds-checkbox [type=checkbox]:disabled ~ .slds-checkbox_faux,
+.slds-checkbox [type=checkbox]:disabled + .slds-checkbox__label .slds-checkbox--faux,
+.slds-checkbox [type=checkbox]:disabled + .slds-checkbox__label .slds-checkbox_faux {
+  background-color: var(--com-c-disabled-checkbox-bg-color, #ecebea);
+  border-color: var(--com-c-disabled-checkbox-border-color, #c9c7c5);
+}
+
+.slds-checkbox [type=checkbox]:disabled + .slds-checkbox--faux::after,
+.slds-checkbox [type=checkbox]:disabled + .slds-checkbox_faux::after,
+.slds-checkbox [type=checkbox]:disabled ~ .slds-checkbox--faux::after,
+.slds-checkbox [type=checkbox]:disabled ~ .slds-checkbox_faux::after,
+.slds-checkbox [type=checkbox]:disabled + .slds-checkbox__label .slds-checkbox--faux::after,
+.slds-checkbox [type=checkbox]:disabled + .slds-checkbox__label .slds-checkbox_faux::after {
+  border-color: var(--com-c-disabled-checkbox-check-color, #c9c7c5);
+}
+
+runtime_industries_cfg-config-header .header-banner-spacer {
+  --banner-height: 6rem;
+}
+
+runtime_industries_cfg-pricing-summary-option .slds-col.slds-text-align_start {
+  text-align: start;
+}

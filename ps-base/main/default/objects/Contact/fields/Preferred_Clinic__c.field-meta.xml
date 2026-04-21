@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_Clinic__c</fullName>
+    <label>Preferred Clinic</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ascension Medical Group St. Vincent</fullName>
+                <default>false</default>
+                <label>Ascension Medical Group St. Vincent</label>
+            </value>
+            <value>
+                <fullName>Franciscan Health Indiana Heart Physicians</fullName>
+                <default>false</default>
+                <label>Franciscan Health Indiana Heart Physicians</label>
+            </value>
+            <value>
+                <fullName>Pinnacle Heart Specialists</fullName>
+                <default>false</default>
+                <label>Pinnacle Heart Specialists</label>
+            </value>
+            <value>
+                <fullName>IU Health Heart &amp; Vascular Care</fullName>
+                <default>false</default>
+                <label>IU Health Heart &amp; Vascular Care</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

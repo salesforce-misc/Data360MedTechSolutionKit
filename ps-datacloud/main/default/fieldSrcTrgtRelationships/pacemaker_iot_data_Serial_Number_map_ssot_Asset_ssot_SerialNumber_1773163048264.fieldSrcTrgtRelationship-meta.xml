@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSrcTrgtRelationship xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <definitionCreationType>Custom</definitionCreationType>
+    <lookupFieldName>pacemaker_iot_data__dlm.rel_1773163048264_end__c</lookupFieldName>
+    <masterLabel>pacemaker_iot_data_Serial_Number_map_ssot_Asset_ssot_SerialNumber_1773163048264</masterLabel>
+    <owner>DataCloud</owner>
+    <relationshipCardinality>ManyToOne</relationshipCardinality>
+    <sourceFieldName>pacemaker_iot_data__dlm.Serial_Number__c</sourceFieldName>
+    <targetEntity xsi:nil="true"/>
+    <targetFieldName>ssot__Asset__dlm.ssot__SerialNumber__c</targetFieldName>
+</FieldSrcTrgtRelationship>

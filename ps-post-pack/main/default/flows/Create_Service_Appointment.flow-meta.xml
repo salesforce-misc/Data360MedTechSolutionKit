@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Get_Telemetry_Data</name>
+        <label>Get Telemetry Data</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>getStructuredData</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Telemetry_Result</targetReference>
+        </connector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>AccountId</name>
+            <value>
+                <elementReference>contactId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>RequestType</name>
+            <value>
+                <stringValue>MonitorTransmitting</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>getStructuredData</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>66.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>AppointmentNumber</name>
+        <label>AppointmentNumber</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>RemoteDeviceSummary</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>DeviceCheckSummary</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>End_Date</name>
+        <label>End Date</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>EndDate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>DueDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_Service_Appointment</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Telemetry_Result</name>
+        <label>Telemetry_Result</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>OutputJS</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Telemetry_Data.Structured_Data</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_AccountId_From_Contact</targetReference>
+        </connector>
+    </assignments>
+    <environments>Default</environments>
+    <formulas>
+        <name>DeviceCheckSummary</name>
+        <dataType>String</dataType>
+        <expression>&quot;Your remote device check has been successfully scheduled. Below is a summary of your appointment and your most recent device information.&quot;
+&amp; BR() &amp; BR() &amp;
+&quot;Appointment Reference: &quot; &amp; {!Create_Service_Appointment.AppointmentNumber}
+&amp; BR() &amp;
+&quot;Appointment Date: &quot; &amp; TEXT({!Create_Service_Appointment.EarliestStartTime})
+&amp; BR() &amp;
+&quot;Device Model: &quot; &amp; {!Product_Name}
+&amp; BR() &amp;
+&quot;Manufacturer: &quot; &amp; {!Manufacturer}
+&amp; BR() &amp;
+&quot;Most Recent Transmission: &quot; &amp; {!Transmission_Status}
+
+&amp; BR() &amp; BR() &amp; 
+&quot;We noticed a small change in your recent health readings compared to your usual baseline. There’s no immediate cause for concern, but we want to make sure you continue feeling your best.&quot;
+&amp; BR() &amp;
+&quot;If you experience chest pain, trouble breathing, dizziness, or anything that feels unusual, please seek urgent care right away.&quot;
+&amp; BR() &amp; BR() &amp;
+&quot;Would you like me to help you schedule a quick follow‑up appointment with your clinician?&quot;</expression>
+    </formulas>
+    <formulas>
+        <name>DueDate</name>
+        <dataType>DateTime</dataType>
+        <expression>{!StartDate} + 1</expression>
+    </formulas>
+    <formulas>
+        <name>f_CleanJson</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE(
+  SUBSTITUTE(
+    SUBSTITUTE({!OutputJS}, &quot; &quot;, &quot;&quot;),
+  CHR(10), &quot;&quot;),
+CHR(13), &quot;&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>Manufacturer</name>
+        <dataType>String</dataType>
+        <expression>IF(
+  CONTAINS({!f_CleanJson}, &apos;&quot;Manufacturer&quot;:&quot;&apos;),
+  MID(
+    {!f_CleanJson},
+    /* start position, immediately after &quot;Manufacturer&quot;:&quot; */
+    FIND(&apos;&quot;Manufacturer&quot;:&quot;&apos;, {!f_CleanJson}) + 16,
+    /* length = position of very next quote after the value - start */
+    FIND(
+      &apos;&quot;&apos;,
+      {!f_CleanJson},
+      FIND(&apos;&quot;Manufacturer&quot;:&quot;&apos;, {!f_CleanJson}) + 16
+    )
+    -
+    (FIND(&apos;&quot;Manufacturer&quot;:&quot;&apos;, {!f_CleanJson}) + 16)
+  ),
+  &quot;&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>Product_Name</name>
+        <dataType>String</dataType>
+        <expression>IF(
+  CONTAINS({!OutputJS}, &apos;&quot;Product_Name&quot;&apos;),
+  MID(
+    {!OutputJS},
+    /* start at the first quote AFTER the colon that follows &quot;Product_Name&quot; */
+    FIND(
+      &apos;&quot;&apos;,
+      {!OutputJS},
+      FIND(&apos;:&apos;, {!OutputJS}, FIND(&apos;&quot;Product_Name&quot;&apos;, {!OutputJS}))
+    ) + 1,
+    /* length = next quote after start minus start */
+    FIND(
+      &apos;&quot;&apos;,
+      {!OutputJS},
+      FIND(
+        &apos;&quot;&apos;,
+        {!OutputJS},
+        FIND(&apos;:&apos;, {!OutputJS}, FIND(&apos;&quot;Product_Name&quot;&apos;, {!OutputJS}))
+      ) + 1
+    )
+    -
+    (
+      FIND(
+        &apos;&quot;&apos;,
+        {!OutputJS},
+        FIND(&apos;:&apos;, {!OutputJS}, FIND(&apos;&quot;Product_Name&quot;&apos;, {!OutputJS}))
+      ) + 1
+    )
+  ),
+  &quot;&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>Transmission_Status</name>
+        <dataType>String</dataType>
+        <expression>IF(
+  CONTAINS({!f_CleanJson}, &apos;&quot;Transmission_Status&quot;:&quot;&apos;),
+  MID(
+    {!f_CleanJson},
+    FIND(&apos;&quot;Transmission_Status&quot;:&quot;&apos;, {!f_CleanJson}) + 23,
+    FIND(
+      &apos;&quot;&apos;,
+      {!f_CleanJson},
+      FIND(&apos;&quot;Transmission_Status&quot;:&quot;&apos;, {!f_CleanJson}) + 23
+    ) -
+    (FIND(&apos;&quot;Transmission_Status&quot;:&quot;&apos;, {!f_CleanJson}) + 23)
+  ),
+  &quot;&quot;
+)</expression>
+    </formulas>
+    <interviewLabel>Create Service Appointment {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Create Service Appointment</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Service_Appointment</name>
+        <label>Create Service Appointment</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>AppointmentNumber</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>DueDate</field>
+            <value>
+                <elementReference>EndDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>EarliestStartTime</field>
+            <value>
+                <elementReference>StartDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ParentRecordId</field>
+            <value>
+                <elementReference>Get_AccountId_From_Contact.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>SchedStartTime</field>
+            <value>
+                <elementReference>StartDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Scheduled</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>Subject</elementReference>
+            </value>
+        </inputAssignments>
+        <object>ServiceAppointment</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_AccountId_From_Contact</name>
+        <label>Get AccountId From Contact</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>End_Date</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>contactId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Telemetry_Data</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>contactId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>EndDate</name>
+        <dataType>DateTime</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>JSON</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>OutputJS</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>RemoteDeviceSummary</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>StartDate</name>
+        <dataType>DateTime</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Subject</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>Remote Device Check Appointment</stringValue>
+        </value>
+    </variables>
+</Flow>

@@ -1,0 +1,38 @@
+{
+"records": [
+    {
+     "attributes": { "type": "PatientMedicalProcedure", "referenceId": "PatientMedicalProceedureRef1"  },
+      "Status": "Completed",
+      "StartDate": "2025-06-21T04:00:00.000+0000",
+      "EndDate": "2025-06-21T06:00:00.000+0000",
+      "CodeId": "@CodeSetBundleRef1",
+      "PatientId": "@personAccRef1"
+    },
+    {
+     "attributes": { "type": "PatientMedicalProcedure", "referenceId": "PatientMedicalProceedureRef2"  },   
+      "Status": "Completed",
+      "StartDate": "2026-03-04T15:30:00.000+0000",
+      "EndDate": "2026-03-04T16:00:00.000+0000",
+      "CodeId": "@CodeSetBundleRef2",
+      "PatientId": "@personAccRef1"
+    },
+    {
+     "attributes": { "type": "PatientMedicalProcedure", "referenceId": "PatientMedicalProceedureRef3"  },
+
+      "Status": "Completed",
+      "StartDate": "2026-03-02T05:00:00.000+0000",
+      "EndDate": "2026-03-02T16:30:00.000+0000",
+      "CodeId": "@CodeSetBundleRef3",
+      "PatientId": "@personAccRef2"
+    },
+    {
+     "attributes": { "type": "PatientMedicalProcedure", "referenceId": "PatientMedicalProceedureRef4"  },
+
+      "Status": "Completed",
+      "StartDate": "2026-02-13T17:00:00.000+0000",
+      "EndDate": "2026-02-13T18:30:00.000+0000",
+      "CodeId": "@CodeSetBundleRef4",
+      "PatientId": "@personAccRef2"
+    }
+  ]
+}

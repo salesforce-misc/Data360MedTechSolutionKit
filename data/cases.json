@@ -1,0 +1,116 @@
+{
+    "records": [
+    {
+      "attributes": {"type": "Case", "referenceId": "caseRef1"},
+      "Subject": "Inpatient Admission for Chest Pain Evaluation",
+      
+      "AccountId": "@personAccRef2",
+      "Type": "Admission",
+      "Description": "Admitted for chest pain evaluation; monitoring and diagnostics initiated to determine cause",
+      "Status": "Closed - Approved",
+      "Origin": "Web",
+      "Priority": "High"
+    },
+    {
+      "attributes": {"type": "Case", "referenceId": "caseRef2"},
+      "Subject": "Pre‑Authorization for Pacemaker Implant",
+      
+      "AccountId": "@personAccRef2",
+      "Type": "PreAuthorization",
+      "Description": "Requesting payer approval for pacemaker implant after hospital diagnostics confirmed symptomatic bradycardia with pauses.",
+      "Status": "Closed",
+      "Origin": "Web",
+      "Priority": "High"
+    },
+    {
+      "attributes": {"type": "Case", "referenceId": "caseRef3"},
+
+      "Subject": "Post-Implant Care Plan (Hospital-managed)",
+      
+      "AccountId": "@personAccRef2",
+      "Type": "CarePlan",
+      "Description": "Hospital‑managed post‑implant plan including remote check at 30 days and an in‑hospital device interrogation.",
+      "Status": "New",
+      "Origin": "Web",
+      "Priority": "Medium"
+    },
+    {
+        "attributes": {"type": "Case", "referenceId": "caseRef4"},
+      "Subject": "Medical Device Check (Pacemaker Interrogation)",
+      
+      "AccountId": "@personAccRef2",
+      "Type": "MedicalDeviceRequest",
+      "Description": "Patient reports dizziness; hospital device interrogation requested to review pacemaker activity.",
+      "Status": "New",
+      "Origin": "Email",
+      "Priority": "Medium"
+    },
+    {
+        "attributes": {"type": "Case", "referenceId": "caseRef5"},
+      "Subject": "Clinic Referral – In‑Clinic Device Interrogation Needed",
+     
+      "AccountId": "@personAccRef1",
+      "Type": "Admission",
+      "Description": "Clinic identified irregular transmissions; scheduling in‑clinic interrogation with device technician.",
+      "Status": "New",
+      "Origin": "System",
+      "Priority": "High"
+    },
+    {
+        "attributes": {"type": "Case", "referenceId": "caseRef6"},
+      "Subject": "RMA – Replace Defective Remote Monitor",
+     
+      "AccountId": "@personAccRef1",
+      "Type": "MedicalDeviceReturn",
+      "Description": "After troubleshooting, clinic approved RMA for remote monitor; issue return label and ship replacement.",
+      "Status": "New",
+      "Origin": "Web",
+      "Priority": "Medium"
+    },
+    {
+        "attributes": {"type": "Case", "referenceId": "caseRef7"},
+      "Subject": "Complaint – Power Adapter Running Hot",
+     
+      "AccountId": "@personAccRef1",
+      "Type": "Complaint",
+      "Description": "Patient reported home monitor adapter feels unusually warm; clinic to assess and advise replacement if needed.",
+      "Status": "New",
+      "Origin": "Email",
+      "Priority": "Medium"
+    },
+    {
+        "attributes": {"type": "Case", "referenceId": "caseRef8"},
+      "Subject": "Medical Device Check – Intermittent Sync Failures",
+     
+      "AccountId": "@personAccRef1",
+      "Type": "MedicalDeviceRequest",
+      "Description": "Clinic to review recent transmissions and run a remote device check due to intermittent monitor sync.",
+      "Status": "New",
+      "Origin": "Chat",
+      "Priority": "High"
+    },
+    {
+        "attributes": {"type": "Case", "referenceId": "caseRef9"},
+      "Subject": "Remote Monitor Setup Assistance",
+     
+      "AccountId": "@personAccRef1",
+      "Type": "MedicalDeviceRequest",
+      "Description": "Patient requested help pairing home monitor to pacemaker; clinic to guide setup and verify a test transmission.",
+      "Status": "New",
+      "Origin": "Phone",
+      "Priority": "Medium"
+    },
+    {
+        "attributes": {"type": "Case", "referenceId": "caseRef10"},
+
+      "Subject": "Clinic Follow‑Up Plan (Remote Monitoring)",
+     
+      "AccountId": "@personAccRef1",
+      "Type": "CarePlan",
+      "Description": "Enroll patient in clinic‑managed remote monitoring plan with 30‑day transmissions and quarterly device reviews.",
+      "Status": "New",
+      "Origin": "System",
+      "Priority": "Low"
+    }
+  ]
+}

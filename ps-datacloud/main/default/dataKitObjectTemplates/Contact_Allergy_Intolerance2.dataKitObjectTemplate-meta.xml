@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectTemplate xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <developerName xsi:nil="true"/>
+    <entityPayload>{&quot;relatedTargetFieldApiName&quot;:&quot;ssot__Id__c&quot;,&quot;sourceFieldApiName&quot;:&quot;Individual_Id__c&quot;,&quot;dataSpaceDevName&quot;:&quot;default&quot;,&quot;parentEntityApiName&quot;:&quot;Contact&quot;,&quot;childRelationshipName&quot;:&quot;Allergy_Intolerance&quot;,&quot;unifiedObjectLinkTableApiName&quot;:&quot;UnifiedLinkssotIndividualProd__dlm&quot;,&quot;relatedTargetEntityApiName&quot;:&quot;ssot__Individual__dlm&quot;,&quot;childEntityApiName&quot;:&quot;ssot__AllergyIntolerance__dlm&quot;,&quot;childRelationshipLabel&quot;:&quot;Allergy&quot;}</entityPayload>
+    <masterLabel>00Nak00003CGeFZ</masterLabel>
+    <parentDataPackageKitDefinitionName xsi:nil="true"/>
+    <sourceObject>00Nak00003CGeFZ</sourceObject>
+    <sourceObjectType>IRRelatedListEnrichment</sourceObjectType>
+    <templateVersion>1</templateVersion>
+</DataKitObjectTemplate>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlannerBundle xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <description>Deliver personalized customer interactions with an autonomous AI agent. Agentforce Service Agent intelligently supports your customers with common inquiries and escalates complex issues.</description>
+    <localActionLinks>
+        <genAiFunctionName>AnswerQuestionsWithKnowledge_16jak000001ZcWT</genAiFunctionName>
+    </localActionLinks>
+    <localTopicLinks>
+        <genAiPluginName>Patient_Follow_Up_Details_16jak000001ZcWT</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>Patient_Implant_Operation_Note_Retrieval_16jak000001ZcWT</genAiPluginName>
+    </localTopicLinks>
+    <localTopics>
+        <fullName>Patient_Follow_Up_Details_16jak000001ZcWT</fullName>
+        <canEscalate>false</canEscalate>
+        <description>This topic is to handle customer enquiries and action related to Patient Follow Up Plan Based on our Protocol Rule along with Task Creation</description>
+        <developerName>Patient_Follow_Up_Details_16jak000001ZcWT</developerName>
+        <genAiPluginInstructions>
+            <description>If customer ask about &quot;CREATE A FOLLOW-UP PLAN BASED ON OUR PROTOCOL.&quot; then always run the action  &quot;Patient Follow Up plans&quot; by passing &apos;Id&apos; as Id of current Record page. Display exact prompt response. 
+DO NOT SKIP OR HIDE ANY INFORMATION.DO NOT ADD ANY EXTRA WORDS.</description>
+            <developerName>instruction_1</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction 1</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>Patient_Follow_Up_plans_179ak000002VG0v</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>Patient_Follow_Up_plans_179ak000002VG0v</fullName>
+            <description>When patient ask about create a follow up plan based on our protocol then run this action and display the response</description>
+            <developerName>Patient_Follow_Up_plans_179ak000002VG0v</developerName>
+            <invocationTarget>Patient_Follow_Up_plans</invocationTarget>
+            <invocationTargetType>generatePromptResponse</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Patient_Follow_Up_plans</localDeveloperName>
+            <masterLabel>Patient Follow Up plans</masterLabel>
+            <source>Patient_Follow_Up_plans</source>
+        </localActions>
+        <localDeveloperName>Patient_Follow_Up_Details</localDeveloperName>
+        <masterLabel>Patient Follow Up Details</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>This topic is to handle customer enquiries and action related to Patient Follow Up Plan Based on our Protocol Rule along with Task Creation</scope>
+    </localTopics>
+    <localTopics>
+        <fullName>Patient_Implant_Operation_Note_Retrieval_16jak000001ZcWT</fullName>
+        <canEscalate>false</canEscalate>
+        <description>This topic is to handle customer enquiries and action related to PulseSync Medical - Implant Operation Note and SUMMARIZE THIS PATIENT’S LAST 30 DAYS.</description>
+        <developerName>Patient_Implant_Operation_Note_Retrieval_16jak000001ZcWT</developerName>
+        <genAiPluginInstructions>
+            <description>If customer ask about &quot;CAN YOU EXTRACT LEAD MODEL/SERIAL AND IMPLANT SITE?&quot; then run the action  &quot;Patient Implant Op Prompt&quot; by passing &apos;Id&apos; as Id of current Record page. Display exact prompt response. 
+DO NOT SKIP OR HIDE ANY INFORMATION.DO NOT ADD ANY EXTRA WORDS.</description>
+            <developerName>instructions_0_1773655772795</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1773655772795</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+        <genAiPluginInstructions>
+            <description>If customer ask about &quot;SUMMARIZE THIS PATIENT’S LAST 30 DAYS AND FLAG ANYTHING ABNORMAL&quot; then run the action &quot;Patient30DaysSummary&quot; by passing &apos;Id&apos; as Id of current Record page. Display exact prompt response. 
+DO NOT SKIP OR HIDE ANY INFORMATION.DO NOT ADD ANY EXTRA WORDS.</description>
+            <developerName>instructions_0_1773747533115</developerName>
+            <language>en_US</language>
+            <masterLabel>instructions_0_1773747533115</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>Patient_Implant_Op_Prompt_179ak000002U8qD</functionName>
+        </localActionLinks>
+        <localActionLinks>
+            <functionName>Patient30DaysSummary_179ak000002U8qD</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>Patient_Implant_Op_Prompt_179ak000002U8qD</fullName>
+            <description>Used to get the Patient OP Note based on Retrievers</description>
+            <developerName>Patient_Implant_Op_Prompt_179ak000002U8qD</developerName>
+            <invocationTarget>Patient_Implant_Op_Prompt</invocationTarget>
+            <invocationTargetType>generatePromptResponse</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Patient_Implant_Op_Prompt</localDeveloperName>
+            <masterLabel>Patient Implant Op Prompt</masterLabel>
+            <source>Patient_Implant_Op_Prompt</source>
+        </localActions>
+        <localActions>
+            <fullName>Patient30DaysSummary_179ak000002U8qD</fullName>
+            <description>Used to get the Patient Summary For Last 30 Days</description>
+            <developerName>Patient30DaysSummary_179ak000002U8qD</developerName>
+            <invocationTarget>Patient30DaysSummary</invocationTarget>
+            <invocationTargetType>generatePromptResponse</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Patient30DaysSummary</localDeveloperName>
+            <masterLabel>Patient30DaysSummary</masterLabel>
+            <source>Patient30DaysSummary</source>
+        </localActions>
+        <localDeveloperName>Patient_Implant_Operation_Note_Retrieval</localDeveloperName>
+        <masterLabel>Patient Implant Operation Note</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is only to assist customers with queries related to PulseSync Medical - Implant Operation Note and SUMMARIZE THIS PATIENT’S LAST 30 DAYS then perform/execute the associated action and display the response. You should not show or handle un-relevant information/topics or provide information outside of the Topic.</scope>
+    </localTopics>
+    <masterLabel>Clinician Copilot</masterLabel>
+    <plannerActions>
+        <fullName>AnswerQuestionsWithKnowledge_16jak000001ZcWT</fullName>
+        <description>Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: “What is your return policy?” “How do I fix an issue?” or “What features does a product have?”</description>
+        <developerName>AnswerQuestionsWithKnowledge_16jak000001ZcWT</developerName>
+        <invocationTarget>streamKnowledgeSearch</invocationTarget>
+        <invocationTargetType>standardInvocableAction</invocationTargetType>
+        <isConfirmationRequired>false</isConfirmationRequired>
+        <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+        <localDeveloperName>AnswerQuestionsWithKnowledge</localDeveloperName>
+        <masterLabel>Answer Questions with Knowledge</masterLabel>
+        <progressIndicatorMessage>Getting answers</progressIndicatorMessage>
+        <source>EmployeeCopilot__AnswerQuestionsWithKnowledge</source>
+    </plannerActions>
+    <plannerSurfaces>
+        <adaptiveResponseAllowed>true</adaptiveResponseAllowed>
+        <callRecordingAllowed>false</callRecordingAllowed>
+        <surface>SurfaceAction__Messaging</surface>
+        <surfaceType>Messaging</surfaceType>
+    </plannerSurfaces>
+    <plannerType>AiCopilot__ReAct</plannerType>
+</GenAiPlannerBundle>

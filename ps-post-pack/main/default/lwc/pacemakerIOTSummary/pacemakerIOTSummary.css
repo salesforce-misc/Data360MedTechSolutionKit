@@ -1,0 +1,44 @@
+.status{
+    border:1px solid black;
+    padding:6px;
+    margin:1rem 0.5rem;
+    border-radius:6px;
+    font-size:16px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.value-text{
+    font-size:12px;
+    font-weight:600;
+    white-space:nowrap;
+}
+
+.greenText{
+    color:green;
+    font-weight:bold;
+}
+
+.redText{
+    color:red;
+    font-weight:bold;
+}
+
+.greenBackground{
+    background:rgb(3,129,62);
+    color:white;
+}
+
+.redBackground{
+    background:rgb(180,0,0);
+    color:white;
+}
+
+.label-box{
+    padding:10px;
+    font-weight:bold;
+}
+
+.value-box{
+    padding:10px;
+}

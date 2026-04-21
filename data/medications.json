@@ -1,0 +1,39 @@
+{
+    "records": [
+    {
+     "attributes": { "type": "Medication", "referenceId": "MedicationRef1"  },
+      "MedicationCodeId": "@CodeSetBundleRef5",
+      "ExpirationDateTime": "2028-05-23T06:30:00.000+0000",
+      "Name": "Acetaminophen",
+      "Status": "Active"
+    },
+    {
+     "attributes": { "type": "Medication", "referenceId": "MedicationRef2"  },
+      "MedicationCodeId": "@CodeSetBundleRef6",
+      "ExpirationDateTime": "2028-05-13T06:30:00.000+0000",
+      "Name": "Keflex",
+      "Status": "Active"
+    },
+    {
+     "attributes": { "type": "Medication", "referenceId": "MedicationRef3"  },
+      "MedicationCodeId": "@CodeSetBundleRef7",
+      "ExpirationDateTime": "2028-05-13T06:30:00.000+0000",
+      "Name": "Cefazolin",
+      "Status": "Active"
+    },
+    {
+     "attributes": { "type": "Medication", "referenceId": "MedicationRef4"  },
+      "MedicationCodeId": "@CodeSetBundleRef8",
+      "ExpirationDateTime": "2028-05-13T06:30:00.000+0000",
+      "Name": "Vancomycin",
+      "Status": "Active"
+    },
+    {
+     "attributes": { "type": "Medication", "referenceId": "MedicationRef5"  },
+      "MedicationCodeId": "@CodeSetBundleRef9",
+      "ExpirationDateTime": "2028-05-13T06:30:00.000+0000",
+      "Name": "Ibuprofen",
+      "Status": "Active"
+    }
+  ]
+}

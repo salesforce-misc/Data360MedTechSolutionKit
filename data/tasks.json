@@ -1,0 +1,16 @@
+{
+"records": [
+    {
+      
+      "attributes": {
+                "type": "Task",
+                "referenceId": "taskRef"
+            },
+    "Subject": "Call",
+    "Status": "Not Started",
+    "Priority": "Normal",
+    "WhatId": "@personAccRef1", 
+    "ActivityDate": "2026-03-30"
+  }
+]
+}

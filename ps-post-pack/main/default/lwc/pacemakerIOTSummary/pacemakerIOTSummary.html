@@ -1,0 +1,54 @@
+<template>
+    <lightning-card title="Pacemaker IOT Summary">
+
+        <!-- Transmission Status -->
+        <template if:true={transmissionStatus}>
+            <p class={transmissionClass}>{transmissionStatus}</p>
+        </template>
+
+        <div class="column__2 slds-grid slds-wrap">
+
+            <div class="slds-col slds-size_1-of-2">
+                <div class="label-box">
+                    <p>Last Transmission:</p>
+                </div>
+                <div class="value-box">
+                    <p class="value-text">{formattedLastTransmission}</p>
+                </div>
+            </div>
+
+            <div class="slds-col slds-size_1-of-2">
+                <div class="label-box">
+                    <p>Battery Score:</p>
+                </div>
+                <div class="value-box">
+                    <p class="value-text">{Battery_Score}</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="column__1 slds-grid slds-wrap">
+
+            <div class="slds-col slds-size_1-of-2">
+                <div class="label-box">
+                    <p>Atrial Risk:</p>
+                </div>
+                <div class="value-box">
+                    <p class={atrialRiskClass}>{Atrial_Risk_Score}</p>
+                </div>
+            </div>
+
+            <div class="slds-col slds-size_1-of-2">
+                <div class="label-box">
+                    <p>Pacing Performance:</p>
+                </div>
+                <div class="value-box">
+                    <p class={pacingClass}>{Pacing_Performance_Score}</p>
+                </div>
+            </div>
+
+        </div>
+
+    </lightning-card>
+</template>

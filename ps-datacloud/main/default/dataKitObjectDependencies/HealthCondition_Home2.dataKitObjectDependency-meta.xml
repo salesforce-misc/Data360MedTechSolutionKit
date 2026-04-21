@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectDependency xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataPackageKitDef>Data360MedTechSolutionKit</dataPackageKitDef>
+    <developerName>HealthCondition_Home2</developerName>
+    <masterLabel>HealthCondition_Home__dll</masterLabel>
+    <sourceObject>HealthCondition_Home3</sourceObject>
+    <sourceObjectType>DataSourceObject</sourceObjectType>
+    <targetObject>HealthCondition_Home2</targetObject>
+</DataKitObjectDependency>

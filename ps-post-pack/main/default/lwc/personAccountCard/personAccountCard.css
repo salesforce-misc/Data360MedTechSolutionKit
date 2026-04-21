@@ -1,0 +1,120 @@
+:host {
+    --primary-color: #00373e;
+
+    --slds-g-color-neutral-base-10: var(--primary-color);
+    --slds-g-color-neutral-base-30: var(--primary-color);
+    --slds-g-color-border-base-1: var(--primary-color);
+    --sds-c-icon-color-foreground: var(--primary-color);
+
+    display: block;
+    overflow: hidden;
+}
+
+/* Card */
+.profile-card {
+    background-color: #bddad7;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 16px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 70px;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.location {
+    font-size: 13px;
+    color: #555;
+}
+
+/* Content */
+.content-section {
+    padding-top: 10px;
+}
+
+/* Rows */
+.info-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 6px 0;
+}
+
+.info-content {
+    margin-left: 4px;
+    line-height: 1.4;
+}
+
+/* Labels */
+.info-content span:first-child {
+    font-size: 12.5px;
+    color: #6b6b6b;
+    font-weight: 500;
+}
+
+/* Values */
+.value-text {
+    margin-left: 6px;
+    font-weight: 400;   /* ✅ normal like address */
+    color: #2d2c2c;     /* same tone as address */
+}
+
+/* Address */
+.address-text {
+    font-size: 13px;
+    margin-top: 3px;
+    line-height: 1.4;
+    color: #2d2c2c;
+}
+
+/* Divider */
+.custom-hr {
+    margin: 10px 0;
+    border-top: 1px solid #d8dde6;
+}
+
+/* Icon alignment */
+lightning-icon {
+    margin-top: 2px;
+}
+
+/* No data */
+.no-data-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+.no-data-text {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+.link-text {
+    margin-left: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #0176d3;   /* Salesforce blue */
+    text-decoration: none;
+}
+
+.link-text:hover {
+    text-decoration: underline;
+}

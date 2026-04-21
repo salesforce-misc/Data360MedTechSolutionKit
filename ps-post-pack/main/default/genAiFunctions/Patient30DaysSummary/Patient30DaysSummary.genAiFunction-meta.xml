@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Used to get the Patient Summary For Last 30 Days</description>
+    <developerName>Patient30DaysSummary</developerName>
+    <invocationTarget>Patient30DaysSummary</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <localDeveloperName>Patient30DaysSummary</localDeveloperName>
+    <masterLabel>Patient30DaysSummary</masterLabel>
+</GenAiFunction>

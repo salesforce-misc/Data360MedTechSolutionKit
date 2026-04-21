@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>Ekk3YHLs3rO/uHnUAkPFDLsTgfQE4u/XXlsB6BS2Hgc=_4</activeVersionIdentifier>
+    <developerName>PatientSummary60Days</developerName>
+    <masterLabel>PatientSummary60Days</masterLabel>
+    <overridable>false</overridable>
+  
+    <templateVersions>
+        <content>Objective: You are an AI expert, helping patient about providing last 6 month summary based on the telemetry date and cased history and patient notes.
+
+Prompt Instructions:
+1. Patient Question: {!$Input:Question}
+2. Invoke apex class {!$Apex:getStructuredData.Structured_Data} by passing AccountId = {!$Input:Id} and RequestType = {!$Input:RequestType}(Always consider SummarizePrimaryCareDoctor)
+-Retrieved the return value from the  apex class as Patient_Name(Use the actual value, Do not placeholder)
+Telemetry Data(All the fields)
+Case History(All the fields)
+3. Use  ADL_PATIENT_CLINIC to get and identify Medical - Clinical Follow Up Note details.
+4. Format the response as :
+-Always use REAL values returned from Apex.Do Not use placeholders.
+-Do not use labels such as “Product_Name:”, “Episode_Type”,&quot;PulseSync Medical&quot; etc.
+- Do not display Patient_Name, Date of birth, Hospital Name
+-Replace the internal term “telemetry data” with the patient‑understandable term “pacemaker  telemetry data”
+-Use complete, grammatically correct sentences
+-Language must be clear and understandable by a patient
+-Summarize the Patient clinician history by using retrieved information from apex class as Telemetry Data and Case History and retriever information as Medical - Clinical Follow Up Note.
+Rules:
+1. Do not display in JSON Format.
+2. Your tone should be friendly as you are speaking with patient.
+3.Use the only  retrieved information from apex class and retriever.
+4. Do not skip, shorten, summarize, merge, reorder, or paraphrase any information. 
+5.Do not display any extra information or any extra word.
+6. Do not display any extra headings, labels, sections, or additional words beyond what is specified.
+7. Do not ask any follow up questions.
+</content>
+        <inputs>
+            <apiName>Question</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Question</masterLabel>
+            <referenceName>Input:Question</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Id</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Id</masterLabel>
+            <referenceName>Input:Id</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>RequestType</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>RequestType</masterLabel>
+            <referenceName>Input:RequestType</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://getStructuredData</definition>
+            <description>Handles multiple request types</description>
+            <label>Get Structured Device Data</label>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>AccountId</parameterName>
+                <valueExpression>{!$Input:Id}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>false</isRequired>
+                <parameterName>RequestType</parameterName>
+                <valueExpression>{!$Input:RequestType}</valueExpression>
+            </parameters>
+            <referenceName>Apex:getStructuredData</referenceName>
+        </templateDataProviders>
+        
+        <versionIdentifier>Ekk3YHLs3rO/uHnUAkPFDLsTgfQE4u/XXlsB6BS2Hgc=_4</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

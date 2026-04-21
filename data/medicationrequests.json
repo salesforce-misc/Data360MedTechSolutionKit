@@ -1,0 +1,45 @@
+{
+    "records": [
+    {
+    "attributes":{ "type":"MedicationRequest", "referenceId":"MedicationRequestRef1" },
+      "PatientId": "@personAccRef1",
+      "Status": "Active",
+      "MedicationId": "@MedicationRef1",
+      "PrescribedDate": "2026-03-03T15:30:00.000+0000",
+      "Type": "Order"
+    },
+    {
+    "attributes":{ "type":"MedicationRequest", "referenceId":"MedicationRequestRef2" },
+      "PatientId": "@personAccRef1",
+      "Status": "Active",
+      "MedicationId": "@MedicationRef2",
+      "PrescribedDate": "2026-03-03T16:30:00.000+0000",
+      "Type": "Order"
+    },
+    {
+    "attributes":{ "type":"MedicationRequest", "referenceId":"MedicationRequestRef3" },
+      "PatientId": "@personAccRef2",
+      "Status": "Active",
+      "MedicationId": "@MedicationRef3",
+      "PrescribedDate": "2026-03-03T15:30:00.000+0000",
+      "Type": "Order"
+    },
+    {
+    "attributes":{ "type":"MedicationRequest", "referenceId":"MedicationRequestRef4" },
+
+      "PatientId": "@personAccRef2",
+      "Status": "Active",
+      "MedicationId": "@MedicationRef4",
+      "PrescribedDate": "2026-03-03T16:30:00.000+0000",
+      "Type": "Order"
+    },
+    {
+    "attributes":{ "type":"MedicationRequest", "referenceId":"MedicationRequestRef5" },
+      "PatientId": "@personAccRef2",
+      "Status": "Completed",
+      "MedicationId": "@MedicationRef5",
+      "PrescribedDate": "2026-02-17T15:30:00.000+0000",
+      "Type": "Proposal"
+    }
+  ]
+}

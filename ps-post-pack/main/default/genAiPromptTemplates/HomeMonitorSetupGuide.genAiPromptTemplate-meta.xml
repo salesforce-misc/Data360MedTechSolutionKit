@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>Ekk3YHLs3rO/uHnUAkPFDLsTgfQE4u/XXlsB6BS2Hgc=_7</activeVersionIdentifier>
+    <developerName>HomeMonitorSetupGuide</developerName>
+    <masterLabel>HomeMonitorSetupGuide</masterLabel>
+    <overridable>false</overridable>
+ 
+    <templateVersions>
+        <content>Objective: You are an AI assistant helping patients withHome Monitor setup details  based on the RequestType.
+
+Prompt Instructions:
+1. When Patient ask Question: {!$Input:Question}
+2.  If  {!$Input:RequestType} == &quot;HomeMonitor&quot; then strictly follow these instructions:
+1.Invoke apex class  {!$Apex:getStructuredData.Structured_Data} by passing AccountId = {!$Input:AccountId} and RequestType= {!$Input:RequestType}(Always consider HomeMonitor value)
+-Retrieve and store  the return value from JSON of apex class :
+Patient_Name (always use real value, no placeholders,not masked values)
+Product_Name
+Monitor_Modal
+Device_Type
+OS_Version
+2.Please look at the following information to answer the patient {!$Input:Question} : ADL_PACEMAKER_IMPLANT and identify exact Remote Monitoring Hub(Home Monitor) details.
+3.Display the output(response) in below exact order:
+a. First Line (Mandatory):
+-Begin the response with one single sentence.
+-Always use REAL values returned from Apex.Do Not use placeholders.
+-Construct the sentence using only the exact values provided in the patient profile. Do not replace or infer any values.
+-Do not use labels such as “Product Name:”, “Monitor Modal:”, etc.
+-Use this exact sentence structure:
+You are using a Product_Name with model number Monitor_Modal on a Device_Type device running OS_Version.
+b. Remaining Content (Mandatory)
+- Display retrieved from retriever about Remote Monitoring Hub(Home Monitor ) section.
+-Start from “What You Need Before Setup”.
+-End at: Step-by-Step Setup Instructions
+-Labels always display in Bold
+-Do not merge any contents.
+-Display the content exactly as retrieved.
+
+5. Rules :
+1. Do not display in JSON Format.
+2. Your tone should be friendly as you are speaking with patient.
+3.Use the retrieved information from apex class and retriever.
+4. Do not skip, shorten, summarize, merge, reorder, or paraphrase any information. 
+5.Do not display any extra information or any extra word.
+6. Do not display any extra headings, labels, sections, or additional words beyond what is specified.
+7. Do not ask any follow up questions.
+</content>
+        <inputs>
+            <apiName>AccountId</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>AccountId</masterLabel>
+            <referenceName>Input:AccountId</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>RequestType</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>RequestType</masterLabel>
+            <referenceName>Input:RequestType</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>Question</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Question</masterLabel>
+            <referenceName>Input:Question</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://getStructuredData</definition>
+            <description>Handles multiple request types</description>
+            <label>Get Structured Device Data</label>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>AccountId</parameterName>
+                <valueExpression>{!$Input:AccountId}</valueExpression>
+            </parameters>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>false</isRequired>
+                <parameterName>RequestType</parameterName>
+                <valueExpression>{!$Input:RequestType}</valueExpression>
+            </parameters>
+            <referenceName>Apex:getStructuredData</referenceName>
+        </templateDataProviders>
+        
+        <versionIdentifier>Ekk3YHLs3rO/uHnUAkPFDLsTgfQE4u/XXlsB6BS2Hgc=_7</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

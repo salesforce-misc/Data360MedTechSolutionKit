@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectTemplate xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <developerName xsi:nil="true"/>
+    <entityPayload>{&quot;connection&quot;:{&quot;connectorType&quot;:&quot;UploadedFiles&quot;,&quot;method&quot;:&quot;Ingress&quot;,&quot;credentials&quot;:[],&quot;lastModifiedDate&quot;:&quot;2026-03-06T04:45:36.000Z&quot;,&quot;editable&quot;:false,&quot;connectorLabel&quot;:&quot;File Upload&quot;,&quot;deletable&quot;:false,&quot;label&quot;:&quot;UploadedFiles&quot;,&quot;params&quot;:[],&quot;url&quot;:&quot;/services/data/v66.0/ssot/connections/9cgak000000kTILAA2&quot;,&quot;createdDate&quot;:&quot;2026-03-06T04:45:35.000Z&quot;,&quot;name&quot;:&quot;UploadedFiles&quot;,&quot;namespace&quot;:&quot;&quot;,&quot;iconUrl&quot;:&quot;/cdp/images/connectors/UploadedFiles.svg&quot;,&quot;id&quot;:&quot;9cgak000000kTILAA2&quot;,&quot;syncStatus&quot;:&quot;None&quot;,&quot;status&quot;:&quot;Active&quot;}}</entityPayload>
+    <masterLabel>UploadedFiles</masterLabel>
+    <parentDataPackageKitDefinitionName xsi:nil="true"/>
+    <sourceObject>UploadedFiles</sourceObject>
+    <sourceObjectType>MktDataConnection</sourceObjectType>
+    <templateVersion>2</templateVersion>
+</DataKitObjectTemplate>

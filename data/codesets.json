@@ -1,0 +1,184 @@
+{
+    "records": [
+    {
+      "attributes": {
+        "type": "Codeset",
+        "referenceId": "codesetRef1"
+      },
+      "Name": "Pacemaker Implantation",
+      "Code": 33206,
+      "IsActive": true,
+      "CodeDescription": "Transvenous pacemaker implantation under local anesthesia with sedation; leads advanced via subclavian/cephalic vein into the right atrium/ventricle under fluoroscopy and connected to a pulse generator placed in a subcutaneous or subpectoral pocket in the upper chest (typical procedure time ~1–2 hours)"
+    },
+    {
+      "attributes": {
+        "type": "Codeset",
+        "referenceId": "codesetRef2"
+      },
+      "Name": "Remote Monitoring",
+      "Code": 93294,
+      "IsActive": true,
+      "CodeDescription": "Scheduled and event‑driven remote pacemaker/device interrogations via a secure home transmitter or mobile gateway; automated transmission of rhythm data, battery status, and lead performance with clinician alerts—reducing routine in‑clinic visits."
+    },
+    {
+      "attributes": {
+        "type": "Codeset",
+        "referenceId": "codesetRef3"
+      },
+      "Name": "Generator Placement",
+      "Code": 33227,
+      "IsActive": true,
+      "CodeDescription": "Creation of a subcutaneous/subpectoral pocket in the upper chest and placement of the pacemaker pulse generator (can) with attachment to transvenous leads; wound closed with sterile dressing. (Use when documenting initial generator placement or pocket creation.)"
+    },
+    {
+      "attributes": {
+        "type": "Codeset",
+        "referenceId": "codesetRef4"
+      },
+      "Name": "Appendix Removal Surgery",
+      "Code": 44970,
+      "IsActive": true,
+      "CodeDescription": "Appendectomy under general anesthesia—typically laparoscopic (3 small ports) or open if indicated; inflamed/infected appendix ligated and removed, peritoneal cavity irrigated as needed, and specimen sent to pathology; most uncomplicated cases discharged within 24–48 hours."
+    },
+    {
+      "attributes": {
+        "type": "Codeset",
+        "referenceId": "codesetRef5"
+      },
+      "Name": "Acetaminophen",
+      "Code": "NDC: 69618‑011‑01",
+      "IsActive": true,
+      "CodeDescription": "Relieves mild‑to‑moderate post‑procedure pain and helps reduce fever; commonly used after surgery because it does not increase bleeding risk."
+    },
+    {
+      "attributes": {
+        "type": "Codeset",
+        "referenceId": "codesetRef6"
+      },
+      "Name": "Keflex",
+      "Code": "NDC: 80425‑0121‑3",
+      "IsActive": true,
+      "CodeDescription": "An oral antibiotic used to treat bacterial skin or wound infections by killing or stopping the growth of bacteria; prescribed only if an incision shows infection signs"
+    },
+    {
+      "attributes": {
+        "type": "Codeset",
+        "referenceId": "codesetRef7"
+      },
+      "Name": "Cefazolin",
+      "Code": "NDC: 0338‑3508‑41",
+      "IsActive": true,
+      "CodeDescription": "Cefazolin is an intravenous antibiotic routinely given before or shortly after pacemaker or generator replacement to prevent surgical‑site infection."
+    },
+    {
+      "attributes": {
+        "type": "Codeset",
+        "referenceId": "codesetRef8"
+      },
+      "Name": "Vancomycin",
+      "Code": "NDC: 70594‑042‑01",
+      "IsActive": true,
+      "CodeDescription": "Used in patients allergic to penicillin/cephalosporins to prevent surgical‑site infection."
+    },
+    {
+      "attributes": {
+        "type": "Codeset",
+        "referenceId": "codesetRef9"
+      },
+      "Name": "Ibuprofen",
+      "Code": "NDC: 69168‑467‑01",
+      "IsActive": true,
+      "CodeDescription": "Relieve mild to moderate post‑surgical pain and reduce inflammation after an appendectomy."
+    },
+    {
+      "attributes": {
+        "type": "Codeset",
+        "referenceId": "codesetRef10"
+      },
+      "Name": "Peanut Allergy",
+      "Code": "Z91.010",
+      "IsActive": true,
+      "CodeDescription": "Allergy to peanuts"
+    },
+    {
+      "attributes": {
+        "type": "Codeset",
+        "referenceId": "codesetRef11"
+      },
+      "Name": "Penicillin Allergy",
+      "Code": "Z88.0",
+      "IsActive": true,
+      "CodeDescription": "Allergy status to penicillin drug"
+    },
+    {
+      "attributes": {
+        "type": "Codeset",
+        "referenceId": "codesetRef12"
+      },
+      "Name": "Dust Mite Allergy",
+      "Code": "J30.89",
+      "IsActive": true,
+      "CodeDescription": "Other allergic rhinitis"
+    },
+    {
+      "attributes": {
+        "type": "Codeset",
+        "referenceId": "codesetRef13"
+      },
+      "Name": "Milk Allergy",
+      "Code": "Z91.011",
+      "IsActive": true,
+      "CodeDescription": "Allergy to milk products"
+    },
+    {
+      "attributes": {
+        "type": "Codeset",
+        "referenceId": "codesetRef14"
+      },
+      "Name": "Shellfish Allergy",
+      "Code": "Z91.013",
+      "IsActive": true,
+      "CodeDescription": "Allergy to shellfish"
+    },
+    {
+      "attributes": {
+        "type": "Codeset",
+        "referenceId": "codesetRef15"
+      },
+      "Name": "High Blood Pressure",
+      "Code": "I10",
+      "IsActive": true,
+      "CodeDescription": "A chronic cardiovascular condition where blood pressure is consistently elevated, increasing strain on the arteries and heart. This form of hypertension has no identifiable secondary cause and is the most common type managed in U.S. clinical practice. It is a significant risk factor for stroke, kidney disease, and heart failure."
+    },
+    {
+      "attributes": {
+        "type": "Codeset",
+        "referenceId": "codesetRef16"
+      },
+      "Name": "Bradycardia",
+      "Code": "R00.1",
+      "IsActive": true,
+      "CodeDescription": "A cardiac rhythm disorder characterized by an abnormally slow heart rate, typically below 60 beats per minute. Bradycardia may be caused by aging of the conduction system, medication effects, or underlying heart disease. Depending on severity, it can lead to fatigue, dizziness, or in some cases require pacemaker evaluation."
+    },
+    {
+      "attributes": {
+        "type": "Codeset",
+        "referenceId": "codesetRef17"
+      },
+      "Name": "Type 2 diabetes",
+      "Code": "E11.9",
+      "IsActive": true,
+      "CodeDescription": "A long‑term metabolic disorder in which the body becomes resistant to insulin or does not produce enough to maintain normal glucose levels. Type 2 diabetes is commonly associated with obesity, lifestyle factors, and genetic predisposition. Without proper management, it can lead to cardiovascular disease, neuropathy, kidney damage, and vision problems."
+    },
+    {
+      "attributes": {
+        "type": "Codeset",
+        "referenceId": "codesetRef18"
+      },
+      "Name": "Congestive Heart Failure",
+      "Code": "I50.9",
+      "IsActive": true,
+      "CodeDescription": "A chronic, progressive condition where the heart cannot pump blood effectively to meet the body’s needs. This leads to symptoms such as shortness of breath, fatigue, and fluid retention. While the code is unspecified, it is commonly used when documentation does not specify whether the failure is systolic, diastolic, or combined. CHF often arises from long‑standing hypertension or ischemic heart disease."
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+     "records": [
+    {
+      "attributes": {
+                "type": "Product2",
+                "referenceId": "productRef1"
+            },
+      "Name": "Dual Chamber MRI Surescan Pacemaker",
+      "ProductCode": "W1DR01",
+      "Family": "Pacemakers",
+      "IsActive": true,
+      "StockKeepingUnit": "SN-9W4MM336",
+      "Product_Feature__c": "• Dual‑chamber pacing for atrial and ventricular coordination\n• Wireless connectivity for configuration and monitoring\n• Algorithms for atrial fibrillation identification and rhythm support\n• Pacing‑minimization technology to reduce ventricular pacing\n• Energy‑optimized electronics for extended longevity\n• MRI‑compatible at 1.5T/3T (under approved conditions)",
+      "Product_Maintenance_Safety__c": "•Adhere to MRI SureScan conditions before scanning\n• Monitor replacement indicators (RRT → ERI → EOS)\n•Verify atrial and ventricular lead integrity and thresholds; utilize Capture Management\n•Enable alert settings to support timely clinical follow‑up",
+      "Device_Type__c": "iOS",
+      "OS_Version__c": "iOS 17.2",
+      "Description": "Dual Chamber MRI Surescan Pacemaker is a DUAL‑CHAMBER (DR) system that supports synchronized atrial and ventricular pacing. It features  wireless technology for tablet‑based programming and app‑based remote monitoring, exclusive AF management algorithms, MVP™ to minimize unnecessary RV pacing, enhanced hardware for extended longevity, and full MRI SureScan compatibility (1.5T/3T)."
+    },
+    {
+      "attributes": {
+                "type": "Product2",
+                "referenceId": "productRef2"
+            },
+      "Name": "Single Chamber MRI Surescan Pacemaker",
+      "Family": "Pacemakers",
+      "ProductCode": "W1SR01",
+      "IsActive": true,
+      "StockKeepingUnit": "SN-STR9YKHX",
+      "Product_Feature__c": "• Single‑chamber ventricular pacing\n• Wireless connectivity for programming and monitoring\n• High‑accuracy atrial fibrillation episode detection\n• Algorithms designed to reduce pacing burden\n• Power‑efficient circuitry for prolonged device life\n• MRI‑compatible at 1.5T/3T (under approved conditions)",
+      "Product_Maintenance_Safety__c": "•Follow MRI SureScan™ scanning conditions as per technical manual\n•Monitor battery status (RRT/ERI/EOS) during follow‑up\n•Review lead impedance and capture thresholds; use Capture Management™ where applicable\n•Configure CareAlert™ notifications for events (e.g., AT/AF burden, low battery, lead impedance)",
+      "Device_Type__c": "iOS",
+      "OS_Version__c": "iOS 17.2",
+      "Description": "Single Chamber MRI Surescan Pacemakeris a SINGLE‑CHAMBER (SR) cardiac pacing system that delivers reliable right‑ventricular pacing. It incorporates  wireless technology for tablet‑based programming and app‑based remote monitoring, includes exclusive algorithms to detect and help manage atrial fibrillation, minimizes unnecessary RV pacing with MVP, improves longevity via optimized hardware architecture, and is MRI SureScan compatible (1.5T/3T)."
+    },
+    {
+      "attributes": {
+                "type": "Product2",
+                "referenceId": "productRef3"
+            },
+      "Name": "Leadless Pacemaker AV Synchronous",
+      "ProductCode": "MC2AVR1",
+      "Family": "Pacemakers",
+      "IsActive": true,
+      "StockKeepingUnit": "SN-JTZYVFV5",
+      "Product_Feature__c": "• Ultra‑small capsule design (~0.8 mL volume, ~1.75 g mass)\n• Atrial mechanical‑sensing algorithms for AV synchrony\n• MRI‑conditional labeling for 1.5T and 3T scanners\n• Long‑term device longevity with remote follow‑up capability",
+      "Product_Maintenance_Safety__c": "• Store/handle within labeled environmental ranges\n• Use approved programming equipment for follow‑ups\n• Observe MRI conditions specified for the device\n• Device is single‑use, sterile, and traceable via UDI",
+      "Device_Type__c": "iOS",
+      "OS_Version__c": "iOS 17.2",
+      "Description": "A self‑contained, miniaturized pacemaker implanted directly into the right ventricle using a transcatheter delivery system. It provides AV‑synchronous ventricular pacing using internal sensors and algorithms that detect atrial mechanical activity. Its leadless design eliminates complications related to leads or surgical pockets, offering a minimally invasive option for bradycardia therapy."
+    },
+    {
+      "attributes": {
+                "type": "Product2",
+                "referenceId": "productRef4"
+            },
+      "Name": "Cardiac Home Monitor",
+      "Family": "Remote Monitor",
+      "ProductCode": 24950,
+      "IsActive": true,
+      "StockKeepingUnit": "SN-R23J6PZ2",
+      "Product_Feature__c": "• LCD‑guided setup and transmission workflow\n• Supports both wand‑based and wireless device communication\n• Designed for automatic scheduled nightly transmissions\n• Visual/audible confirmations for completed data transfers",
+      "Product_Maintenance_Safety__c": "• Keep device plugged in continuously\n• Ensure adequate cellular signal strength at the bedside\n• Follow environmental guidelines (dry area, stable surface)\n• Device is prescription‑only and must be used as directed",
+      "Device_Type__c": "iOS",
+      "OS_Version__c": "iOS 17.2",
+      "Description": "A bedside cardiac data‑transmission unit designed to collect information from an implanted heart device through a reader wand or wireless telemetry. It enables routine, automated transfer of cardiac rhythm data to a secure remote‑monitoring network, supporting early detection of arrhythmias, device performance issues, and patient clinical changes. The system is intended for use in a home environment, providing continuous connectivity between the patient and their care team."
+    },
+    {
+      "attributes": {
+                "type": "Product2",
+                "referenceId": "productRef5"
+            },
+      "Name": "Cardiac Remote Monitoring App",
+      "ProductCode": "Mobile app",
+      "Family": "Remote Monitoring Mobile App",
+      "IsActive": true,
+      "StockKeepingUnit": "SKU-Heart1234",
+      "Product_Feature__c": "• Automatic and on‑demand transmissions\n• Connectivity dashboard and status indicators\n• Displays key device parameters (battery estimation, activity trends)\n• Available via major app stores (OS/version requirements apply)",
+      "Product_Maintenance_Safety__c": "• Keep the mobile device’s OS updated for compatibility\n• Maintain Bluetooth® and internet availability\n• Protect phone with security features (PIN, encryption)\n• Coordinate enrollment with clinic before first use",
+      "Device_Type__c": "iOS",
+      "OS_Version__c": "iOS 17.2",
+      "Description": "A smartphone‑based remote monitoring platform that connects to an implanted cardiac device using Bluetooth telemetry. It securely transmits device diagnostics, rhythm data, activity indicators, and connectivity status to a remote monitoring network. The app also provides patient‑friendly insights, reminders, and alerts to help maintain continuous monitoring compliance."
+    },
+    {
+      "attributes": {
+                "type": "Product2",
+                "referenceId": "productRef6"
+            },
+      "Name": "Lead Stylets",
+      "ProductCode": 6490,
+      "Family": "Pacing Accessories",
+      "IsActive": true,
+      "StockKeepingUnit": "SN-ESYPLKZQ",
+      "Product_Feature__c": "• Straight, J‑shaped, and tapered variants\n• Multiple stiffness levels for anatomical flexibility\n• Color indicators for size and stiffness identification\n• Sterile, single‑use components",
+      "Product_Maintenance_Safety__c": "• Do not re‑use or resterilize\n• Match stylet to compatible lead models\n• Maintain controlled handling to avoid lead damage",
+      "Device_Type__c": "iOS",
+      "OS_Version__c": "iOS 17.2",
+      "Description": "Thin, shapeable metal guide wires inserted into transvenous pacing leads to provide stiffness and directional control during implant. They assist the clinician in navigating cardiac anatomy and achieving stable lead positioning. Different geometries such as straight or atrial‑J configurations allow tailored navigation for specific chambers or pathways."
+    },
+    {
+      "attributes": {
+                "type": "Product2",
+                "referenceId": "productRef7"
+            },
+      "Name": "Lead Introducer System",
+      "ProductCode": 405120,
+      "Family": "Pacing Accessories",
+      "IsActive": true,
+      "StockKeepingUnit": "SN-BXUPCRJY",
+      "Product_Feature__c": "• Hemostatic valve to reduce air and blood exposure\n• Smooth dilator transition for atraumatic vessel entry\n• Peel‑away wings for controlled removal\n• Color‑coded French sizing",
+      "Product_Maintenance_Safety__c": "• Single‑use only\n• Use in compliant sterile environments\n• Follow anticoagulation and hemostasis best practices",
+      "Device_Type__c": "iOS",
+      "OS_Version__c": "iOS 17.2",
+      "Description": "A sterile introducer sheath with an integrated hemostatic valve and peelable design used to access the venous system during cardiac lead or catheter implantation. The valve minimizes backflow and air ingress, while the peel‑away sheath enables removal without disturbing the positioned lead. It is a key tool in ensuring safe, efficient venous entry during cardiac rhythm device procedures."
+    },
+    {
+      "attributes": {
+                "type": "Product2",
+                "referenceId": "productRef8"
+            },
+      "Name": "Lead Fixation",
+      "ProductCode": "LS‑15",
+      "Family": "Pacing Accessories",
+      "IsActive": true,
+      "StockKeepingUnit": "SN-VSSFYB6N",
+      "Product_Feature__c": "• Long‑term biocompatible silicone\n• Multiple sizing options for different lead types\n• Supports secure fixation and strain relief",
+      "Product_Maintenance_Safety__c": "• Verify proper sizing prior to implantation\n• Maintain sterile field and correct suture technique\n• Follow implant protocol for placement",
+      "Device_Type__c": "iOS",
+      "OS_Version__c": "iOS 17.2",
+      "Description": "Implantable silicone sleeves positioned around the proximal portion of a pacing or defibrillator lead to secure it with sutures. These sleeves provide strain relief at the venous entry point or pocket, minimizing traction forces on the implanted lead. Proper fixation reduces the risk of dislodgement and enhances long‑term lead stability."
+    },
+    {
+      "attributes": {
+                "type": "Product2",
+                "referenceId": "productRef9"
+            },
+      "Name": "Lead Adapters",
+      "ProductCode": "DF4",
+      "Family": "Pacing Accessories",
+      "IsActive": true,
+      "StockKeepingUnit": "SN-UBHRTQNS",
+      "Product_Feature__c": "• Multiple connector standards (IS‑1, IS4/DF4, LV‑1)\n• Measurement adapters for temporary testing\n• Available as unipolar or bipolar configurations",
+      "Product_Maintenance_Safety__c": "• Confirm compatibility before use\n• Follow torque and locking instructions\n• Maintain sterility and use as single‑use components",
+      "Device_Type__c": "iOS",
+      "OS_Version__c": "iOS 17.2",
+      "Description": "Mechanical and electrical interface components used to connect pacing or defibrillation leads of different connector standards. Adapters enable compatibility during generator replacement, system upgrades, or diagnostic testing. Lead extensions provide additional length when required for routing or repositioning."
+    },
+    {
+      "attributes": {
+                "type": "Product2",
+                "referenceId": "productRef10"
+            },
+      "Name": "Guide Wire",
+      "ProductCode": 352023,
+      "Family": "Pacing Accessories",
+      "IsActive": true,
+      "StockKeepingUnit": "SN-52KQB3K6",
+      "Product_Feature__c": "• Slim profile for accessing narrow coronary veins\n• Conductive capability for threshold testing/temporary pacing\n• Typically ~175 cm working length\n• Packaged sterile and intended for single use",
+      "Product_Maintenance_Safety__c": "• Avoid reuse to prevent contamination or mechanical failure\n• Use compatible analyzers/leads per IFU\n• Maintain fluoroscopic guidance during manipulation",
+      "Device_Type__c": "iOS",
+      "OS_Version__c": "iOS 17.2",
+      "Description": "A thin (0.014 in), flexible guide wire engineered for navigating the coronary venous system during cardiac resynchronization therapy lead placement. Its design supports probing of venous anatomy, performing intraoperative electrical measurements, and enabling precise over‑the‑wire lead delivery into the target vein. The wire's characteristics assist clinicians in overcoming tortuous venous pathways encountered during CRT implants."
+    },
+    {
+      "attributes": {
+                "type": "Product2",
+                "referenceId": "productRef11"
+            },
+      "Name": "Cardiac Device Programmer Base",
+      "ProductCode": "24970A",
+       "Family": "Pacing Accessories",
+      "IsActive": true,
+      "StockKeepingUnit": "SN-JGZ8DNGZ",
+      "Product_Feature__c": "• Touch‑driven interface with electrophysiologic analyzer tools\n• Supports secure software updates and clinical connectivity\n• Stores and exports session reports",
+      "Product_Maintenance_Safety__c": "• Keep firmware and security patches current\n• Operate in clinical environments with trained personnel\n• Configure per institutional data‑protection standards",
+      "Device_Type__c": "iOS",
+      "OS_Version__c": "iOS 17.2",
+      "Description": "A tablet‑integrated programming base used for interrogating, testing, and configuring implanted cardiac devices. The system supports secure communication, real‑time diagnostics, and analyzer functions that allow clinicians to evaluate sensing, thresholds, impedance, and rhythm behavior during follow‑up visits or implantation."
+    },
+    {
+      "attributes": {
+                "type": "Product2",
+                "referenceId": "productRef12"
+            },
+      "Name": "Delivery Catheter",
+      "ProductCode": "412305DC",
+      "IsActive": true,
+      "Family": "Pacing Accessories",
+      "StockKeepingUnit": "SN-N2LFSHYQ",
+      "Product_Feature__c": "• 23 Fr outer diameter suitable for femoral access\n• Deflectable shaft for intracardiac navigation\n• Integrated tether for fixation testing and recapture\n• Radiopaque materials for fluoroscopic visibility",
+      "Product_Maintenance_Safety__c": "• Use only with a compatible introducer sheath\n• Single‑use, sterile device; handle carefully to avoid trauma\n• Maintain fluoroscopic visualization during all stages",
+      "Device_Type__c": "iOS",
+      "OS_Version__c": "iOS 17.2",
+      "Description": "A long (≈105 cm), steerable transcatheter system designed to deliver, position, test, and—if necessary—retrieve a leadless pacemaker during implantation. It includes a device‑holding cup, deflection controls for maneuverability inside the heart, and a recapture mechanism for repositioning prior to final release. The catheter facilitates minimally invasive femoral‑vein access to the right ventricle for precise deployment."
+    }
+  ]
+}

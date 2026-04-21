@@ -1,0 +1,1207 @@
+:root {
+    --com-c-theme-version: 2;
+    --com-c-text-color-weak: #7c7e81;
+    --com-c-dropdown-button-sizing-border: 0px;
+    --com-c-dropdown-button-shadow-focus: none;
+    --com-c-dropdown-text-decoration: none;
+    --com-c-dropdown-button-text-decoration-active: none;
+    --com-c-dropdown-button-text-decoration: none;
+    --com-c-number-input-border-radius: 50%;
+    --com-c-number-input-shadow: none;
+    --com-c-number-input-width-border: 1px;
+    --com-c-button-icon-color-disabled: #d9dfe7;
+    --com-c-layout-header-border-bottom: 0.065rem solid #d9dfe7;
+    /* linking these two hooks to make consistency when border-radius changes to different value */
+    --dxp-c-navigation-list-border-radius: var(--com-c-dropdown-border-radius, 6px);
+
+    /* variable for form input element min height */
+    --var-form-input-element-min-height: 54px;
+
+    --com-c-header-zindex: 999;
+    /*
+        Subscription history panel z-index should be greater than header z-index
+        as Subscription panel should be on top header panel.
+    */
+    --com-c-subscription-history-panel-zindex: 1000;
+}
+
+a.slds-button:not(:is(.slds-button_outline-brand, .slds-button_brand, .slds-button_neutral)),
+button.slds-button:not(:is(.slds-button_outline-brand, .slds-button_brand, .slds-button_neutral)),
+a.slds-button:not(:is(.slds-button_outline-brand, .slds-button_brand, .slds-button_neutral)):is(
+        :active,
+        :focus,
+        :hover
+    ),
+button.slds-button:not(:is(.slds-button_outline-brand, .slds-button_brand, .slds-button_neutral)):is(
+        :active,
+        :focus,
+        :hover
+    ),
+lightning-button-menu.no-border-button::part(button),
+lightning-button-menu.no-border-button::part(button):is(:active, :focus, :hover) {
+    text-decoration: underline;
+}
+
+/* Dropdown styles for mobile view*/
+.slds-select, /* Backward compatible old override */
+lightning-select::part(select) {
+    /* Native shadow DOM compatible */
+    --sds-c-select-color-border: var(--dxp-s-form-element-color-border);
+}
+
+b2b_buyer_product_details-expandable-text-section {
+    --sds-c-accordion-section-spacing-inline-start: 0;
+}
+
+/* DEPRECATED Component still we need to support styling as per new theme*/
+/* My Account Profile and Password styles start */
+commerce-my-account-profile,
+commerce-my-account-password {
+    --sds-c-card-header-spacing-block-start: 1.5rem;
+    --sds-c-card-header-spacing-inline-end: 1.5rem;
+    --sds-c-card-header-spacing-inline-start: 1.5rem;
+    --sds-c-card-body-spacing-inline-start: 1.5rem;
+    --sds-c-card-body-spacing-inline-end: 1.5rem;
+    --sds-c-card-body-spacing-block-end: 1.5rem;
+    --sds-c-card-radius-border: 0;
+}
+
+commerce-my-account-profile label,
+commerce-my-account-password label {
+    --dxp-s-form-element-label-font-size: var(--dxp-g-font-size-4);
+    font-weight: var(--dxp-c-strong-text-weight);
+}
+
+commerce-my-account-password lightning-card header[part='header'],
+commerce-my-account-profile lightning-card header[part='header'] {
+    padding-left: var(--dxp-s-form-element-spacing-horizontal-start);
+}
+
+commerce-my-account-password header {
+    font-size: var(--dxp-g-font-size-4);
+}
+
+commerce-my-account-profile lightning-input.slds-form-element[readonly] div[part='input-text']:focus-within,
+commerce-my-account-password lightning-input.slds-form-element[readonly] div[part='input-text']:focus-within,
+commerce-my-account-profile lightning-input.slds-form-element[readonly] div[part='input-text'],
+commerce-my-account-password lightning-input.slds-form-element[readonly] div[part='input-text'] {
+    border: 0;
+    pointer-events: none;
+}
+
+commerce-my-account-profile lightning-input.slds-form-element.slds-has-error div[part='input-text'],
+commerce-my-account-password lightning-input.slds-form-element.slds-has-error div[part='input-text'] {
+    border: 0;
+    border-bottom: 2px solid var(--dxp-g-destructive);
+    box-shadow: none;
+}
+
+commerce-my-account-profile lightning-input.slds-form-element div[part='input-text'],
+commerce-my-account-password lightning-input.slds-form-element div[part='input-text'] {
+    border-radius: 0;
+    border: 0;
+    border-bottom: var(--dxp-s-form-element-width-border) solid var(--dxp-s-form-element-color-border);
+}
+
+commerce-my-account-profile lightning-input.slds-form-element.slds-has-error .slds-input:not(:focus-within),
+commerce-my-account-password lightning-input.slds-form-element.slds-has-error .slds-input:not(:focus-within),
+commerce-my-account-profile lightning-input.slds-form-element .slds-input,
+commerce-my-account-password lightning-input.slds-form-element .slds-input,
+commerce-my-account-profile lightning-input.slds-form-element div[part='input-container'],
+commerce-my-account-password lightning-input.slds-form-element div[part='input-container'] {
+    border-radius: 0;
+    height: 100%;
+}
+
+commerce-my-account-profile lightning-input.slds-form-element[readonly] .slds-input,
+commerce-my-account-password lightning-input.slds-form-element[readonly] .slds-input {
+    padding-left: var(--dxp-s-form-element-spacing-horizontal-start);
+}
+
+commerce-my-account-profile lightning-input.slds-form-element .slds-input,
+commerce-my-account-password lightning-input.slds-form-element .slds-input {
+    padding-left: calc(var(--dxp-s-form-element-spacing-horizontal-start) + 2px);
+}
+
+commerce-my-account-profile lightning-input.slds-form-element div[part='input-text']:focus-within,
+commerce-my-account-password lightning-input.slds-form-element div[part='input-text']:focus-within {
+    border: 0;
+    border-bottom: var(--dxp-s-form-element-width-border) solid var(--dxp-s-form-element-color-border-focus);
+}
+
+commerce-my-account-profile
+    commerce_unified_checkout-multi-country-phone-field
+    .slds-form-element
+    .slds-form-element__control
+    .slds-combobox_container {
+    border-radius: 0;
+    border-left: none;
+    border-top: none;
+}
+
+commerce-my-account-profile
+    commerce_unified_checkout-multi-country-phone-field
+    .slds-form-element
+    .slds-form-element__control
+    .slds-input,
+commerce-my-account-profile
+    commerce_unified_checkout-multi-country-phone-field
+    .slds-form-element
+    .slds-form-element__control
+    div[part='input-text'] {
+    border-radius: 0;
+}
+/* My Account Profile and Password styles end */
+
+
+/* OrderTotals component styles for CGX */
+commerce_my_account-order-totals .totals-card.slds-card {
+    border-color: var(--com-c-order-totals-custom-border-color, var(--com-c-order-totals-border-color, #d9dfe7));
+    box-shadow: none;
+}
+
+commerce_my_account-order-totals .totals-card .field-item {
+    --com-c-order-totals-font-size: var(--com-c-order-totals-custom-font-size, var(--dxp-s-body-font-size));
+}
+
+commerce_my_account-order-totals .totals-card .field-item lightning-formatted-rich-text,
+commerce_my_account-order-totals .totals-card .field-item commerce-field-display {
+    --com-c-order-totals-text-decoration: var(
+        --com-c-order-totals-custom-text-decoration,
+        var(--dxp-s-body-text-decoration)
+    );
+}
+
+commerce_my_account-order-totals .discount-content {
+    --com-c-order-discounts-color: var(--com-c-order-discounts-custom-color, #707275);
+}
+
+commerce_my_account-order-totals .totals-card.slds-card {
+    padding: 16px;
+}
+
+commerce_my_account-order-totals .totals-card.slds-card .field-item:not(:last-child),
+commerce_my_account-order-totals .totals-card.slds-card header h2 {
+    margin-bottom: 8px;
+}
+
+commerce_my_account-order-totals .totals-card.slds-card header,
+commerce_my_account-order-totals .totals-card.slds-card dl:not(.order-discount) {
+    margin: 0px;
+    padding: 0px;
+}
+
+commerce_my_account-order-totals .totals-card.slds-card .field-item:last-child {
+    margin-bottom: 0px;
+}
+
+commerce_my_account-order-totals .order-discount {
+    padding-top: 8px;
+}
+/* OrderTotals component styles for CGX ends */
+
+
+/* DEPRECATED Component lightning-vertical-navigation-item is not used in v2 component*/
+/** My Account navigation menu cgx styles **/
+
+aside.navigation {
+    padding-top: var(--dxp-g-spacing-large);
+    padding-bottom: var(--dxp-g-spacing-large);
+}
+
+aside.navigation lightning-vertical-navigation-item.slds-nav-vertical__item.slds-is-active:before,
+aside.navigation lightning-vertical-navigation-item.slds-nav-vertical__item:hover:before {
+    background-color: #f7f9fa;
+}
+
+aside.navigation lightning-vertical-navigation-item.slds-nav-vertical__item.slds-is-active .slds-nav-vertical__action,
+aside.navigation lightning-vertical-navigation-item.slds-nav-vertical__item .slds-nav-vertical__action:hover,
+aside.navigation lightning-vertical-navigation-item.slds-nav-vertical__item:focus-within::before {
+    box-shadow: none;
+}
+
+aside.navigation lightning-vertical-navigation-item.slds-nav-vertical__item a {
+    text-decoration: none;
+}
+
+aside.navigation
+    lightning-vertical-navigation-item.slds-nav-vertical__item
+    a:link:not(.slds-button, .slds-dropdown__item > a),
+aside.navigation
+    lightning-vertical-navigation-item.slds-nav-vertical__item
+    a:visited:not(.slds-button, .slds-dropdown__item > a) {
+    text-decoration: none;
+}
+
+aside.navigation lightning-vertical-navigation-item.slds-nav-vertical__item a {
+    font-size: 1rem;
+    color: var(--dxp-c-text-block-text-color, var(--dxp-g-root-contrast, #1c1c1c));
+}
+
+/** My Account navigation menu cgx styles ends **/
+
+
+/* My Account navigation menu v2 styles start */
+
+@media (min-width: 64.0625em) {
+    commerce_builder-navigation-menu-item-list .my-account-nav-menu li.slds-nav-vertical__item a.slds-nav-vertical__action {
+        padding-left: 3.5rem;
+    }
+}
+
+commerce_builder-navigation-menu-item-list .my-account-nav-menu li.slds-nav-vertical__item.slds-is-active:before,
+commerce_builder-navigation-menu-item-list .my-account-nav-menu li.slds-nav-vertical__item:hover:before {
+    background-color: var(--com-c-my-account-nav-menu-item-bg-color, #f7f9fa);
+}
+
+commerce_builder-navigation-menu-item-list .my-account-nav-menu li.slds-nav-vertical__item.slds-is-active .slds-nav-vertical__action,
+commerce_builder-navigation-menu-item-list .my-account-nav-menu li.slds-nav-vertical__item .slds-nav-vertical__action:hover,
+commerce_builder-navigation-menu-item-list .my-account-nav-menu li.slds-nav-vertical__item:focus-within::before {
+    box-shadow: none;
+}
+
+commerce_builder-navigation-menu-item-list .my-account-nav-menu li.slds-nav-vertical__item a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--dxp-c-text-block-text-color, var(--dxp-g-root-contrast, #1c1c1c));
+}
+
+/* My Account navigation menu v2 styles end */
+
+@media (min-width: 64.0625em) {
+    commerce-my-account-profile,
+    commerce-my-account-password {
+        --sds-c-card-body-spacing-block: 1rem;
+    }
+
+    /* css for My Account Navigation menu CGX  designs specific to desktop */
+
+    aside.navigation {
+        padding-top: var(--dxp-g-spacing-xlarge);
+        padding-bottom: var(--dxp-g-spacing-xlarge);
+    }
+
+    aside.navigation .navigationCtn .welcomeMessageCtn {
+        padding-left: 3.5rem;
+    }
+
+    aside.navigation lightning-vertical-navigation-item .slds-nav-vertical__action {
+        padding: 1rem 0rem 1rem 3.5rem;
+    }
+
+    /* Navigation Menu styles ends */
+}
+
+
+/* Order Confirmation Styles Start*/
+commerce_builder-order-confirmation-error-message .slds-icon,
+commerce_builder-order-confirmation-error-message lightning-icon::part(icon) {
+    width: 4rem;
+    height: 4rem;
+    fill: var(--com-c-order-confirmation-error-icon-color, #707275);
+}
+
+/* Required to override cart items css in order confirmation items*/
+commerce_builder-order-confirmation-items ul article li.li-layout {
+    border-bottom: none;
+    padding: 0.75rem 0 0.25rem 0 !important;
+}
+
+commerce_builder-order-confirmation-items ul article:last-child li.li-layout {
+    border-bottom: none;
+    padding: 0.75rem 0 0 0 !important;
+}
+
+commerce_builder-order-confirmation-items ul {
+    padding-bottom: 0rem !important;
+}
+
+/* Order Confirmation Styles End*/
+
+
+/* Commerce dropdown styles start */   
+.slds-dropdown, /* Backward compatible old override */
+lightning-button-menu::part(dropdown) /* Native shadow DOM compatible */ {
+    border-radius: var(--com-c-dropdown-border-radius, 6px);
+}
+
+commerce-dropdown button.slds-button, /* Backward compatible old override */
+commerce-dropdown button.slds-button:active,
+commerce-dropdown button.slds-button:focus,
+commerce-dropdown button.slds-button:hover,
+commerce-dropdown lightning-button-menu::part(button), /* Native shadow DOM compatible */
+commerce-dropdown lightning-button-menu::part(button):active,
+commerce-dropdown lightning-button-menu::part(button):focus,
+commerce-dropdown lightning-button-menu::part(button):hover {
+    text-decoration: var(--com-c-dropdown-button-text-decoration, none);
+}
+
+commerce-dropdown button.slds-button:focus-visible {
+    /* Follows the Theme's Tertiary Button Focus State color */
+    outline: 2px solid var(--dxp-s-tertiary-button-text-color-focus, var(--dxp-g-brand-1, var(--dxp-g-root-contrast)));
+    outline-offset: 2px;
+}
+/* Commerce dropdown styles end */  
+
+
+/* Subscription card styles start */
+commerce-subscription-card commerce-dropdown button.slds-button,
+commerce-subscription-card commerce-dropdown button.slds-button:active,
+commerce-subscription-card commerce-dropdown button.slds-button:focus,
+commerce-subscription-card commerce-dropdown button.slds-button:hover {
+    text-decoration: var(--com-c-dropdown-button-text-decoration, none) !important;
+}
+
+/* Native shadow DOM compatible */
+commerce-subscription-card commerce-dropdown lightning-button-menu::part(button),
+commerce-subscription-card commerce-dropdown lightning-button-menu::part(button):active,
+commerce-subscription-card commerce-dropdown lightning-button-menu::part(button):focus,
+commerce-subscription-card commerce-dropdown lightning-button-menu::part(button):hover {
+    text-decoration: var(--com-c-dropdown-button-text-decoration, none) !important;
+}
+
+commerce-subscription-card commerce-pill .slds-pill__label {
+    white-space: normal;
+    word-break: break-all;
+}
+/* Subscription card styles end */
+
+
+commerce_builder-order-products-info {
+    --com-c-order-products-separator-color: #d9dfe7;
+}
+
+b2c_lite_commerce-scoped-notification .slds-scoped-notification,
+commerce-scoped-notification .slds-scoped-notification {
+    margin-bottom: 1rem;
+}
+
+/*
+ * =========================
+ * For form input new design
+ * =========================
+ */
+
+ lightning-input label.slds-form-element__label, /* Backward compatible old override */
+ lightning-combobox label.slds-form-element__label,
+ lightning-combobox::part(label), /* Native shadow DOM compatible */
+ lightning-input::part(label) {
+     cursor: text;
+     position: absolute;
+     font-size: var(--dxp-s-body-font-size);
+     font-weight: var(--dxp-s-body-font-weight);
+     transition: ease all 0.2s;
+     z-index: 1;
+     padding: 0;
+     left: 12px;
+ }
+ 
+ /*Required flag color*/
+ abbr.slds-required, /* Backward compatible old override */
+ lightning-select::part(required), /* Native shadow DOM compatible */
+ lightning-radio-group::part(required),
+ lightning-combobox::part(required),
+ lightning-input::part(required) {
+     color: var(--dxp-s-form-element-label-color);
+ }
+ 
+ /*for input boxes*/
+ lightning-input.slds-form-element.slds-has-error div[part="input-text"], /* Backward compatible old override */
+ lightning-input.slds-form-element[invalid] div[part="input-text"],
+ lightning-lookup-address.slds-form-element.slds-has-error div[part="input-text"],
+ lightning-lookup-address.slds-form-element[invalid] div[part="input-text"],
+ lightning-input.slds-form-element.slds-has-error::part(input-text), /* Native shadow DOM compatible */
+ lightning-input.slds-form-element[invalid]::part(input-text) {
+     border: calc(var(--dxp-s-form-element-width-border) + 1px) solid var(--dxp-g-destructive);
+ }
+ 
+ lightning-input.slds-form-element.slds-has-error .slds-input:not(:focus-within), /* Backward compatible old override */
+ lightning-lookup-address.slds-form-element.slds-has-error .slds-input:not(:focus-within),
+ lightning-input.slds-form-element.slds-has-error::part(input):not(:focus-within) /* Native shadow DOM compatible */ {
+     padding-bottom: calc(var(--dxp-s-form-element-spacing-block-end) - 2px);
+     border-radius: calc(var(--dxp-s-form-element-radius-border) - var(--dxp-s-form-element-width-border));
+ }
+ 
+  /*
+   * Input forms in commerce storefronts have the labels inside the input so we need to hide the error icon
+   * as it is overlapping with the label.
+   */
+  lightning-input.slds-form-element.slds-has-error svg[part="icon"] {
+     display: none;
+ }
+ 
+ lightning-input.slds-form-element div[part="input-text"], /* Backward compatible old override */
+ lightning-lookup-address.slds-form-element div[part="input-text"],
+ lightning-input.slds-form-element::part(input-text) /* Native shadow DOM compatible */ {
+     min-height: var(--var-form-input-element-min-height, 54px);
+     border: var(--dxp-s-form-element-width-border) solid var(--dxp-s-form-element-color-border);
+     border-radius: var(--dxp-s-form-element-radius-border);
+ }
+ 
+ lightning-input.slds-form-element div[part="input-text"]:focus-within, /* Backward compatible old override */
+ lightning-lookup-address.slds-form-element div[part="input-text"]:focus-within,
+ lightning-input.slds-form-element::part(input-text):focus-within /* Native shadow DOM compatible */ {
+     border: var(--dxp-s-form-element-width-border) solid var(--dxp-s-form-element-color-border-focus);
+ }
+ 
+ lightning-input
+     lightning-datepicker
+     div[part='input-text']
+     .slds-form-element__label:has(~ .slds-form-element__control > input:not(:placeholder-shown)),
+ lightning-input.slds-form-element div[part='input-text']:focus-within .slds-form-element__label,
+ lightning-input:focus-within::part(label),
+ lightning-input.slds-form-element
+     div[part='input-text']
+     .slds-form-element__label:has(~ .slds-form-element__control > input:-webkit-autofill),
+ lightning-input.slds-form-element
+     div[part='input-text']
+     .slds-form-element__label:has(~ .slds-form-element__control > input:autofill),
+ lightning-input.slds-form-element div[part='input-text'][populated] .slds-form-element__label,
+ lightning-lookup-address.slds-form-element
+     .slds-form-element__label:has(~ .slds-form-element__control input:not(:placeholder-shown)),
+ lightning-lookup-address.slds-form-element:focus-within .slds-form-element__label,
+ lightning-lookup-address.slds-form-element
+     .slds-form-element__label:has(~ .slds-form-element__control input:-webkit-autofill),
+ lightning-lookup-address.slds-form-element .slds-form-element__label:has(~ .slds-form-element__control input:autofill) {
+     font-size: var(--dxp-s-body-small-font-size);
+     top: 4px;
+     cursor: default;
+ }
+ 
+ lightning-input.slds-form-element div[part='input-text'] .slds-form-element__icon,
+ lightning-combobox lightning-helptext {
+     top: 5px;
+     right: 10px;
+     position: absolute;
+ }
+ 
+ lightning-input lightning-datepicker div[part='input-text'] .slds-form-element__label,
+ lightning-input.slds-form-element div[part='input-text'] .slds-form-element__label,
+ lightning-input::part(label),
+ lightning-lookup-address.slds-form-element .slds-form-element__label {
+     top: 18px;
+ }
+ 
+ /* to avoid label overlap with border on focus. */
+ .comm-forgot-password__username-input label {
+     margin-top: var(--dxp-g-spacing-small);
+ }
+ 
+ lightning-input lightning-datepicker div[part='input-text'] lightning-button-icon button.slds-button_icon {
+     padding-top: var(--dxp-s-form-element-spacing-block-start);
+ }
+ 
+ lightning-input.slds-form-element .slds-input, /* Backward compatible old override */
+ lightning-lookup-address.slds-form-element .slds-input,
+ lightning-input.slds-form-element::part(input) /* Native shadow DOM compatible */ {
+     border: none;
+     box-shadow: none;
+     --slds-c-input-shadow: none;
+     min-height: var(--var-form-input-element-min-height, 54px);
+     border-radius: calc(var(--dxp-s-form-element-radius-border) - var(--dxp-s-form-element-width-border));
+     padding-top: calc(var(--dxp-s-form-element-spacing-block-start) + 12px);
+     padding-right: var(--dxp-s-form-element-spacing-horizontal-end);
+     padding-bottom: var(--dxp-s-form-element-spacing-block-end);
+     padding-left: var(--dxp-s-form-element-spacing-horizontal-start);
+ }
+ 
+ lightning-input.slds-form-element .slds-input:active, /* Backward compatible old override */
+ lightning-input.slds-form-element .slds-input:focus,
+ lightning-lookup-address .slds-input:active,
+ lightning-lookup-address .slds-input:focus,
+ lightning-input.slds-form-element::part(input):active, /* Native shadow DOM compatible */
+ lightning-input.slds-form-element::part(input):focus {
+     border: none;
+     box-shadow: none;
+     --slds-c-input-shadow: none;
+ }
+ 
+ /* to avoid label overlap with border on focus. */
+ .comm-forgot-password__username-input label {
+     margin-top: var(--dxp-g-spacing-small);
+ }
+ 
+ /* consistent padding under inputs - to avoid collapse on error */
+ lightning-input.slds-form-element:not(.slds-has-error),
+ lightning-textarea.slds-form-element:not(.slds-has-error),
+ lightning-combobox.slds-form-element:not(.slds-has-error),
+ lightning-lookup-address.slds-form-element:not(.slds-has-error) {
+     padding-bottom: 1rem;
+ }
+ 
+ /*for text area*/
+ lightning-textarea.slds-form-element {
+     position: relative;
+ }
+ 
+ lightning-textarea.slds-form-element .slds-textarea:focus {
+     border-color: var(--dxp-s-form-element-color-border-focus);
+ }
+ 
+ lightning-textarea.slds-form-element.slds-has-error .slds-textarea,
+ lightning-textarea.slds-form-element.slds-has-error .slds-textarea:active {
+     border: calc(var(--dxp-s-form-element-width-border) + 1px) solid var(--dxp-g-destructive);
+     box-shadow: none;
+ }
+ 
+ lightning-textarea.slds-form-element.slds-has-error .slds-textarea:focus {
+     border: var(--dxp-s-form-element-width-border) solid var(--dxp-s-form-element-color-border-focus);
+     box-shadow: none;
+ }
+ lightning-textarea.slds-form-element:focus-within .slds-form-element__label,
+ lightning-textarea.slds-form-element
+     .slds-form-element__label:has(+ .slds-form-element__control > textarea:not(:placeholder-shown)) {
+     font-size: var(--dxp-s-body-small-font-size);
+     top: 6px;
+     cursor: default;
+ }
+ 
+ lightning-textarea.slds-form-element label.slds-form-element__label {
+     top: 12px;
+     left: 12px;
+     z-index: 1;
+ }
+ 
+ lightning-textarea.slds-form-element .slds-textarea {
+     padding: 24px 12px 8px;
+ }
+ 
+ lightning-textarea.slds-form-element .slds-textarea:active,
+ lightning-textarea.slds-form-element .slds-textarea:focus {
+     box-shadow: none;
+ }
+ 
+ /*for radio*/
+ .slds-radio .slds-radio--faux, /* Backward compatible old override */
+ .slds-radio .slds-radio_faux,
+ lightning-radio-group::part(indicator) /* Native shadow DOM compatible */ {
+     width: 1.4rem;
+     height: 1.4rem;
+ }
+ 
+ /* Updating label color to map it text color based on UX suggestion */
+ .slds-radio__label .slds-form-element__label, /* Backward compatible old override */
+ lightning-radio-group::part(label) /* Native shadow DOM compatible */ {
+     color: var(--dxp-g-root-contrast);
+ }
+ 
+ /*for checkbox*/
+ .slds-checkbox .slds-checkbox--faux, /* Backward compatible old override */
+ .slds-checkbox .slds-checkbox_faux,
+ lightning-input::part(indicator) /* Native shadow DOM compatible */ {
+     width: 1.4rem;
+     height: 1.4rem;
+ }
+ 
+ .slds-checkbox [type=checkbox]:checked + .slds-checkbox--faux::after, /* Backward compatible old override */
+ .slds-checkbox [type=checkbox]:checked + .slds-checkbox__label .slds-checkbox--faux::after,
+ .slds-checkbox [type=checkbox]:checked + .slds-checkbox__label .slds-checkbox_faux::after,
+ .slds-checkbox [type=checkbox]:checked + .slds-checkbox_faux::after,
+ .slds-checkbox [type=checkbox]:checked ~ .slds-checkbox--faux::after,
+ .slds-checkbox [type=checkbox]:checked ~ .slds-checkbox_faux::after,
+ lightning-input::part(indicator)::after /* Native shadow DOM compatible */ {
+     height: 0.4rem;
+     width: 0.75rem;
+     top: 43%;
+     left: 52%;
+     border-color: var(--dxp-g-brand);
+ }
+ 
+ /* Updating label color to map it text color based on UX suggestion */
+ .slds-checkbox__label .slds-form-element__label, /* Backward compatible old override */
+ lightning-input::part(label) /* Native shadow DOM compatible */ {
+     color: var(--dxp-g-root-contrast);
+ }
+
+/* disabled checkbox will be greyed out */
+.slds-checkbox [type="checkbox"]:disabled + .slds-checkbox--faux,
+.slds-checkbox [type="checkbox"]:disabled + .slds-checkbox_faux,
+.slds-checkbox [type="checkbox"]:disabled ~ .slds-checkbox--faux, 
+.slds-checkbox [type="checkbox"]:disabled ~ .slds-checkbox_faux, 
+.slds-checkbox [type="checkbox"]:disabled + .slds-checkbox__label .slds-checkbox--faux,
+.slds-checkbox [type="checkbox"]:disabled + .slds-checkbox__label .slds-checkbox_faux {
+    background-color: var(--com-c-disabled-checkbox-bg-color, #ecebea);
+    border-color: var(--com-c-disabled-checkbox-border-color, #c9c7c5);
+}
+
+.slds-checkbox [type="checkbox"]:disabled + .slds-checkbox--faux::after,
+.slds-checkbox [type="checkbox"]:disabled + .slds-checkbox_faux::after,
+.slds-checkbox [type="checkbox"]:disabled ~ .slds-checkbox--faux::after, 
+.slds-checkbox [type="checkbox"]:disabled ~ .slds-checkbox_faux::after, 
+.slds-checkbox [type="checkbox"]:disabled + .slds-checkbox__label .slds-checkbox--faux::after,
+.slds-checkbox [type="checkbox"]:disabled + .slds-checkbox__label .slds-checkbox_faux::after {
+    border-color: var(--com-c-disabled-checkbox-check-color, #c9c7c5);
+}
+ 
+ /*row alignments*/
+ .slds-form-element__row > :first-child,
+ .slds-form-element_compound lightning-combobox.slds-form-element {
+     padding-left: 0;
+     padding-right: 0;
+ }
+ 
+ /*column alignments*/
+ .slds-form-element__row > *:not(:first-child) {
+     padding-left: var(--dxp-g-spacing-xxsmall);
+     padding-right: 0;
+ }
+ 
+ [data-validate].slds-form-element {
+     vertical-align: text-top;
+ }
+ 
+ .slds-form-element_address .slds-form-element__row {
+     align-items: flex-start;
+ }
+ 
+ .slds-form-element, /* Backward compatible old override */
+ lightning-slider::part(form-element) {
+     /* Native shadow DOM compatible */
+     margin-bottom: var(--dxp-g-spacing-xxsmall);
+ }
+ 
+ lightning-input-address .slds-form-element:not(:last-child) {
+     padding-right: var(--dxp-g-spacing-xxsmall);
+ }
+ 
+ /* for dropdown */
+ lightning-combobox:not(.slds-has-error) button.slds-combobox__input, /* Backward compatible old override */
+ lightning-combobox:not(.slds-has-error)::part(input-button) /* Native shadow DOM compatible */ {
+     box-shadow: none;
+ }
+ 
+ lightning-combobox:not(.slds-has-error) button.slds-combobox__input:focus, /* Backward compatible old override */
+ lightning-combobox:not(.slds-has-error) button.slds-combobox__input:active,
+ lightning-combobox:not(.slds-has-error)::part(input-button):focus, /* Native shadow DOM compatible */
+ lightning-combobox:not(.slds-has-error)::part(input-button):active {
+     box-shadow: none;
+ }
+ 
+ lightning-combobox.slds-has-error button.slds-combobox__input:focus, /* Backward compatible old override */
+ lightning-combobox.slds-has-error button.slds-combobox__input:active,
+ lightning-combobox.slds-has-error::part(input-button):focus, /* Native shadow DOM compatible */
+ lightning-combobox.slds-has-error::part(input-button):active {
+     border: calc(var(--dxp-s-form-element-width-border) + 1px) solid var(--dxp-g-destructive);
+ }
+ 
+ lightning-combobox [part="combobox"], /* Backward compatible old override */
+ lightning-combobox::part(combobox) /* Native shadow DOM compatible */ {
+     position: relative;
+ }
+ 
+ lightning-combobox [part="combobox"] label.slds-form-element__label, /* Backward compatible old override */
+ lightning-combobox::part(label) /* Native shadow DOM compatible */ {
+     top: 4px;
+     font-size: var(--dxp-s-body-small-font-size);
+     z-index: 1;
+ }
+ 
+ lightning-combobox [part="combobox"] lightning-base-combobox [part="input-text"] [part="input-container"] input, /* Backward compatible old override */
+ lightning-combobox [part="combobox"] lightning-base-combobox button.slds-combobox__input,
+ lightning-combobox::part(input), /* Native shadow DOM compatible */
+ lightning-combobox::part(input-button) {
+     min-height: var(--var-form-input-element-min-height, 54px);
+     border: none;
+     box-shadow: none;
+     border-radius: calc(var(--dxp-s-form-element-radius-border) - var(--dxp-s-form-element-width-border));
+     padding-top: calc(var(--dxp-s-form-element-spacing-block-start) + 12px);
+     padding-right: var(--dxp-s-form-element-spacing-horizontal-end);
+     padding-bottom: var(--dxp-s-form-element-spacing-block-end);
+     padding-left: var(--dxp-s-form-element-spacing-horizontal-start);
+ }
+ 
+ lightning-combobox [part="combobox"] lightning-base-combobox .slds-combobox__form-element, /* Backward compatible old override */
+ lightning-combobox::part(input-button) /* Native shadow DOM compatible */ {
+     border: var(--dxp-s-form-element-width-border) solid var(--dxp-s-form-element-color-border);
+     border-radius: var(--dxp-s-form-element-radius-border);
+ }
+ 
+ lightning-combobox.slds-has-error [part="combobox"] lightning-base-combobox .slds-combobox__form-element, /* Backward compatible old override */
+ lightning-combobox.slds-has-error::part(input-button) {
+     /* Native shadow DOM compatible */
+     border: calc(var(--dxp-s-form-element-width-border) + 1px) solid var(--dxp-g-destructive);
+     border-radius: var(--dxp-s-form-element-radius-border);
+ }
+ 
+ lightning-combobox [part="combobox"] lightning-base-combobox .slds-combobox__form-element:has(.slds-input:focus), /* Backward compatible old override */
+ lightning-combobox [part="combobox"] lightning-base-combobox .slds-combobox__form-element:has(button.slds-combobox__input:focus),
+ lightning-combobox.slds-has-error [part="combobox"] lightning-base-combobox .slds-combobox__form-element:has(.slds-input:focus),
+ lightning-combobox::part(input):focus, /* Native shadow DOM compatible */
+ lightning-combobox::part(input-button):focus,
+ lightning-combobox.slds-has-error::part(input):focus {
+     border: var(--dxp-s-form-element-width-border) solid var(--dxp-s-form-element-color-border-focus);
+     border-radius: var(--dxp-s-form-element-radius-border);
+ }
+ 
+ lightning-combobox [part="combobox"] lightning-base-combobox button.slds-combobox__input > span, /* Backward compatible old override */
+ lightning-combobox::part(input-button-value) /* Native shadow DOM compatible */ {
+     margin-top: 8px;
+     margin-right: 1rem;
+ }
+
+/* Label-hidden variant override */
+lightning-combobox[variant="label-hidden"] [part="combobox"] lightning-base-combobox button.slds-combobox__input > span,
+lightning-combobox[variant="label-hidden"]::part(input-button-value) {
+     margin-top: 0;
+ }
+
+ /*
+ * for Select List
+ * We are using default html select boxes rather than lightning-base-combobox
+ * eg. country and state field in address
+ * to keep the UI same we have to keep below css
+ * which should be removed once we have lightning-base-combobox in place.
+ * The referential css is required so that no other select box get affected. Eg. Product Page
+ */
+lightning-picklist lightning-select label.slds-form-element__label {
+    top: 28px;
+    font-size: var(--dxp-s-body-small-font-size);
+    z-index: 1;
+    left: 8px;
+}
+
+lightning-picklist lightning-select .slds-form-element__control .slds-select_container [part='select'].slds-select {
+    height: 56px;
+    padding-left: 0.75rem;
+    padding-top: 15px;
+}
+
+/* targeting mobile view to manage the alignment of input types*/
+@media (max-width: 47.9375em) {
+    lightning-input.slds-size_1-of-2 {
+        width: 100%;
+    }
+
+    lightning-input-address .slds-form-element__row {
+        flex-wrap: wrap;
+    }
+
+    lightning-input-address .slds-form-element__row lightning-input,
+    lightning-input-address .slds-form-element__row lightning-picklist,
+    lightning-input-address .slds-form-element__row lightning-lookup-address {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .slds-form-element__row > *:not(:first-child),
+    .slds-form-element__row lightning-input.slds-form-element.name-field {
+        padding-left: 0;
+    }
+
+    /* consistent padding under inputs - to avoid collapse on error */
+    lightning-picklist.slds-form-element:not(.slds-has-error) {
+        padding-bottom: 1rem;
+    }
+
+    /* consistent padding under inputs - to avoid collapse on error */
+    lightning-lookup-address.slds-form-element:not(.slds-has-error) {
+        padding-bottom: 1rem;
+    }
+
+    lightning-input-address .slds-form-element:nth-child(1),
+    slds-form-element.name-field:nth-child(1) {
+        --dxp-g-spacing-xxsmall: 0px;
+    }
+
+    aside.navigation {
+        padding-top: var(--dxp-g-spacing-xsmall);
+        padding-bottom: 0;
+    }
+}
+lightning-datepicker:has(lightning-helptext) .slds-input__icon button {
+ 	position: absolute;
+	right: 25px;
+}
+lightning-datepicker lightning-helptext {
+    top: 10px;
+    right: 0px;
+    position: absolute;
+}
+lightning-combobox:has(lightning-helptext) lightning-base-combobox .slds-input__icon-group lightning-icon lightning-primitive-icon {
+    position: absolute;
+	right: 25px;
+}
+lightning-input:has(input[type="search"]) div[part="input-text"] .slds-form-element__label {
+    left: 37px;
+}
+lightning-input:has(input[type="search"]) div[part="input-container"] {
+    padding-left: 26px;
+}
+lightning-input:has(input[type="search"]):has(lightning-helptext) button.slds-input__icon_right[data-element-id="searchClear"] {
+    right: 35px;
+    top: 5px;
+}
+lightning-input:has(input[type="search"]):not(:has(lightning-helptext)) button.slds-input__icon_right[data-element-id="searchClear"] {
+   top: 5px;
+   right: 10px;
+}
+
+/* targeting tablet view to manage the alignment of input types*/
+@media only screen and (min-width: 48em) and (max-width: 64.0625em) {
+    lightning-select.slds-form-element:not(.slds-has-error) {
+        padding: 0rem;
+    }
+
+    lightning-picklist lightning-select label.slds-form-element__label {
+        top: 5%;
+    }
+}
+
+
+/* Self Register v2 styles start */
+commerce_builder-self-register-v2 lightning-input::part(label) {
+    color: var(--dxp-s-form-element-label-color, var(--dxp-g-root-contrast));
+    padding-top: 0;
+    font-family: var(--dxp-s-form-element-label-font-family, var(--dxp-s-body-font-family));
+    font-style: var(--dxp-s-form-element-label-font-style, var(--dxp-s-body-font-style));
+    text-decoration: var(--dxp-s-form-element-label-text-decoration);
+    text-transform: var(--dxp-s-form-element-label-text-transform, var(--dxp-s-body-text-transform));
+    line-height: var(--dxp-s-form-element-label-line-height, var(--dxp-s-body-line-height));
+    letter-spacing: var(--dxp-s-form-element-label-letter-spacing, var(--dxp-s-body-letter-spacing));
+}
+
+commerce_builder-self-register-v2 lightning-input::part(label):not(.slds-form-element__legend) {
+    font-weight: var(--dxp-s-form-element-label-font-weight, var(--dxp-s-body-font-weight));
+}
+
+commerce_builder-self-register-v2 lightning-input::part(input-container) {
+    border: none;
+    box-shadow: none;
+}
+
+commerce_builder-self-register-v2 lightning-input::part(input){
+    background-color: var(--input-color-background);
+    font-size: var(--dxp-c-input-text-font-size, var(--dxp-s-form-element-text-font-size, var(--dxp-s-body-font-size)));
+    font-family: var(--dxp-s-form-element-text-font-family, var(--dxp-s-body-font-family));
+    font-weight: var(--dxp-s-form-element-text-font-weight, var(--dxp-s-body-font-weight));
+    font-style: var(--dxp-s-form-element-text-font-style, var(--dxp-s-body-font-style));
+    text-decoration: var(--dxp-s-form-element-text-text-decoration);
+    text-transform: var(--dxp-s-form-element-text-text-transform, var(--dxp-s-body-text-transform));
+    line-height: var(--dxp-s-form-element-text-line-height, var(--dxp-s-body-line-height));
+    letter-spacing: var(--dxp-s-form-element-text-letter-spacing, var(--dxp-s-body-letter-spacing));
+    color: var(--sds-c-input-text-color, var(--dxp-s-form-element-text-color, var(--dxp-g-root-contrast)));
+    border-inline-start:var(--dxp-c-input-border-inline-start, var(--dxp-s-form-element-border-inline-start, var(--border-width) solid var(--border-color)));border-inline-end: var(--dxp-c-input-border-inline-end, var(--dxp-s-form-element-border-inline-end, var(--border-width) solid var(--border-color)));
+    border-block-start:var(--dxp-c-input-border-block-start, var(--dxp-s-form-element-border-block-start, var(--border-width) solid var(--border-color)));border-block-end: var(--dxp-c-input-border-block-end, var(--dxp-s-form-element-border-block-end, var(--border-width) solid var(--border-color)));
+}
+
+commerce_builder-self-register-v2 lightning-icon::part(icon){
+    fill: inherit;
+}
+
+commerce_builder-self-register-v2 lightning-input[populated]::part(label){
+    font-size: var(--dxp-s-body-small-font-size);
+    top: 4px;
+    cursor: default;
+}
+/* Self Register v2 styles end */
+
+
+/* Styles for phone number field start */
+commerce_unified_checkout-multi-country-phone-field .slds-form-element:focus-within .slds-form-element__label,
+commerce_unified_checkout-multi-country-phone-field
+    .slds-form-element
+    .slds-form-element__label:has(~ .slds-form-element__control .slds-form-element input:-webkit-autofill),
+commerce_unified_checkout-multi-country-phone-field
+    .slds-form-element
+    .slds-form-element__label:has(~ .slds-form-element__control .slds-form-element input:autofill),
+commerce_unified_checkout-multi-country-phone-field
+    .slds-form-element
+    .slds-form-element__label:has(~ .slds-form-element__control .slds-form-element div[part='input-text'][populated]),
+commerce_unified_checkout-multi-country-phone-field lightning-input[populated]::part(label) {
+    font-size: var(--dxp-s-body-small-font-size);
+    top: 6px;
+    cursor: default;
+}
+
+commerce_unified_checkout-multi-country-phone-field
+    .slds-form-element
+    .slds-form-element__control
+    .slds-combobox_container {
+    min-height: var(--var-form-input-element-min-height, 54px);
+    border: var(--dxp-s-form-element-width-border) solid var(--dxp-s-form-element-color-border);
+    border-radius: var(--dxp-s-form-element-radius-border) 0 0 var(--dxp-s-form-element-radius-border);
+    position: relative;
+    min-width: 85px;
+    background-color: var(
+        --sds-c-input-color-background,
+        var(--dxp-s-form-element-color-background, var(--dxp-g-root))
+    );
+    top: 0;
+}
+
+commerce_unified_checkout-multi-country-phone-field
+    .slds-form-element
+    .slds-form-element__control
+    .slds-combobox_container:focus-within,
+commerce_unified_checkout-multi-country-phone-field
+    .slds-form-element
+    .slds-form-element__control
+    .slds-combobox_container:has(button.slds-has-focus) {
+    background-color: var(
+        --sds-c-input-color-background-focus,
+        var(--dxp-s-form-element-color-background-active, var(--dxp-s-form-element-color-background, var(--dxp-g-root)))
+    );
+}
+
+commerce_unified_checkout-multi-country-phone-field
+    .slds-form-element
+    .slds-form-element__control
+    .slds-combobox_container:focus-within {
+    border-color: var(--dxp-s-form-element-color-border-focus);
+}
+
+commerce_unified_checkout-multi-country-phone-field
+    .slds-form-element
+    .slds-form-element__control
+    .slds-combobox__input.slds-has-focus,
+commerce_unified_checkout-multi-country-phone-field
+    .slds-form-element
+    .slds-form-element__control
+    .slds-combobox__input:focus {
+    border: none;
+    box-shadow: none;
+    --slds-c-input-shadow: none;
+}
+
+commerce_unified_checkout-multi-country-phone-field
+    .slds-form-element
+    .slds-form-element__control
+    div[part='input-text'],
+    commerce_unified_checkout-multi-country-phone-field lightning-input::part(input-text) {
+    border-radius: 0 var(--dxp-s-form-element-radius-border) var(--dxp-s-form-element-radius-border) 0;
+    border-left: 0;
+}
+
+commerce_unified_checkout-multi-country-phone-field .slds-form-element .slds-form-element__control .slds-input,
+commerce_unified_checkout-multi-country-phone-field lightning-input::part(input)  {
+    border-radius: 0 calc(var(--dxp-s-form-element-radius-border) - var(--dxp-s-form-element-width-border))
+        calc(var(--dxp-s-form-element-radius-border) - var(--dxp-s-form-element-width-border)) 0;
+    border-left: 0;
+}
+
+commerce_unified_checkout-multi-country-phone-field
+    .slds-form-element
+    .slds-form-element__control
+    .slds-combobox__input {
+    border-radius: var(--dxp-s-form-element-radius-border) 0 0 var(--dxp-s-form-element-radius-border);
+    min-height: var(--var-form-input-element-min-height, 54px);
+    padding-top: 4px;
+}
+
+commerce_unified_checkout-multi-country-phone-field .slds-form-element label.slds-form-element__label {
+    position: absolute;
+    left: 12px;
+}
+/* Styles for phone number field ends */
+
+commerce_cart-apply-coupon-button button,
+commerce_cart-apply-coupon-button button.slds-button.dxp-button-small,
+commerce_cart-apply-coupon-button button.slds-button.dxp-button-large {
+    border-radius: var(--dxp-s-button-radius-border), var(--com-c-cart-apply-coupon-button-border-radius);
+}
+
+commerce_product_details-gallery {
+    --com-c-product-gallery-image-width-mobile: 200;
+    --com-c-product-gallery-image-width-tablet: 400;
+    --com-c-product-gallery-image-width-desktop: 450;
+}
+
+commerce_builder-purchase-options .quantity-list-container .quantity-list-action,
+commerce_builder-purchase-options .quantity-list-container .quantity-list-action commerce_product_details-add-quantity .container {
+    flex-direction: column;
+}
+
+commerce_builder-purchase-options .quantity-list-container .quantity-list-action commerce_product_details-add-quantity .container {
+    gap: 1rem;
+} 
+
+commerce_builder-purchase-options .quantity-list-container .quantity-list-action commerce_product_details-add-quantity, 
+commerce_builder-purchase-options .quantity-list-container .quantity-list-action commerce_builder-product-configure-button,
+commerce_builder-purchase-options .quantity-list-container .quantity-list-action commerce-action-button button {
+    width: 100%;    
+}
+
+/* 
+  Overridden width and margin-right for wishlist button in mobile view.
+  Added CSS hooks for future customer overrides.
+*/
+commerce_builder-purchase-options .quantity-list-action commerce-action-button {
+    width: var(--com-c-button-width, 100%) !important;
+    margin-right: var(--com-c-button-margin-right, auto) !important;
+}
+
+/* * for payment iframe * the css for payment details is targeting inside the iframe so referring it based on the type of input * this will help in achieving the same UI look as per new styling */
+[data-card-number-container].slds-form-element label.slds-form-element__label,
+[data-expiry-container].slds-form-element label.slds-form-element__label,
+[data-cvv-container].slds-form-element label.slds-form-element__label,
+.slds-form-element-cardholder-name.slds-form-element label.slds-form-element__label {
+    z-index: 1;
+    top: 18px;
+    left: 12px;
+}
+
+[data-card-number-container].slds-form-element label.slds-form-element__label.card-input-label,
+[data-expiry-container].slds-form-element label.slds-form-element__label.card-input-label,
+[data-cvv-container].slds-form-element label.slds-form-element__label.card-input-label,
+.slds-form-element-cardholder-name.slds-form-element label.slds-form-element__label.card-input-label {
+    padding: 0 12px;
+}
+
+[data-card-number-container].slds-form-element:not(.slds-has-error),
+[data-expiry-container].slds-form-element:not(.slds-has-error),
+[data-cvv-container].slds-form-element:not(.slds-has-error),
+.slds-form-element-cardholder-name.slds-form-element:not(.slds-has-error) {
+    padding-bottom: 1rem;
+}
+
+[data-card-number-container].slds-form-element .slds-form-element__control .slds-input,
+[data-expiry-container].slds-form-element .slds-form-element__control .slds-input,
+[data-cvv-container].slds-form-element .slds-form-element__control .slds-input,
+.slds-form-element-cardholder-name.slds-form-element .slds-form-element__control .slds-input {
+    height: 56px;
+    padding-top: 10px;
+    box-shadow: none;
+    border: var(--dxp-s-form-element-width-border) solid var(--dxp-s-form-element-color-border);
+    border-radius: var(--dxp-s-form-element-radius-border);
+    background-color: var(
+        --sds-c-input-color-background,
+        var(--dxp-s-form-element-color-background, var(--dxp-g-root))
+    );
+}
+
+[data-card-number-container].slds-has-error .slds-input,
+[data-expiry-container].slds-has-error .slds-input,
+[data-cvv-container].slds-has-error .slds-input,
+.slds-form-element-cardholder-name.slds-has-error .slds-input {
+    border: var(--dxp-s-form-element-width-border) solid var(--dxp-g-destructive);
+    box-shadow: none;
+}
+
+[data-card-number-container].slds-form-element:focus-within .slds-form-element__label,
+[data-expiry-container].slds-form-element:focus-within .slds-form-element__label,
+[data-cvv-container].slds-form-element:focus-within .slds-form-element__label,
+.slds-form-element-cardholder-name.slds-form-element:focus-within .slds-form-element__label,
+[data-card-number-container].slds-form-element
+    .slds-form-element__label:has(~ .slds-form-element__control input:not(:placeholder-shown)),
+[data-expiry-container].slds-form-element
+    .slds-form-element__label:has(~ .slds-form-element__control input:not(:placeholder-shown)),
+[data-cvv-container].slds-form-element
+    .slds-form-element__label:has(~ .slds-form-element__control input:not(:placeholder-shown)),
+.slds-form-element-cardholder-name.slds-form-element
+    .slds-form-element__label:has(~ .slds-form-element__control input:not(:placeholder-shown)),
+[data-card-number-container].slds-form-element
+    .slds-form-element__label:has(~ .slds-form-element__control #expiry-date:placeholder-shown),
+[data-expiry-container].slds-form-element
+    .slds-form-element__label:has(~ .slds-form-element__control #expiry-date:placeholder-shown),
+[data-cvv-container].slds-form-element
+    .slds-form-element__label:has(~ .slds-form-element__control #expiry-date:placeholder-shown),
+.slds-form-element-cardholder-name.slds-form-element
+    .slds-form-element__label:has(~ .slds-form-element__control #expiry-date:placeholder-shown) {
+    font-size: var(--dxp-s-body-small-font-size);
+    top: 4px;
+}
+
+/* targeting mobile view to avoid overlap of cards icons with input number */
+@media (max-width: 47.9375em) {
+    [data-card-number-container].slds-form-element .slds-form-element__control .slds-input {
+        height: 72px;
+    }
+
+    .accordion-content[data-accordion-section-content="credit-card"] {
+        padding: 1rem;
+    }
+
+    #credit-cards-accepted svg {
+        width: 1.5rem;
+    }
+}
+
+/* Quick Order styles start */
+commerce-quick-order-display commerce-quick-order-item lightning-input.slds-form-element .slds-input::placeholder{
+    color: transparent;
+}
+commerce-quick-order-display commerce-quick-order-item commerce-quantity-selector commerce-number-input .slds-input.number-input__input {
+    border-radius: calc(var(--dxp-s-form-element-radius-border) - var(--dxp-s-form-element-width-border));
+    min-height: calc(var(--var-form-input-element-min-height, 54px) + 2px);
+}
+commerce-quick-order-display commerce-quick-order-item div.contents,
+commerce-quick-order-display commerce-quick-order-item div.actions {
+    align-self: start;
+}
+
+/* Needed to handle error state for quick order search input */
+commerce-quick-order-display commerce-quick-order-item div.search-input.slds-has-error div[part="input-text"]{
+    border: calc(var(--dxp-s-form-element-width-border) + 1px) solid var(--dxp-g-destructive);
+}
+commerce-quick-order-display commerce-quick-order-item div.search-input.slds-has-error lightning-input.slds-form-element {
+    padding-bottom: 0rem;
+}
+/* Quick Order styles end */
+
+/* To hide recaptcha badge */
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
+/* Hide placeholders for Contact Support Form & Lead Form */
+dxp_form-contact-support-form lightning-input.slds-form-element .slds-input::placeholder,
+dxp_form-lead-form lightning-input.slds-form-element .slds-input::placeholder {
+    color: transparent;
+}
+
+/* Checkout Payment Sheet With Purchase Order Button Alignment */
+commerce_builder-checkout-payment-sheet-with-purchase-order .button-container button {
+    display: flex !important;
+    justify-content: space-around;
+    margin-top: var(--dxp-g-spacing-small, 0.75rem);
+}
+
+commerce_builder-checkout-payment-sheet-with-purchase-order .button-container button svg {
+    fill: currentColor !important;
+}
+
+/* Theme changes for product configurator modal */
+runtime_industries_cfg-pricing-summary-option .optionName .slds-truncate {
+    max-width: 100%;
+  }
+  
+  runtime_industries_cfg-pricing-summary-pane .detailHeader {
+    padding: 1rem;
+  }
+  
+  runtime_industries_cfg-pricing-summary .totalsSection {
+    --footerHeight: var(--lwc-spacingXxLarge, 3.5rem);
+  }
+  
+  runtime_industries_cfg-action-footer .spacer-element .slds-docked-form-footer {
+    --componentHeight: 4.5rem;
+    padding-bottom: 1rem;
+  }
+  
+runtime_industries_cfg-transaction-header,
+runtime_industries_cfg-favorite-container,
+runtime_industries_cfg-product-header .psm-option-value,
+runtime_industries_cfg-pricing-summary .totalsSection .slds-grid:has(.monthlyTotal),
+runtime_industries_cfg-pricing-summary .totalsSection .slds-grid:has(.annualTotal),
+runtime_industries_cfg-pricing-summary .totalsSection .slds-grid:has(.quarterlyTotal),
+runtime_industries_cfg-pricing-summary .totalsSection .slds-grid:has(.semiAnnualTotal),
+runtime_industries_cfg-pricing-summary .totalsSection .slds-grid:has(.defaultNetAmount) {
+    display: none;
+}
+
+runtime_industries_cfg-search-bar .search-input lightning-primitive-input-simple div[part="input-container"] input {
+    padding-left: 2rem;
+    padding-top: 0rem;
+}
+
+runtime_industries_cfg-config-header .header-banner-spacer {
+    --banner-height: 6rem;
+}
+
+runtime_industries_cfg-option runtime_industries_cfg-product-header .phc lightning-input.slds-form-element {
+    padding-bottom: 0rem;
+}
+
+runtime_industries_cfg-pricing-summary-option .slds-col.slds-text-align_start {
+  text-align: start;
+}

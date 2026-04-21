@@ -1,0 +1,43 @@
+{
+    "records": [
+    {
+      "attributes":{ "type":"HealthCondition", "referenceId":"HealthConditionRef1" },
+      "PatientId": "@personAccRef1",
+      "ConditionCodeId": "@CodeSetBundleRef14",
+      "ConditionStatus": "Active",
+      "Severity": "Severe",
+      "OnsetStartDateTime": "2026-01-11T17:00:00.000+0000",
+      "ProblemDescription": "Chronic elevation of blood pressure above 130/80 mmHg"
+    },
+    {
+      "attributes":{ "type":"HealthCondition", "referenceId":"HealthConditionRef2" },
+
+      "PatientId": "@personAccRef1",
+      "ConditionCodeId": "@CodeSetBundleRef16",
+      "ConditionStatus": "Active",
+      "Severity": "Medium",
+      "OnsetStartDateTime": "2026-02-11T17:00:00.000+0000",
+      "ProblemDescription": "Bradycardia due to AV block requiring pacemaker support"
+    },
+    {
+      "attributes":{ "type":"HealthCondition", "referenceId":"HealthConditionRef3" },
+
+      "PatientId": "@personAccRef2",
+      "ConditionCodeId": "@CodeSetBundleRef17",
+      "ConditionStatus": "Active",
+      "Severity": "Moderate",
+      "OnsetStartDateTime": "2026-01-11T17:00:00.000+0000",
+      "ProblemDescription": "Chronic metabolic disorder characterized by insulin resistance and elevated blood glucose."
+    },
+    {
+      "attributes":{ "type":"HealthCondition", "referenceId":"HealthConditionRef4" },
+      "PatientId": "@personAccRef2",
+      "ConditionCodeId": "@CodeSetBundleRef18",
+      "ConditionStatus": "Resolved",
+      "Severity": "Mild",
+      "OnsetEndDateTime": "2026-01-11T17:00:00.000+0000",
+      "OnsetStartDateTime": "2026-01-09T17:00:00.000+0000",
+      "ProblemDescription": "Chronic systolic and/or diastolic heart failure with fluid congestion."
+    }
+  ]
+}

@@ -39,7 +39,7 @@
         <isAttachmentUploadEnabled>true</isAttachmentUploadEnabled>
         <isEstimatedWaitTimeEnabled>false</isEstimatedWaitTimeEnabled>
         <isFallbackMessageEnabled>false</isFallbackMessageEnabled>
-        <isSaveTranscriptEnabled>false</isSaveTranscriptEnabled>
+        <isSaveTranscriptEnabled>true</isSaveTranscriptEnabled>
         <maxFileSize>5</maxFileSize>
     </embeddedConfig>
     <masterLabel>ESA Channel</masterLabel>

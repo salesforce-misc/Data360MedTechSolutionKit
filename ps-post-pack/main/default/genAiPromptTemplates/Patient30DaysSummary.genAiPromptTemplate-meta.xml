@@ -11,7 +11,7 @@ Prompt Rules:
 1. patient Question: {!$Input:Question}
 2. Invoke the apex class {!$Apex:getSmmarizePatientDetails.Pacemaker_Data} 
 3. Get the returned field from the apex class.
-4. After Identifying the patient name from the apex class, please look at the following information: DAI_PATIENT_OP ADL_PATIENT_CLINIC 
+4. After Identifying the patient name from the apex class, please look at the following information: DAI_PATIENT_OPADL_PATIENT_CLINIC
 - From the retrieved result from retriever, as last interrogation note,call transcript,implant report for the identified Patient from the apex class
 5. Display the output as : 
 Summary :Summarize a concise, clinically oriented summary based on the retrieved result from retriever and fields returned from the apex class and Do not display any patient name
@@ -33,8 +33,7 @@ Recommendation: recommend some steps for next review.
             <required>true</required>
         </inputs>
         <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
-        <status>Published</status>
-        <templateDataProviders>
+        <status>Published</status>        <templateDataProviders>
             <definition>apex://getSmmarizePatientDetails</definition>
             <description>Extract Patient and Telemetric details</description>
             <label>Get Summarize Patient Details</label>

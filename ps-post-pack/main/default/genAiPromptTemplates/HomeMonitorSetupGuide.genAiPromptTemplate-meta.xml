@@ -18,7 +18,7 @@ Product_Name
 Monitor_Modal
 Device_Type
 OS_Version
-2.Please look at the following information to answer the patient {!$Input:Question} : ADL_PACEMAKER_IMPLANT and identify exact Remote Monitoring Hub(Home Monitor) details.
+2.Please look at the following information to answer the patient {!$Input:Question} : ADL_PACEMAKER_IMPLANTand identify exact Remote Monitoring Hub(Home Monitor) details.
 3.Display the output(response) in below exact order:
 a. First Line (Mandatory):
 -Begin the response with one single sentence.
@@ -66,8 +66,7 @@ b. Remaining Content (Mandatory)
             <required>true</required>
         </inputs>
         <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
-        <status>Published</status>
-        <templateDataProviders>
+        <status>Published</status>        <templateDataProviders>
             <definition>apex://getStructuredData</definition>
             <description>Handles multiple request types</description>
             <label>Get Structured Device Data</label>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<DataSourceBundleDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
-    <dataPlatform>UploadedFiles</dataPlatform>
-    <isMultiDeploymentSupported>false</isMultiDeploymentSupported>
-    <masterLabel>PSFLUP</masterLabel>
-</DataSourceBundleDefinition>

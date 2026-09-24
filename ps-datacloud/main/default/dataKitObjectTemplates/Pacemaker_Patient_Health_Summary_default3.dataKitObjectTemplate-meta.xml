@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectTemplate xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <developerName xsi:nil="true"/>
+    <entityPayload>{&quot;filterCriteria&quot;:null,&quot;sourceObjectApiName&quot;:&quot;Pacemaker_Patient_Health_Summary__cio&quot;,&quot;keyQualifierApiName&quot;:null,&quot;matchType&quot;:&quot;UNIFIED&quot;,&quot;sourceMatchKeyApiName&quot;:&quot;unifiedindividualid__c&quot;,&quot;label&quot;:&quot;Pacemaker Patient Health Summary default&quot;,&quot;fieldMappings&quot;:[{&quot;sourceFieldApiName&quot;:&quot;battery_score__c&quot;,&quot;targetFieldApiName&quot;:&quot;Battery_Score__c&quot;},{&quot;sourceFieldApiName&quot;:&quot;pacing_performance_score__c&quot;,&quot;targetFieldApiName&quot;:&quot;Pacing_Performance_Score__c&quot;},{&quot;sourceFieldApiName&quot;:&quot;af_risk_score__c&quot;,&quot;targetFieldApiName&quot;:&quot;Atrial_Risk_Score__c&quot;},{&quot;sourceFieldApiName&quot;:&quot;last_transmission_ts__c&quot;,&quot;targetFieldApiName&quot;:&quot;Last_Transmission__c&quot;}],&quot;developerName&quot;:&quot;Pacemaker_Patient_Health_Summary_default&quot;,&quot;targetObjectApiName&quot;:&quot;Contact&quot;,&quot;targetMatchKeyApiName&quot;:&quot;Id&quot;}</entityPayload>
+    <masterLabel>Pacemaker_Patient_Health_Summary_default</masterLabel>
+    <parentDataPackageKitDefinitionName xsi:nil="true"/>
+    <sourceObject>Pacemaker_Patient_Health_Summary_default</sourceObject>
+    <sourceObjectType>CopyFieldEnrichment</sourceObjectType>
+    <templateVersion>1</templateVersion>
+</DataKitObjectTemplate>

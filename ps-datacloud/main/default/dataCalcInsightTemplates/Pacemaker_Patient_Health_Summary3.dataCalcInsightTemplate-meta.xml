@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCalcInsightTemplate xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <builderExpression xsi:nil="true"/>
+    <creationType>Custom</creationType>
+    <dataspaceName>default</dataspaceName>
+    <dataspacePrefix xsi:nil="true"/>
+    <definitionType>CALCULATED_METRIC</definitionType>
+    <description xsi:nil="true"/>
+    <developerName>Pacemaker_Patient_Health_Summary3</developerName>
+    <expression>SELECT
+    UnifiedssotIndividualProd__dlm.ssot__Id__c AS unifiedindividualid__c,
+
+    /* Last Transmission */
+    MAX(pacemaker_iot_data__dlm.Transmission_Timestamp__c) AS last_transmission_ts__c,
+
+    /* Battery Health Score */
+    SUM(
+        CASE
+            WHEN pacemaker_iot_data__dlm.Battery_Voltage__c &gt;= 2.9 THEN 100
+            WHEN pacemaker_iot_data__dlm.Battery_Voltage__c &gt;= 2.7 THEN 50
+            WHEN pacemaker_iot_data__dlm.Battery_Voltage__c &gt;= 2.3 THEN 25
+            ELSE 0
+        END
+    ) / COUNT(pacemaker_iot_data__dlm.Transmission_Timestamp__c) AS battery_score__c,
+
+    /* Pacing Performance Score */
+    SUM(
+        CASE
+            WHEN pacemaker_iot_data__dlm.Atrial_Capture_Status__c = &apos;Stable&apos;
+             AND pacemaker_iot_data__dlm.Ventricular_Capture_Status__c = &apos;Stable&apos;
+             AND pacemaker_iot_data__dlm.Atrial_Pacing_Threshold_V__c &lt; 2.5
+             AND pacemaker_iot_data__dlm.Ventricular_Pacing_Threshold_V__c &lt; 2.5
+                THEN 3
+            WHEN pacemaker_iot_data__dlm.Atrial_Capture_Status__c = &apos;Stable&apos;
+             AND pacemaker_iot_data__dlm.Ventricular_Capture_Status__c = &apos;Stable&apos;
+             AND (
+                    pacemaker_iot_data__dlm.Atrial_Pacing_Threshold_V__c &gt;= 2.5
+                 OR pacemaker_iot_data__dlm.Ventricular_Pacing_Threshold_V__c &gt;= 2.5
+                 )
+                THEN 2
+            ELSE 1
+        END
+    ) / COUNT(pacemaker_iot_data__dlm.Transmission_Timestamp__c) AS pacing_performance_score__c,
+
+    /* AF Risk Score */
+    SUM(
+        CASE
+            WHEN pacemaker_iot_data__dlm.AF_Burden__c = 0
+             AND pacemaker_iot_data__dlm.VT_Episodes__c = 0
+             AND pacemaker_iot_data__dlm.VF_Episodes__c = 0
+                THEN 1
+            WHEN (
+                    pacemaker_iot_data__dlm.AF_Burden__c &gt; 0
+                AND pacemaker_iot_data__dlm.AF_Burden__c &lt;= 10
+                 )
+              OR pacemaker_iot_data__dlm.Episode_Duration_s__c &gt; 0
+                THEN 2
+            ELSE 3
+        END
+    ) / COUNT(pacemaker_iot_data__dlm.Transmission_Timestamp__c) AS af_risk_score__c
+
+FROM pacemaker_iot_data__dlm
+JOIN Pacemaker_Latest_Transmission__cio
+    ON pacemaker_iot_data__dlm.Serial_Number__c = Pacemaker_Latest_Transmission__cio.serial_number__c
+   AND pacemaker_iot_data__dlm.Transmission_Timestamp__c = Pacemaker_Latest_Transmission__cio.latest_ts__c
+JOIN ssot__Asset__dlm
+    ON pacemaker_iot_data__dlm.Serial_Number__c = ssot__Asset__dlm.ssot__SerialNumber__c
+JOIN UnifiedLinkssotIndividualProd__dlm
+    ON ssot__Asset__dlm.ssot__PrimaryContactId__c = UnifiedLinkssotIndividualProd__dlm.SourceRecordId__c
+JOIN UnifiedssotIndividualProd__dlm
+    ON UnifiedLinkssotIndividualProd__dlm.UnifiedRecordId__c = UnifiedssotIndividualProd__dlm.ssot__Id__c
+GROUP BY
+    UnifiedssotIndividualProd__dlm.ssot__Id__c</expression>
+    <masterLabel>Pacemaker Patient Health Summary</masterLabel>
+    <scheduleInterval>0</scheduleInterval>
+    <sourceObjectDevName>Pacemaker_Patient_Health_Summary</sourceObjectDevName>
+    <templateVersion>1</templateVersion>
+</DataCalcInsightTemplate>

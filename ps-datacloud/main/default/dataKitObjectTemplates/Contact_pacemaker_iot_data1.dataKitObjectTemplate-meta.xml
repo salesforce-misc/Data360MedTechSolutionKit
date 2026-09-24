@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectTemplate xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <developerName xsi:nil="true"/>
+    <entityPayload>{&quot;relatedTargetFieldApiName&quot;:&quot;ssot__Id__c&quot;,&quot;sourceFieldApiName&quot;:&quot;Observation_Id__c&quot;,&quot;dataSpaceDevName&quot;:&quot;default&quot;,&quot;parentEntityApiName&quot;:&quot;Contact&quot;,&quot;childRelationshipName&quot;:&quot;pacemaker_iot_data1&quot;,&quot;unifiedObjectLinkTableApiName&quot;:&quot;UnifiedLinkssotIndividualProd__dlm&quot;,&quot;relatedTargetEntityApiName&quot;:&quot;ssot__Individual__dlm&quot;,&quot;childEntityApiName&quot;:&quot;pacemaker_iot_data__dlm&quot;,&quot;childRelationshipLabel&quot;:&quot;Pacemaker IOT&quot;}</entityPayload>
+    <masterLabel>00NgK00004ZocWv</masterLabel>
+    <parentDataPackageKitDefinitionName xsi:nil="true"/>
+    <sourceObject>00NgK00004ZocWv</sourceObject>
+    <sourceObjectType>IRRelatedListEnrichment</sourceObjectType>
+    <templateVersion>1</templateVersion>
+</DataKitObjectTemplate>

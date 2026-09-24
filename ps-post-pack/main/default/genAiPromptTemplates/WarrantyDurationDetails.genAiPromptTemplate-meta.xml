@@ -17,7 +17,7 @@ Patient_Name (always use real value, no placeholders,not masked values)
 Product_Name
 End_Date
 Is_Product_Under_Warranty
-2.Use ADL_PACEMAKER_IMPLANT  to get and identify Pacemaker Warranty - Coverage &amp; Replacement Summary section details.
+2.Use ADL_PACEMAKER_IMPLANTto get and identify Pacemaker Warranty - Coverage &amp; Replacement Summary section details.
 3.Format the response as exactly as:
 -Always Use the actual Patient Name (true value) returned from Apex
 -Always convert End_Date to a simple human-readable string before generating the output. --Do not include any time, hours, minutes, seconds, or timezone.
@@ -106,8 +106,7 @@ b Remaining Content:
             <required>true</required>
         </inputs>
         <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
-        <status>Published</status>
-        <templateDataProviders>
+        <status>Published</status>        <templateDataProviders>
             <definition>apex://getStructuredData</definition>
             <description>Handles multiple request types</description>
             <label>Get Structured Device Data</label>

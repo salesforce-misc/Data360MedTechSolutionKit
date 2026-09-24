@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>Your job is to assist enquiry about Pacemaker Options and Process, Pacemaker FDA-Approved/Cleared, Pacemaker Warranty Duration and Warranty Coverage,setup Remote Monitor App and display the information.</description>
+    <developerName>Pacemaker_Guide_Info</developerName>
+    <genAiPluginInstructions>
+        <description>When customer ask about Pacemaker Options and Process, Pacemaker FDA-Approved/Cleared, pacemaker warranty duration and warranty coverage, setup Remote Monitor App then run the &apos;PacemakerDetailsForGuest&apos; action and display the  exact prompt response. DO NOT SKIP OR HIDE ANY STPES.DO NOT ASK ANY FOLLOW UP QUESTIONS.</description>
+        <developerName>instruction_0_1787552328027</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0_1787552328027</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <localDeveloperName>Pacemaker_Guide_Info</localDeveloperName>
+    <masterLabel>Pacemaker Guide Info</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to assist enquiry about Pacemaker Options and Process, Pacemaker FDA-Approved/Cleared, Pacemaker Warranty duration and warranty coverage, setup Remote Monitor App and display the exact prompt response.  You should not handle unrelated topics or provide information outside of plant Pacemaker Guide Info Also this topic should not execute when patient ask about &apos;WHAT’S THE WARRANTY/COVERAGE FOR MY IMPLANTED DEVICE AND MONITOR&apos;</scope>
+</GenAiPlugin>

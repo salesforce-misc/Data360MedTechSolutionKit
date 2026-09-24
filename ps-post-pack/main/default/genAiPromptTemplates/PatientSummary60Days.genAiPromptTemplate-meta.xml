@@ -14,7 +14,7 @@ Prompt Instructions:
 -Retrieved the return value from the  apex class as Patient_Name(Use the actual value, Do not placeholder)
 Telemetry Data(All the fields)
 Case History(All the fields)
-3. Use  ADL_PATIENT_CLINIC to get and identify Medical - Clinical Follow Up Note details.
+3. Use  ADL_PATIENT_CLINICto get and identify Medical - Clinical Follow Up Note details.
 4. Format the response as :
 -Always use REAL values returned from Apex.Do Not use placeholders.
 -Do not use labels such as “Product_Name:”, “Episode_Type”,&quot;PulseSync Medical&quot; etc.
@@ -54,8 +54,7 @@ Rules:
             <required>true</required>
         </inputs>
         <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
-        <status>Published</status>
-        <templateDataProviders>
+        <status>Published</status>        <templateDataProviders>
             <definition>apex://getStructuredData</definition>
             <description>Handles multiple request types</description>
             <label>Get Structured Device Data</label>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectTemplate xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <developerName xsi:nil="true"/>
+    <entityPayload>{&quot;filterCriteria&quot;:null,&quot;sourceObjectApiName&quot;:&quot;UnifiedssotIndividualProd__dlm&quot;,&quot;keyQualifierApiName&quot;:null,&quot;matchType&quot;:&quot;UNIFIED&quot;,&quot;sourceMatchKeyApiName&quot;:&quot;ssot__Id__c&quot;,&quot;label&quot;:&quot;Unified Individual prod default&quot;,&quot;fieldMappings&quot;:[{&quot;sourceFieldApiName&quot;:&quot;ssot__Id__c&quot;,&quot;targetFieldApiName&quot;:&quot;Unified_Individual_Id__c&quot;}],&quot;developerName&quot;:&quot;Unified_Individual_prod_default&quot;,&quot;targetObjectApiName&quot;:&quot;Contact&quot;,&quot;targetMatchKeyApiName&quot;:&quot;Id&quot;}</entityPayload>
+    <masterLabel>Unified_Individual_prod_default</masterLabel>
+    <parentDataPackageKitDefinitionName xsi:nil="true"/>
+    <sourceObject>Unified_Individual_prod_default</sourceObject>
+    <sourceObjectType>CopyFieldEnrichment</sourceObjectType>
+    <templateVersion>1</templateVersion>
+</DataKitObjectTemplate>

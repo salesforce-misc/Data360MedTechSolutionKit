@@ -15,20 +15,32 @@ public without sharing class generateCommerceData {
         
         //creation of Product Category
         List<String> categoryNameList = new List<String>{'Pacemaker','Home Monitor','Remote App','Pacemaker Accessories'};
+        Set<String> existingCategoryNames = new Set<String>();
+        for(ProductCategory pc : [SELECT Name FROM ProductCategory
+                                   WHERE CatalogId = :prodCatalog.Id
+                                   AND Name IN :categoryNameList]){
+            existingCategoryNames.add(pc.Name);
+        }
         List<ProductCategory> pCategoryList = new List<ProductCategory>();
         for(String cName : categoryNameList){
-            pCategoryList.add(new ProductCategory(
-                Name = cName,IsNavigational = true, CatalogId =prodCatalog.Id));
+            if(!existingCategoryNames.contains(cName)){
+                pCategoryList.add(new ProductCategory(
+                    Name = cName, IsNavigational = true, CatalogId = prodCatalog.Id));
+            }
         }
-        insert pCategoryList;
+        if(!pCategoryList.isEmpty()){
+            insert pCategoryList;
+        }
         system.debug('Created Category:'+pCategoryList);
         
-        //uncheck show is menu checkbox
-        ProductCategory categoryNameProduct = [Select id,name,IsNavigational,CatalogId from ProductCategory where
+        //uncheck show is menu checkbox if product category present
+        List<ProductCategory> categoryNameProduct = [Select id,name,IsNavigational,CatalogId from ProductCategory where
                                                Name = 'Products' And CatalogId =:prodCatalog.Id limit 1];
-        categoryNameProduct.IsNavigational = false;
-        update categoryNameProduct;
-        system.debug('categoryNameProduct:'+categoryNameProduct);
+        if(!categoryNameProduct.isEmpty()){
+        categoryNameProduct[0].IsNavigational = false;
+        update categoryNameProduct[0];
+        system.debug('categoryNameProduct:'+categoryNameProduct[0]);
+        }
      
         
          // Define Category -> Families mapping
@@ -138,7 +150,8 @@ public without sharing class generateCommerceData {
             
             // Fetch entries from old pricebook
         List<PricebookEntry> oldEntries = [ SELECT Product2Id, UnitPrice, Name, IsActive, UseStandardPrice
-                							FROM PricebookEntry  WHERE Pricebook2Id = :oldPB.Id];
+                		            FROM PricebookEntry  WHERE Pricebook2Id = :oldPB.Id AND
+                                            Product2.Family IN ('Pacemaker', 'Remote Monitor', 'Remote Monitoring Mobile App', 'Pacing Accessories')];
         system.debug('oldEntries:'+oldEntries);
 
         

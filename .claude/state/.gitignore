@@ -1,0 +1,5 @@
+# Runtime install state files — never committed.
+# Ignores everything in this folder except .gitignore and .gitkeep themselves.
+*
+!.gitignore
+!.gitkeep

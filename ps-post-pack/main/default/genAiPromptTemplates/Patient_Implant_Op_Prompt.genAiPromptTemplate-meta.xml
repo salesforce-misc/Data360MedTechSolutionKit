@@ -43,9 +43,7 @@ Implant Site :
             <required>true</required>
         </inputs>
         <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
-        <status>Published</status>
-        
-        <templateDataProviders>
+        <status>Published</status>        <templateDataProviders>
             <definition>apex://PulseSyncUtil</definition>
             <description>Returns a contact name to prompt</description>
             <label>Get Contact</label>

@@ -28,7 +28,7 @@ public class generateCommerceDataTest {
         List<Product2> products = new List<Product2>{
             new Product2(Name='Single Chamber Pacemaker', Family='Pacemaker', IsActive=true, DisplayUrl='http://test.com/1'),
             new Product2(Name='Home Monitor', Family='Remote Monitor', IsActive=true, DisplayUrl='http://test.com/2'),
-            new Product2(Name='Lead Fixation device', Family='Pacemaker Accessories', IsActive=true, DisplayUrl='http://test.com/3')
+            new Product2(Name='Lead Fixation device', Family='Pacing Accessories', IsActive=true, DisplayUrl='http://test.com/3')
         };
         insert products;
         

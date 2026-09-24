@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtlClntAppOauthConfigurablePolicies xmlns="http://soap.sforce.com/2006/04/metadata">
+    <clientCredentialsFlowUser>storm.2de2ccdb6f5c0f@salesforce.com</clientCredentialsFlowUser>
+    <externalClientApplication>Salesforce_DC_Prod_Org</externalClientApplication>
+    <isClientCredentialsFlowEnabled>true</isClientCredentialsFlowEnabled>
+    <label>Salesforce_DC_Prod_Org_oauthPlcy</label>
+</ExtlClntAppOauthConfigurablePolicies>

@@ -1,8 +1,27 @@
 {
   "packageDirectories": [
-   
+    {
+      "path": "ps-base",
+      "default": false
+    },
+    {
+      "path": "ps-eca",
+      "default": false
+    },
+    {
+      "path": "ps-embeddedservice",
+      "default": false
+    },
+    {
+      "path": "ps-pd-experience-optional",
+      "default": false
+    },
     {
       "path": "ps-post-pack",
+      "default": false
+    },
+    {
+      "path": "ps-datacloud",
       "default": true
     }
   ],

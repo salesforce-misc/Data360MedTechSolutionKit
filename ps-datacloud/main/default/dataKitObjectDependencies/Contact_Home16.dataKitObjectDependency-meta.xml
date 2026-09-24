@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<DataKitObjectDependency xmlns="http://soap.sforce.com/2006/04/metadata">
-    <dataPackageKitDef>Data360MedTechSolutionKit</dataPackageKitDef>
-    <developerName>Contact_Home16</developerName>
-    <masterLabel>Contact_Home__dll</masterLabel>
-    <sourceObject>Contact_Home17</sourceObject>
-    <sourceObjectType>DataSourceObject</sourceObjectType>
-    <targetObject>Contact_Home28</targetObject>
-</DataKitObjectDependency>

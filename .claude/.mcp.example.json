@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "data360": {
+      "command": "java",
+      "args": [
+        "-jar",
+        "./mcptools/data360-mcp-server-1.0.0.jar"
+      ],
+      "env": {
+        "DATA360_INSTANCE_URL": "https://YOUR_ORG.my.salesforce.com",
+        "DATA360_AUTH_FLOW": "client_credentials",
+        "DATA360_CLIENT_ID": "<YOUR_CONSUMER_KEY>",
+        "DATA360_CLIENT_SECRET": "<YOUR_CONSUMER_SECRET>",
+        "DATA360_LOGIN_URL": "https://login.salesforce.com",
+        "DATA360_API_VERSION": "66.0"
+      }
+    }
+  }
+}

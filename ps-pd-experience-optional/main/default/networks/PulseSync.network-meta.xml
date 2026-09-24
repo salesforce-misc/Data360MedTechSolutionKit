@@ -55,6 +55,8 @@
         <recaptchaScoreThreshold>0.0</recaptchaScoreThreshold>
     </networkAuthApiSettings>
     <networkMemberGroups>
+        <permissionSet>PulseSyncBasePS</permissionSet>
+        <permissionSet>PulseSyncCustomPS</permissionSet>
         <profile>admin</profile>
         <profile>customer community plus login user</profile>
     </networkMemberGroups>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectDependency xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataPackageKitDef>Data360MedTechSolutionKit</dataPackageKitDef>
+    <developerName>Pricebook2_Home1</developerName>
+    <masterLabel>Pricebook2_Home__dll</masterLabel>
+    <sourceObject>Pricebook2_Home2</sourceObject>
+    <sourceObjectType>DataSourceObject</sourceObjectType>
+    <targetObject>Pricebook2_Home1</targetObject>
+</DataKitObjectDependency>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<DataKitObjectDependency xmlns="http://soap.sforce.com/2006/04/metadata">
-    <dataPackageKitDef>Data360MedTechSolutionKit</dataPackageKitDef>
-    <developerName>SalesforceDotCom_Home42</developerName>
-    <masterLabel>Salesforce Connector EPIC OrgFarm Home</masterLabel>
-    <sourceObject>Pricebook2_Home_1775496020565</sourceObject>
-    <sourceObjectType>DataStreamTemplate</sourceObjectType>
-    <targetObject>SalesforceDotCom_Home</targetObject>
-</DataKitObjectDependency>

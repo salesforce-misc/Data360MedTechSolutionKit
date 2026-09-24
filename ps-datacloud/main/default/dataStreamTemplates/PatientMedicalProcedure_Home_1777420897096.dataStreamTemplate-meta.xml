@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataStreamTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataSourceBundleDefinition>MDCRM</dataSourceBundleDefinition>
+    <dataSourceObject>PatientMedicalProcedure_Home2</dataSourceObject>
+    <fullRefreshIntervalDays>NONE</fullRefreshIntervalDays>
+    <masterLabel>PatientMedicalProcedure_Home</masterLabel>
+    <objectCategory>Salesforce_SFDCReferenceModel_0_93.Engagement</objectCategory>
+    <refreshFrequency>BATCH</refreshFrequency>
+    <refreshMode>UPSERT</refreshMode>
+    <sourceObjectName>PatientMedicalProcedure_Home</sourceObjectName>
+    <streamType>INGEST</streamType>
+    <templateVersion>1</templateVersion>
+</DataStreamTemplate>

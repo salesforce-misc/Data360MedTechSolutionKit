@@ -458,7 +458,7 @@
         <datatype>S</datatype>
         <definitionCreationType>Custom</definitionCreationType>
         <externalName>Party_Identification_Type</externalName>
-        <fieldFormula>&quot;Device Identifier&quot;</fieldFormula>
+        <fieldFormula>&apos;Device Identifier&apos;</fieldFormula>
         <isDataRequired>false</isDataRequired>
         <isEventDate>false</isEventDate>
         <isFormula>true</isFormula>

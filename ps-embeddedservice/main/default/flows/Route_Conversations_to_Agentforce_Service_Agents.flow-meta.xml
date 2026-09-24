@@ -90,7 +90,7 @@
         <inputParameters>
             <name>copilotLabel</name>
             <value>
-                <stringValue>PulseSync Assistant</stringValue>
+                <stringValue>PulseMedAssitant</stringValue>
             </value>
         </inputParameters>
         <inputParameters>

@@ -77,14 +77,17 @@ global class PulseSyncUtil {
     @TestVisible
     private static final Set<String> PERM_SET_LICENSES = new Set<String>{
         'AgentforceServiceAgentUserPsl',
-        'Agentforce_Service_Agent553366132_Permissions',
-        'PulseSyncCustomPS'
+        'EinsteinGPTPromptTemplatesPsl', 
+        'GenieDataPlatformStarterPsl'               
     };
 
     private static final Set<String> PERM_SETS = new Set<String>{
-        'AgentforceServiceAgentUserPsg',
-        'AgentforceServiceAgentUserPsl',
-        'GenieDataPlatformStarterPsl'
+        'AgentforceServiceAgentSecureBase',
+        'AgentforceServiceAgentBase',
+        'AgentforceServiceAgentUser',
+        'GenieUserEnhancedSecurity',
+        'PulseSyncCustomPS',
+        'Agentforce_Service_Agent553366132_Permissions' 
     };
 
     private static final List<String> COPY_FIELDS = new List<String>{
@@ -402,6 +405,7 @@ global class PulseSyncUtil {
         if (!objPermsToUpdate.isEmpty()) {
             update objPermsToUpdate;
         }
+       PulseSyncUtil.contactUpdationIntoAsset();
     }
 
    
@@ -446,6 +450,8 @@ global class PulseSyncUtil {
         );
 
         insert u;
+        System.debug('Created user: ' + u.Username);
+        System.debug('Created user email: ' + u.Email);
 
         Set<Id> targetPslIds = getPermissionSetLicenseIds();
 
@@ -562,67 +568,39 @@ global class PulseSyncUtil {
         insert usr;
     }
 
-    // Assign Permission set Licenses to Logged in User
-
-   
-
-    public static void assignHealthCloudPSL() {
-        Id userId = UserInfo.getUserId();
-
-        // Target PSL DeveloperNames
-        Set<String> targetPSLs = new Set<String>{
-            'HealthCloudGA_HealthCloudPsl',
-            'HealthCloudPlatformPsl'
-        };
-
-        // Query PSLs
-        Map<String, PermissionSetLicense> pslMap = new Map<String, PermissionSetLicense>(
-            [SELECT Id, DeveloperName 
-             FROM PermissionSetLicense 
-             WHERE DeveloperName IN :targetPSLs]
-        );
-
-        if (pslMap.isEmpty()) {
-            System.debug('No matching PSLs found.');
-            return;
-        }
-
-        // Existing assignments
-        Set<Id> pslIds = new Set<Id>();
-        for (PermissionSetLicense psl : pslMap.values()) {
-            pslIds.add(psl.Id);
-        }
-
-        Set<Id> alreadyAssigned = new Set<Id>();
-        for (PermissionSetLicenseAssign psa : [
-            SELECT PermissionSetLicenseId
-            FROM PermissionSetLicenseAssign
-            WHERE AssigneeId = :userId
-            AND PermissionSetLicenseId IN :pslIds
-        ]) {
-            alreadyAssigned.add(psa.PermissionSetLicenseId);
-        }
-
-        // Prepare new assignments
-        List<PermissionSetLicenseAssign> toInsert = new List<PermissionSetLicenseAssign>();
-
-        for (PermissionSetLicense psl : pslMap.values()) {
-            if (!alreadyAssigned.contains(psl.Id)) {
-                toInsert.add(new PermissionSetLicenseAssign(
-                    AssigneeId = userId,
-                    PermissionSetLicenseId = psl.Id
-                ));
+    public static void contactUpdationIntoAsset(){
+        List<Contact> contactList = [Select id,name,AccountId from Contact where isHealthCloudRecord__c =: true
+                                     AND AccountId != null];
+        
+        
+        Map<Id, Id> accountToContactMap = new Map<Id, Id>();
+        for (Contact c : contactList) {
+            // If multiple contacts per account, first one wins
+            if (!accountToContactMap.containsKey(c.AccountId)) {
+                accountToContactMap.put(c.AccountId, c.Id);
             }
         }
-
-        // Insert if needed
-        if (!toInsert.isEmpty()) {
-            insert toInsert;
-            System.debug('Assigned PSLs successfully.');
-        } else {
-            System.debug('User already has all PSLs.');
+        
+        system.debug('Contact Id value:'+accountToContactMap);
+        
+        List<Asset> assetList = [Select id,name,AccountId,ContactId from Asset where AccountId IN :accountToContactMap.keySet()];
+        system.debug('Asset List:'+assetList);
+        List<Asset> assetsToUpdate = new List<Asset>();
+        
+        for(Asset a:assetList){
+            
+            Id contactId = accountToContactMap.get(a.AccountId);
+            
+            if (contactId != null && a.ContactId != contactId) {
+                a.ContactId = contactId;
+                assetsToUpdate.add(a);
+            } 
         }
+        
+        if (!assetsToUpdate.isEmpty()) {
+            update assetsToUpdate;
+        }
+        system.debug('assetsToUpdate:'+assetsToUpdate);   
     }
-
 
 }

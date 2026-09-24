@@ -4,6 +4,9 @@
       "attributes": {"type": "ServiceAppointment", "referenceId": "serviceAppointmentRef1"},
       "ParentRecordId": "@personAccRef1",
       "SchedStartTime": "2026-02-15T16:30:21.000+0000",
+      "SchedEndTime": "2026-02-15T17:30:21.000+0000",
+      "EarliestStartTime": "2026-02-15T16:30:21.000+0000",
+      "DueDate": "2026-02-15T17:30:21.000+0000",
       "AppointmentType": "In Person",
       "Status": "Scheduled",
       "Subject": "Remote Monitoring Setup"
@@ -12,6 +15,9 @@
       "attributes": {"type": "ServiceAppointment", "referenceId": "serviceAppointmentRef2"},
       "ParentRecordId": "@personAccRef1",
       "SchedStartTime": "2026-02-20T16:30:21.000+0000",
+      "SchedEndTime": "2026-02-20T17:30:21.000+0000",
+      "EarliestStartTime": "2026-02-20T16:30:21.000+0000",
+      "DueDate": "2026-02-20T17:30:21.000+0000",
       "AppointmentType": "Virtual",
       "Status": "Canceled",
       "Subject": "Permanent Pacemaker Implant"
@@ -20,6 +26,9 @@
         "attributes": {"type": "ServiceAppointment", "referenceId": "serviceAppointmentRef3"},
       "ParentRecordId": "@personAccRef1",
       "SchedStartTime": "2026-03-10T10:30:21.000+0000",
+      "SchedEndTime": "2026-03-10T11:30:21.000+0000",
+      "EarliestStartTime": "2026-03-10T10:30:21.000+0000",
+      "DueDate": "2026-03-10T11:30:21.000+0000",
       "AppointmentType": "Phone",
       "Status": "Review",
       "Subject": "Device Implant"
@@ -28,6 +37,9 @@
         "attributes": {"type": "ServiceAppointment", "referenceId": "serviceAppointmentRef4"},
       "ParentRecordId": "@personAccRef1",
       "SchedStartTime": "2026-03-15T10:30:21.000+0000",
+      "SchedEndTime": "2026-03-15T11:30:21.000+0000",
+      "EarliestStartTime": "2026-03-15T10:30:21.000+0000",
+      "DueDate": "2026-03-15T11:30:21.000+0000",
       "AppointmentType": "In Person",
       "Status": "Scheduled",
       "Subject": "Implantable Pacemaker Procedure"
@@ -36,6 +48,9 @@
         "attributes": {"type": "ServiceAppointment", "referenceId": "serviceAppointmentRef5"},
       "ParentRecordId": "@personAccRef1",
       "SchedStartTime": "2026-03-20T11:15:21.000+0000",
+      "SchedEndTime": "2026-03-20T12:15:21.000+0000",
+      "EarliestStartTime": "2026-03-20T11:15:21.000+0000",
+      "DueDate": "2026-03-20T12:15:21.000+0000",
       "AppointmentType": "Virtual",
       "Status": "Scheduled",
       "Subject": "Remote Monitoring Setup"
@@ -44,6 +59,9 @@
         "attributes": {"type": "ServiceAppointment", "referenceId": "serviceAppointmentRef6"},
       "ParentRecordId": "@personAccRef1",
       "SchedStartTime": "2026-03-29T11:15:21.000+0000",
+      "SchedEndTime": "2026-03-29T12:15:21.000+0000",
+      "EarliestStartTime": "2026-03-29T11:15:21.000+0000",
+      "DueDate": "2026-03-29T12:15:21.000+0000",
       "AppointmentType": "In Person",
       "Status": "Scheduled",
       "Subject": "Permanent Pacemaker Implant"
@@ -52,6 +70,9 @@
         "attributes": {"type": "ServiceAppointment", "referenceId": "serviceAppointmentRef7"},
       "ParentRecordId": "@personAccRef1",
       "SchedStartTime": "2026-04-10T11:15:21.000+0000",
+      "SchedEndTime": "2026-04-10T12:15:21.000+0000",
+      "EarliestStartTime": "2026-04-10T11:15:21.000+0000",
+      "DueDate": "2026-04-10T12:15:21.000+0000",
       "AppointmentType": "Virtual",
       "Status": "Scheduled",
       "Subject": "Implantable Pacemaker Procedure"

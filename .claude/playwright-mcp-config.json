@@ -1,0 +1,10 @@
+{
+  "browser": {
+    "launchOptions": {
+      "args": [
+        "--disable-features=LocalNetworkAccessChecks,LocalNetworkAccessRespectsAddressSpaces",
+        "--disable-blink-features=LocalNetworkAccess"
+      ]
+    }
+  }
+}

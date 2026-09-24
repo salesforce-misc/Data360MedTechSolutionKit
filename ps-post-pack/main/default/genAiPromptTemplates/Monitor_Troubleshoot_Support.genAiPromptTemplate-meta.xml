@@ -10,7 +10,7 @@
 
 Prompt Instructions:
 1. When Patient ask Question: {!$Input:Question}
-please look at the following information to answer the customer : ADL_PACEMAKER_IMPLANT  
+please look at the following information to answer the customer :ADL_PACEMAKER_IMPLANT
 and identify the exact details of Troubleshooting Decision Tree 
 2. Display the exact retrieved information from the retriever in a tailored way.
 3. Do Not add any extra contents.
@@ -41,9 +41,7 @@ Retrieve and store the return value from JSON of apex class 
             <required>true</required>
         </inputs>
         <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
-        <status>Published</status>
-        
-        <templateDataProviders>
+        <status>Published</status>        <templateDataProviders>
             <definition>apex://getStructuredData</definition>
             <description>Handles multiple request types</description>
             <label>Get Structured Device Data</label>

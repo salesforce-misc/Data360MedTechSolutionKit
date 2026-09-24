@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<DataSrcDataModelFieldMap xmlns="http://soap.sforce.com/2006/04/metadata">
-    <filterApplied>false</filterApplied>
-    <masterLabel>Data360MedTechSolutionKitUploadedFilesVF_Episodespacemaker_iot_dataVF_EpisodesDqebiDjSUUIBgeW</masterLabel>
-    <sourceField>pacemaker_iot_data.VF_Episodes__c</sourceField>
-    <targetField>pacemaker_iot_data__dlm.VF_Episodes__c</targetField>
-    <templateVersion>1</templateVersion>
-    <versionNumber>1.0</versionNumber>
-</DataSrcDataModelFieldMap>

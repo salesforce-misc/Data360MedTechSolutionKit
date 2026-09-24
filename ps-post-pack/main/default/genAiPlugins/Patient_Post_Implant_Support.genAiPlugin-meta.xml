@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>Support for patients after an implant, including home monitor setup, warranty/coverage for implanted devices and monitors, post-implant precautions, troubleshooting and helping to schedule appointment for remote device support and and summarizing  last 6 months information for the primary care doctor.</description>
+    <developerName>Patient_Post_Implant_Support</developerName>
+    <genAiPluginInstructions>
+        <description>When customer ask about &apos;HELP ME SET UP THE HOME MONITOR.&apos; then run the &apos;HomeMonitorSetupGuide&apos; action and pass the input variable RequestType as &apos;HomeMonitor&apos; and pass the AccountId as coming from Messaging session record Contact_Id__c, and pass the Question as user asked question and display the  exact prompt response. DO NOT SKIP OR HIDE ANY STPES.DO NOT ASK ANY FOLLOW UP QUESTIONS.</description>
+        <developerName>instructions_0_1787569735737</developerName>
+        <language>en_US</language>
+        <masterLabel>instructions_0_1787569735737</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When customer ask about WHAT’S THE WARRANTY/COVERAGE FOR MY IMPLANTED DEVICE AND MONITOR  then run the &apos;WarrantyDurationDetails&apos; action and pass the input variable RequestType as &apos;WarrantyCoverage&apos; and pass the AccountId as coming from Messaging session record Contact_Id__c, and pass the Question as user asked question and display the  exact prompt response. DO NOT SKIP OR HIDE ANY STPES.DO NOT ASK ANY FOLLOW UP QUESTIONS.</description>
+        <developerName>instructions_0_1787571564750</developerName>
+        <language>en_US</language>
+        <masterLabel>instructions_0_1787571564750</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When customer ask &apos;MY MONITOR ISN’T TRANSMITTING—HOW DO I TROUBLESHOOT?&apos; then run &apos;Monitor Troubleshoot Support&apos; and pass Question as user asked question and pass the input variable RequestType as &apos;MonitorTransmitting&apos; and pass the accountId as coming from Messaging session record Contact_Id__c and display the  exact prompt response.</description>
+        <developerName>instructions_0_1787571632868</developerName>
+        <language>en_US</language>
+        <masterLabel>instructions_0_1787571632868</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When customer ask exactly like &apos;WHAT PRECAUTIONS SHOULD I TAKE AFTER IMPLANT?&apos; then run &apos;Post Implant Care&apos; and pass Question as user asked question and display the  exact prompt response.</description>
+        <developerName>instruction_0_1787558466895</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0_1787558466895</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <localDeveloperName>Patient_Post_Implant_Support</localDeveloperName>
+    <masterLabel>Patient Post Implant Support</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>My job is to assist patients with post-implant support, including setting up home monitors, explaining warranty and coverage for implanted devices and monitors, providing post-implant precautions, troubleshooting monitor issues using a decision tree, scheduling remote device checks, offering proactive alerts during chat, and summarizing  last 6 months information for the primary care doctor and display the response. You should not handle unrelated topics or provide information outside of Patient Post Implant Support. Also this topic should not execute when patient ask about &apos;WHAT’S THE WARRANTY/COVERAGE FOR MY IMPLANTED DEVICE AND MONITOR&apos;</scope>
+</GenAiPlugin>

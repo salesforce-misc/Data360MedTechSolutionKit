@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataKitObjectDependency xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataPackageKitDef>Data360MedTechSolutionKit</dataPackageKitDef>
+    <developerName>AllergyIntolerance_Home1</developerName>
+    <masterLabel>AllergyIntolerance_Home__dll</masterLabel>
+    <sourceObject>AllergyIntolerance_Home2</sourceObject>
+    <sourceObjectType>DataSourceObject</sourceObjectType>
+    <targetObject>AllergyIntolerance_Home1</targetObject>
+</DataKitObjectDependency>

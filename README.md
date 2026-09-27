@@ -5,8 +5,8 @@ Imagine a pacemaker application that does more than monitor a device; it helps c
 The Pulse Sync application showcases Agentforce, Prompt Builder, Document AI, and Notebook AI by leveraging both structured and unstructured data to process patient and device telemetry information. It features a comprehensive patient profile, with the Pulse Sync AI agent using structured and unstructured data to drive contextual conversations.
 
 ## 🎥 Product Demo
-
-[![Watch the video ](images/demo-thumbnail.png)]() to see what is included in this end-to-end solution before you get started.
+Watch the video on what is included in this end to end solution before you get started.
+[![ ](https://cdn.vidyard.com/thumbnails/nmad0BNFCe5zsy5_CYLgOw/6a5741079bee5e3b63387f_play_button_small.gif)](https://salesforce.vidyard.com/watch/Q8pZYM7bEFN2mdwZw4hoDJ) 
 
 There are two ways to install this solution kit. You can use Claude to run the installation process for you, or you can manually set up the solution in your org. The instructions for both are provided below. 
 <details>

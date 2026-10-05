@@ -44,11 +44,12 @@ There are two ways to install this solution kit. You can use Claude to run the i
   | 1 |  Initiate a Claude chat session within VS Code as shown below  |
   | 2 |  To get started, Claude requires some information: The instructions (prompts), an alias (which can be anything), your new Demo Org username and password. |
   | 3 |   To initiate the installation, use the following prompt: <br>"**Install Data 360 Healthcare Installer into Alias: ALIASNAME Username: USERNAME Password: PASSWORD**" </br></br>Replace the alias (can be anything), username and password with your own credentials (from when you created your org) and then press enter to begin the installation. Here is an example: Install Data 360 Healthcare Installer into Alias: Data360MedTechSolution Username: XXX.com Password: XXXXX</br> |
+ <img width="700" height="250" alt="claudeicon" src="https://git.soma.salesforce.com/gdevadoss/MedTechClaudeDeployment/blob/master/AgentforceAgentImages/claudeicon.png">
 
 ### 5. Installation Mode Selection
 | Step | Details |
  | ----- | ----- |
-  | 1 |   You will then receive the following prompt from Claude: <br/> **"The installer needs confirmation on which mode to run. Based on your request for the complete Data360 Healthcare Installer, you'll want Mode 2 which includes all 21 steps - the full Data Cloud + Commerce + Experience Cloud solution. Should I proceed with Mode 2 (the complete installation with all 21 steps)?"** <br/> Choose your adventure! We recommend option 2 <br/> Mode 1 = Data Cloud Only <br/> Mode 2 = Data Cloud + Commerce + Experience Cloud + Agentforce |
+  | 1 |   You will then receive the following prompt from Claude: <br/> **"The installer needs confirmation on which mode to run. Based on your request for the complete Data360 Healthcare Installer, you'll want Mode 2 which includes all 21 steps - the full Data Cloud + Commerce + Experience Cloud solution. Should I proceed with Mode 2 (the complete installation with all 21 steps)?"** <br/>  We recommend option 2 <br/> Mode 1 = Data Cloud Only <br/> Mode 2 = Data Cloud + Commerce + Experience Cloud + Agentforce |
 
 ### 6. Authenticate The Org
 | Step | Details |
@@ -57,11 +58,65 @@ There are two ways to install this solution kit. You can use Claude to run the i
  | 2 | Log in with your org username and password. |
  | 3 | Click **Allow Access**. |
 
-Claude will begin installing everything from the code repository and will orchestrate a series of sub-agents to do the work for you. We recommend  checking on the installation once in a while, as there are times when Claude may require additional permissions from you, depending on your settings.  
+Claude will begin installing everything from the code repository and will orchestrate a series of sub-agents to do the work for you. We recommend  checking on the installation, as there are times when Claude may require additional permissions from you, depending on your settings.  
 
+### 7. Configure MCP Server
+ While the MCP Setup skill (/mcp-setup) is running, the installer may pause and ask you to complete the following steps to configure the Salesforce MCP servers: <br/>
+  **i.** **Retrieve Consumer Key & Secret from External Client App** 
+  
+ | Step | Details |
+ | ----- | ----- |
+ | 1 | Go to Setup → External Client App Manager → **Salesforce_DC_Prod_Org**. |
+ | 2 | Open Settings → OAuth Settings → **Consumer Key and Secret** |
+ | 3 |Enter the verification code sent to your Salesforce user email. |
+ | 4 |Copy the **Consumer Key & Secret and Environment as Sandbox or Production** and provide them to Claude.  |
+ | 5 |Claude will register and connect the Salesforce MCP servers. |
+
+<img width="700" height="250" alt="mcpserverconsumerkey" src="https://git.soma.salesforce.com/gdevadoss/MedTechClaudeDeployment/blob/master/AgentforceAgentImages/mcpserverconsumerkey.png">
+
+ **ii.** **Reload VS Code & Verify MCP Connections**
+ 
+ | Step | Details |
+ | ----- | ----- |
+ | 1 | Press Ctrl+Shift+P (Windows) or Cmd+Shift+P (Mac)  |
+ | 2 | Select **Developer: Reload Window** |
+ | 3 | After reload, run **/mcp**  or  **open MCP Servers under Customize** |
+ | 4 | Verify that all four Salesforce MCP servers show **Connected** |
+ | 5 | Reply **reloaded** to Claude to continue. |
+ 
+ <img width="700" height="250" alt="mcpserverconnected" src="https://git.soma.salesforce.com/gdevadoss/MedTechClaudeDeployment/blob/master/AgentforceAgentImages/mcpserverconnected.png">
+
+### 8. Claude Moves Forward with Installation
+Claude will begin installing everything from the code repository and will orchestrate a series of sub-agents to do the work for you. We recommend  checking on the installation once in a while, as there are times when Claude may require additional permissions from you (Consumer Key/Secret for MCP setup, VS Code window reload after MCP registration), depending on your settings. <br/> 
+
+1. Feature Enablement
+2. External Client App Deploy
+3. MCP Setup
+4. Base Metadata Deploy
+5. Data Kit Install
+6. Agentforce Data Library
+7. Notebook AI
+8. Document AI
+9. Agent Setup Configuration
+10. Prompt Template Add Retriever
+11. Assign Permission To App
+12. Experience Cloud Setup
+13. Commerce Store Enablement
+14. Cms Workspace Setup
+15. Storefront Publish
+16. Embed Service Agent On Experience Site
+17. Site Branding Setup
+18. Datastream File Upload
+19. Refresh Data Cloud Components
+20. Copy Field Sync
+21. Refresh Data Streams(Optional)
+
+ 
 **It takes close to more than three hours to complete so let Claude do its work.** Once the installation is complete, navigate to Sales Cloud and search for Mark Smith who is the featured unified profile. From Mark Smith’s profile, navigate to Details, then log in to Experience Cloud to try the logged-in user agent experience. All possible conversations are available in the video and in the “behind the scenes” section of Git repository.
 
-### 7. Access Experience Cloud and Test the MedTech Solution
+<img width="700" height="250" alt="claudeinstallationsummary" src="https://git.soma.salesforce.com/gdevadoss/MedTechClaudeDeployment/blob/master/AgentforceAgentImages/claudeinstallationsummary.png">
+
+### 9. Access Experience Cloud and Test the MedTech Solution
 
 Once installation is complete, use Mark Smith, the primary Experience Cloud user, to test the logged-in customer, Commerce, and Service Agentforce experiences.
 

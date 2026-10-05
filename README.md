@@ -44,7 +44,7 @@ There are two ways to install this solution kit. You can use Claude to run the i
   | 1 |  Initiate a Claude chat session within VS Code as shown below  |
   | 2 |  To get started, Claude requires some information: The instructions (prompts), an alias (which can be anything), your new Demo Org username and password. |
   | 3 |   To initiate the installation, use the following prompt: <br>"**Install Data 360 Healthcare Installer into Alias: ALIASNAME Username: USERNAME Password: PASSWORD**" </br></br>Replace the alias (can be anything), username and password with your own credentials (from when you created your org) and then press enter to begin the installation. Here is an example: Install Data 360 Healthcare Installer into Alias: Data360MedTechSolution Username: XXX.com Password: XXXXX</br> |
- <img width="700" height="250" alt="claudeicon" src="https://git.soma.salesforce.com/gdevadoss/MedTechClaudeDeployment/blob/master/AgentforceAgentImages/claudeicon.png">
+ <img width="700" height="250" alt="claudeicon" src="https://github.com/salesforce-misc/Data360MedTechSolutionKit/blob/main/AgentforceAgentImages/claudeicon.png">
 
 ### 5. Installation Mode Selection
 | Step | Details |
